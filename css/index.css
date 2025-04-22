@@ -1,0 +1,69 @@
+
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.fixed__menu {
+    background: #00abfe;
+    display: flex;
+    justify-content: center;
+        height: 55px;
+        gap: 50px;
+}
+.fixed__menu a {
+    color: white;
+}
+.fixed__menu p{
+    color: white;
+}
+.fixed__menu-list {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    justify-items: center;
+    
+}
+.fixed__menu-list li {
+   margin: auto 0;
+    
+}
+
+.fixed__menu-icons{
+    display: flex;
+    gap: 40px;
+    
+    
+}
+.fixed__menu-icons li{
+    margin: auto 0;
+}
+.fixed__menu-icons hr {
+    margin: auto 0;
+    height: 70%;
+    width: 2px;
+    background: white;
+
+}
+
+.fixed__menu-support {
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+gap: 5px;
+font-size: 13px;
+}
+.fixed__menu-support a {
+    font-size: 17px;
+}
