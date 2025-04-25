@@ -1,54 +1,61 @@
-
-
 .wrapper {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
 }
+
 a {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1rem;
 }
-p{
+
+p {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
+}
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
 }
 
 .fixed__menu {
     background: #00abfe;
     display: flex;
     justify-content: center;
-        height: 55px;
-        gap: 50px;
+    height: 55px;
+    gap: 50px;
 }
+
 .fixed__menu a {
     color: white;
 }
-.fixed__menu p{
+
+.fixed__menu p {
     color: white;
 }
+
 .fixed__menu-list {
     display: flex;
     gap: 50px;
     justify-content: center;
     justify-items: center;
-    
-}
-.fixed__menu-list li {
-   margin: auto 0;
-    
+
 }
 
-.fixed__menu-icons{
-    display: flex;
-    gap: 40px;
-    
-    
-}
-.fixed__menu-icons li{
+.fixed__menu li,
+.nav__menu li {
     margin: auto 0;
 }
+
+.fixed__menu-icons {
+    display: flex;
+    gap: 40px;
+}
+
+
+
 .fixed__menu-icons hr {
     margin: auto 0;
     height: 70%;
@@ -60,10 +67,57 @@ p{
 .fixed__menu-support {
     display: flex;
     flex-direction: column;
-justify-content: center;
-gap: 5px;
-font-size: 13px;
+    justify-content: center;
+    gap: 5px;
+    font-size: 13px;
 }
+
 .fixed__menu-support a {
     font-size: 17px;
+}
+
+.nav__menu {
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+  
+align-items: center;
+}
+.logo {
+    margin: auto 0;
+    cursor: pointer;
+}
+.logo img {
+    max-width: 215px;
+    
+}
+
+.nav__menu-list {
+    display: flex;
+   gap: 100px;
+    
+}
+
+.nav__menu-list a {
+    display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+
+.nav__menu-list img{
+    max-width: 35px;
+    margin: auto 0;
+}
+.nav__menu-button {
+background-color: #ccff66;
+vertical-align: middle;
+display: flex;
+align-items: center;
+padding: .8rem;
+}
+.nav__menu-button::before {
+    content:url(/img/icons/icon_button_personal.png);
+    margin-right: .5rem;
 }
