@@ -1,30 +1,35 @@
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
 .wrapper {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
 }
 
-h1 {
-    font-family: "Montserrat", sans-serif;
+h1,
+h2 {
     font-weight: 600;
     font-size: 55px;
 }
 
-a {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-}
 
-p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-}
-
+a,
 button {
-    font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 1rem;
+}
+
+p,
+legend {
+    
+    font-weight: 300;
+}
+
+.button-color {
+    background: #00abfe;
+    color: white;
 }
 
 .fixed__menu {
@@ -174,7 +179,80 @@ button {
 
 .banner__content button {
     width: 45%;
-    background: #00abfe;
+
     padding: 1rem;
     color: white;
 }
+
+.connection {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfcfc;
+    box-shadow: 2px 4px 10px #c9c9c9;
+    padding: 40px 60px;
+
+}
+
+.connection__form {
+   
+    width: 100%;
+    margin-top: 60px;
+}
+
+.connection__form-wrap
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.connection__form-item {
+    border: solid 1px #e4e4e4;
+    padding: 4px;
+    font-size: 1.3rem;
+    color: #999999;
+
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+.street {
+    color: #999999;
+    font-size: 1.2rem;
+}
+
+.connection__form button{
+    padding: 1rem 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+
+.connection__form-item input {
+    font-size: 1.2rem;
+}
+
+.check {
+    display: flex;
+    gap: 15px;
+margin: 30px 0 0 15px  ;
+font-size: 1.2rem;
+color: #999999;
+}
+.check a {
+    color: #ff0c6d;
+    text-decoration: underline;
+}
+
+.check input {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
