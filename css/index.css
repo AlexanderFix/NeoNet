@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -19,12 +23,17 @@ h3 {
     font-weight: 500;
 }
 
+h4 {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
 h6 {
     font-size: 1.2rem;
 }
 
 a {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1rem;
 
 }
@@ -32,7 +41,7 @@ a {
 p,
 legend {
 
-    font-weight: 300;
+    font-weight: 400;
 }
 
 button {
@@ -47,7 +56,9 @@ button {
     background: #00abfe;
     color: white;
 }
-
+.box_shadow {
+    
+}
 .fixed__menu {
     background: #00abfe;
     display: flex;
@@ -206,6 +217,7 @@ button {
     padding: 1rem;
     color: white;
 }
+
 .form-wrap {
     margin-top: 60px;
     display: flex;
@@ -338,7 +350,70 @@ h2 {
     gap: 20px;
     width: 100%;
 }
+
 .tarrifs__plans-check--footer {
     font-size: 2.2rem;
     font-weight: 600;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 65px;
+    gap: 30px;
+}
+
+.map__check {
+    text-decoration: underline;
+    color: #b4b4b4;
+    cursor: pointer;
+}
+
+.news {
+width: 30%;
+display: flex;
+flex-direction: column;
+}
+.news__operator {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 70px;
+}
+
+.news__operator-title {
+    display: flex;
+    gap: 30px;
+
+}
+
+.news__operator-title img {
+    width: 65%;
+/* height: 350px; */
+object-fit: cover;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.news--boxshadow {
+    box-shadow: 2px 4px 10px #c9c9c9;
+}
+.news--height{
+    height: 100%;
+    padding: 30px;
+}
+.news-item a {
+text-decoration: underline;
+color: #ff3333;
+font-weight: 700;
+
+}
+.news-wrap {
+    display: flex;
+justify-content: space-between;
+height: 500px;
 }
