@@ -206,8 +206,7 @@ button {
     padding: 1rem;
     color: white;
 }
-
-.connection {
+.form-wrap {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -215,22 +214,22 @@ button {
     background-color: #fcfcfc;
     box-shadow: 2px 4px 10px #c9c9c9;
     padding: 40px 60px;
-
 }
 
-.connection__form {
+
+.form {
 
     width: 100%;
     margin-top: 60px;
 }
 
-.connection__form-wrap {
+.form__item-wrap {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.connection__form-item {
+.form__item {
     border: solid 1px #e4e4e4;
     padding: 4px;
     font-size: 1.3rem;
@@ -257,7 +256,7 @@ h2 {
 
 
 
-.connection__form-item input {
+.form__item input {
     font-size: 1.2rem;
 }
 
@@ -298,7 +297,7 @@ h2 {
 
 .tarrifs__plans-item {
     font-size: 1.2rem;
-    max-width: 25.4%;
+    max-width: 25.07%;
     display: flex;
     flex-direction: column;
     box-shadow: 2px 4px 10px #c9c9c9;
