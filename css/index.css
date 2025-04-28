@@ -438,3 +438,11 @@ height: 500px;
     border: 2px solid #00abfe;
     font-weight: 600;
 }
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 90px;
+    font-size: 1.2rem;
+}
