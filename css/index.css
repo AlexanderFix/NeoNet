@@ -88,12 +88,12 @@ button {
     margin: auto 0;
 }
 
-.fixed__menu-icons {
+.menu-icons {
     display: flex;
     gap: 40px;
 }
 
-.fixed__menu-icons::after {
+.menu-icons::after {
     content: '';
     height: 70%;
     width: 2px;
@@ -101,7 +101,7 @@ button {
     margin: auto 0;
 }
 
-.fixed__menu-icons::before {
+.menu-icons::before {
     content: '';
     height: 70%;
     width: 2px;
@@ -445,4 +445,38 @@ height: 500px;
     gap: 30px;
     margin-top: 90px;
     font-size: 1.2rem;
+}
+
+footer {
+    margin-top: 200px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    padding-top: 40px;
+}
+footer a {
+    color: white;
+}
+.footer__item{
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    gap: 30px;
+}
+
+.footer__list {
+display: flex;
+flex-direction: column;
+gap: 15px;
+
+}
+.footer__item p {
+    line-height: 1.5rem;
+}
+
+.footer__contacts-icons {
+display: flex;
+gap: 30px;
 }
