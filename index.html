@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -14,57 +14,95 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <nav class="fixed__menu">
+
+    <header id="header">
+
+        <nav class="fixed__menu-wrap">
+            <div class="fixed__menu wrapper">
+
                 <ul class="fixed__menu-list ">
-                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">О компании</a>
+                        <hr>
+                    </li>
                     <li><a href="#">Абонентам</a></li>
                     <li><a href="#">Бизнесу</a></li>
                     <li><a href="#">Сервис и помощь</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
-                <ul class="menu-icons">
 
+                <ul class="menu-icons">
                     <li><a href="#"><img src="img/icons/icon_viber.png" alt=""></a></li>
                     <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
                     <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
-
                 </ul>
+
                 <div class="fixed__menu-support">
                     <p>Служба поддержки</p>
                     <a href="tel:375297450222">+375 29 7450222 (МТС)</a>
                 </div>
-            </nav>
-            <nav class="nav__menu">
-                <div class="logo center">
-                    <img src="img/logo.png" alt="">
+
+                <div class="burger">
+
+                    <div class="logo center">
+                        <img src="img/logo.png" alt="">
+                    </div>
+
+                    <div class="burger_button" id="burger_button">
+                        <div class="burger_menu" id="burger_menu"></div>
+                    </div>
                 </div>
+            </div>
 
-                <ul class="nav__menu-list">
-                    <li><a href="#"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
-                    <li><a href="#"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
-                    <li><a href="#"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
-                </ul>
+          
+        </nav>
 
-                <button class="nav__menu-button">Личный кабинет</button>
-            </nav>
-        </header>
-        <main>
-            <div class="banner">
-                <img src="img/banner.png" alt="">
-                <div class="banner__content">
-                    <section class="banner__content-text">
-                        <p>Стабильный</p>
-                        <h1>ИНТЕРНЕТ</h1>
-                        <p>до 250 <img class="fire" src="img/hotjar_6424088.png" alt=""> Мбит/c</p>
-                    </section>
-                    <button class="banner__content-button blue">Подробнее</button>
+        <nav class="nav__menu wrapper">
+            <div class="logo center">
+                <img src="img/logo.png" alt="">
+            </div>
 
+            <ul class="nav__menu-list">
+                <li><a href="#"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
+                <li><a href="#"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
+                <li><a href="#"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
+            </ul>
+
+            <button class="nav__menu-button">Личный кабинет</button>
+        </nav>
+
+  <div id="burger_wrapper" class="burger_wrapper">
+                <div id="burger_nav" class="burger_nav">
+                    <nav class="burger_nav_active">
+                        <ul class="burger_list">
+                            <li><a href="#">О компании</a>
+                                <hr>
+                            </li>
+                            <li><a href="#">Абонентам</a></li>
+                            <li><a href="#">Бизнесу</a></li>
+                            <li><a href="#">Сервис и помощь</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
                 </div>
+            </div>
+
+    </header>
+    <main>
+        <div class="banner">
+            <img src="img/banner.png" alt="">
+            <div class="banner__content">
+                <section class="banner__content-text">
+                    <p>Стабильный</p>
+                    <h1>ИНТЕРНЕТ</h1>
+                    <p>до 250 <img class="fire" src="img/hotjar_6424088.png" alt=""> Мбит/c</p>
+                </section>
+                <button class="banner__content-button blue">Подробнее</button>
 
             </div>
-            <section class="form-wrap">
+
+        </div>
+        <div class="wrapper">
+            <section class="form-wrap boxshadow">
                 <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="" class="form">
                     <div class="form__item-wrap">
@@ -80,19 +118,19 @@
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Дом</legend>
-                            <input type="text">
+                            <input class="form__item-input form__item-input--widht" type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Кв-ра</legend>
-                            <input type="text">
+                            <input class="form__item-input form__item-input--widht" type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Имя</legend>
-                            <input type="text">
+                            <input class="form__item-input " type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Телефон</legend>
-                            <input type="tel" placeholder="+375(__)___-__-__">
+                            <input class="form__item-input " type="tel" placeholder="+375(__)___-__-__">
                         </fieldset>
                         <button class="button blue">Подключить</button>
                     </div>
@@ -104,11 +142,13 @@
                     </div>
                 </form>
             </section>
-            <section class="tarrifs">
+
+
+            <section class="tarrifs ">
                 <h3>Выгодные тарифы для лучших клиентов</h3>
                 <div class="tarrifs__plans">
 
-                    <form action="" class="tarrifs__plans-item">
+                    <form action="" class="tarrifs__plans-item boxshadow">
                         <section class="tarrifs__plans-text">
                             <h6 class="tarrifs__plans--normal-text tarrifs__plans-text--padding">ИНТЕРНЕТ</h6>
                             <p class="tarrifs__plans--big-text tarrifs__plans-text--padding">50 Мбит/с</p>
@@ -164,7 +204,7 @@
                     </form>
 
 
-                    <form action="" class="tarrifs__plans-item">
+                    <form action="" class="tarrifs__plans-item boxshadow">
                         <section class="tarrifs__plans-text">
                             <h6 class="tarrifs__plans--normal-text tarrifs__plans-text--padding">ИНТЕРНЕТ</h6>
                             <p class="tarrifs__plans--big-text tarrifs__plans-text--padding blue">100 Мбит/с</p>
@@ -218,7 +258,7 @@
                         <button type="submit" class="button blue">Подключить</button>
                     </form>
 
-                    <form action="" class="tarrifs__plans-item">
+                    <form action="" class="tarrifs__plans-item boxshadow">
                         <section class="tarrifs__plans-text">
                             <h6 class="tarrifs__plans--normal-text tarrifs__plans-text--padding">ИНТЕРНЕТ</h6>
                             <p class="tarrifs__plans--big-text tarrifs__plans-text--padding">250 Мбит/с</p>
@@ -274,50 +314,56 @@
                     </form>
                 </div>
             </section>
-            <section class="form-wrap">
+
+            <section class="form-wrap  boxshadow">
                 <h2>Проверьте адрес на возможность подключения</h2>
                 <form action="" class="form">
                     <div class="form__item-wrap">
 
                         <fieldset class="form__item">
                             <legend>Город</legend>
-                            <input placeholder="Брест" type="text">
+                            <input class="form__item-input" placeholder="Брест" type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Улица</legend>
-                            <input type="text">
+                            <input class="form__item-input" type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Дом</legend>
-                            <input type="text">
+                            <input class="form__item-input form__item-input--widht" type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Корпус</legend>
-                            <input type="text">
+                            <input class="form__item-input form__item-input--widht" type="text">
                         </fieldset>
                         <button class="button blue">Подключить</button>
                     </div>
 
                 </form>
             </section>
-            <section class="map">
-                <h3>Карта покрытия NEONET в Бресте</h3>
-                <p class="map__check">Проверить адрес</p>
-                <script type="text/javascript" charset="utf-8" async
-                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
-            </section>
-            <section class="news__operator">
+        </div>
+
+
+
+        <section class="map">
+            <h3>Карта покрытия NEONET в Бресте</h3>
+            <p class="map__check">Проверить адрес</p>
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
+        </section>
+        <div class="wrapper">
+            <section class="news__operator ">
                 <h3>Новости оператора</h3>
-                <article class="news__operator-title">
+                <div class="news__operator-title">
                     <img src="img/newstitle.png" alt="">
                     <section class="news__operator-text">
                         <h4>Сегодня 12 марта, с 12:00 до 14:30 ожидаются перебои в работе сети</h4>
                         <p>Будет недоступно ряд веб-сайтов и сетевых сервисов. Возможны проблемы в месенджерах</p>
                         <a href="#">Читать дальше</a>
                     </section>
-                </article>
+                </div>
                 <div class="news__item-wrap">
-                    <article class="news__item news--boxshadow">
+                    <div class="news__item boxshadow">
                         <img src="img/newspic1.png" alt="">
                         <section class="news__operator-text news--height">
                             <h4>Удобный переезд, когда интернет переезжает с вами</h4>
@@ -325,8 +371,8 @@
                             </p>
                             <a href="#">Читать дальше</a>
                         </section>
-                    </article>
-                    <article class="news__item news--boxshadow">
+                    </div>
+                    <div class="news__item boxshadow">
 
                         <img src="img/newspic1.png" alt="">
                         <section class="news__operator-text news--height">
@@ -335,8 +381,8 @@
                             </p>
                             <a href="#">Читать дальше</a>
                         </section>
-                    </article>
-                    <article class="news__item news--boxshadow">
+                    </div>
+                    <div class="news__item boxshadow">
 
                         <img src="img/newspic1.png" alt="">
                         <section class="news__operator-text news--height">
@@ -345,44 +391,45 @@
                             </p>
                             <a href="#">Читать дальше</a>
                         </section>
-                    </article>
+                    </div>
                 </div>
 
 
             </section>
-            <section class="news">
+            <section class="news ">
                 <h3>Новости</h3>
 
                 <div class="news__item-wrap">
-                    <article class="news__item news--boxshadow">
+                    <div class="news__item boxshadow">
                         <img src="img/newspic2.png" alt="">
                         <section class="news-text news--height">
-                            <h4>AMEDIATEKA <br> на KOTTV</h4>
-                            <p>Смотрите на любых <br> устройствах с KOTTV</p>
+                            <h4>AMEDIATEKA на KOTTV</h4>
+                            <p>Смотрите на любых устройствах с KOTTV</p>
                             <button class="button button__news">Подробнее</button>
                         </section>
-                    </article>
-                    <article class="news__item news--boxshadow">
+                    </div>
+                    <div class="news__item boxshadow">
 
                         <img src="img/newspic2.png" alt="">
                         <section class="news-text news--height">
-                            <h4>Новогодние праздники с<br> онлайн кинотеатрами</h4>
-                            <p>Удобная оплата и возможность<br> кредита в личном кабинете</p>
+                            <h4>Новогодние праздники с онлайн кинотеатрами</h4>
+                            <p>Удобная оплата и возможность кредита в личном кабинете</p>
                             <button class="button button__news">Подробнее</button>
                         </section>
-                    </article>
-                    <article class="news__item news--boxshadow">
+                    </div>
+                    <div class="news__item boxshadow">
 
                         <img src="img/newspic2.png" alt="">
                         <section class="news-text news--height">
-                            <h4>только для абонентов <br>KOTTV - книжный сервис</h4>
-                            <p>Наслаждайтесь любимыми книгами,<br> подкастами вместе с NEONET</p>
+                            <h4>только для абонентов KOTTV - книжный сервис</h4>
+                            <p>Наслаждайтесь любимыми книгами, подкастами вместе с NEONET</p>
                             <button class="button button__news">Подробнее</button>
                         </section>
-                    </article>
+                    </div>
                 </div>
             </section>
-            <section class="about">
+
+            <section class="about ">
                 <h2>Провайдер домашнего Интернета и телевидения NEONET</h2>
 
                 <p><strong>NEONET</strong> — это современный интернет-провайдер, стремящийся предоставить своим клиентам
@@ -413,9 +460,10 @@
                     Присоединяйтесь к NEONET и откройте для себя новые возможности в мире цифровых технологий!</p>
 
             </section>
-            <section class="form-wrap">
+            <section class="form-wrap  boxshadow">
                 <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="" class="form">
+
                     <div class="form__item-wrap">
                         <fieldset class="form__item">
                             <legend>Улица</legend>
@@ -429,65 +477,68 @@
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Дом</legend>
-                            <input type="text">
+                            <input class="form__item-input form__item-input--widht" type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Кв-ра</legend>
-                            <input type="text">
+                            <input class="form__item-input form__item-input--widht" type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Имя</legend>
-                            <input type="text">
+                            <input class="form__item-input " type="text">
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Телефон</legend>
-                            <input type="tel" placeholder="+375(__)___-__-__">
+                            <input class="form__item-input " type="tel" placeholder="+375(__)___-__-__">
                         </fieldset>
                         <button class="button blue">Подключить</button>
                     </div>
 
                 </form>
             </section>
+        </div>
 
-        </main>
 
-        <footer>
-            <div class="footer__about footer__item">
-                <img src="img/footer_icon.png" alt="">
-                <p> ООО «Сетевые инновации»
-                    <br> Брест, Варшавское шоссе 11
-                    <br>info@neonet.by
-                </p>
-            </div>
-            <div class="footer__info footer__item">
-                <h5>ИНФОРМАЦИЯ</h5>
-                <ul class="footer__list">
-                    <li><a href="#">Кабинет пользователя </a></li>
-                    <li><a href="#"> Приложение для Android</a></li>
-                    <li><a href="#"> Приложение для iPhone</a></li>
-                    <li><a href="#"> Политика обработки персональных данных</a></li>
-                </ul>
-            </div>
-            <div class="footer__contacts footer__item">
-                <h5><strong>КОНТАКТЫ</strong></h5>
-                <ul class="footer__list">
-                    <li><a href="tel:+375297450222">+375 29 7450222 (МТС) </a></li>
-                    <li><a href="tel:+375447745022">+375 44 7745022 (А1)</a></li>
-                    <li><a href="mailto:support@neonet.by">support@neonet.by / техподдержка</a></li>
-                    <li><a href="viber://chat?number=+375333356343">Viber (+375 33 3356343)</a></li>
-                </ul>
 
-                <ul class="footer__contacts-icons">
+    </main>
 
-                    <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+    <footer>
+        <div class="footer__about footer__item">
+            <img src="img/footer_icon.png" alt="">
+            <p> ООО «Сетевые инновации»
+                <br> Брест, Варшавское шоссе 11
+                <br>info@neonet.by
+            </p>
+        </div>
+        <div class="footer__info footer__item">
+            <h5>ИНФОРМАЦИЯ</h5>
+            <ul class="footer__list">
+                <li><a href="#">Кабинет пользователя </a></li>
+                <li><a href="#"> Приложение для Android</a></li>
+                <li><a href="#"> Приложение для iPhone</a></li>
+                <li><a href="#"> Политика обработки персональных данных</a></li>
+            </ul>
+        </div>
+        <div class="footer__contacts footer__item">
+            <h5><strong>КОНТАКТЫ</strong></h5>
+            <ul class="footer__list">
+                <li><a href="tel:+375297450222">+375 29 7450222 (МТС) </a></li>
+                <li><a href="tel:+375447745022">+375 44 7745022 (А1)</a></li>
+                <li><a href="mailto:support@neonet.by">support@neonet.by / техподдержка</a></li>
+                <li><a href="viber://chat?number=+375333356343">Viber (+375 33 3356343)</a></li>
+            </ul>
 
-                </ul>
+            <ul class="footer__contacts-icons">
 
-            </div>
-        </footer>
-    </div>
+                <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a></li>
+                <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+
+            </ul>
+
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
