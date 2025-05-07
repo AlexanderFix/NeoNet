@@ -127,7 +127,7 @@ header {
 .logo {
     margin: auto 0;
     cursor: pointer;
-    width: 20vw;
+    width: 20%;
 }
 
 .logo img {
@@ -166,7 +166,7 @@ header {
 }
 
 .nav__menu-button::before {
-    content: url(/img/icons/icon_button_personal.png);
+    content: url(../img/icons/icon_button_personal.png);
     margin-right: .5rem;
 }
 
