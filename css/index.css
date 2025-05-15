@@ -1,5 +1,5 @@
 @import url(header.css);
-
+@import url(form.css);
 
 html {
     scroll-behavior: smooth;
@@ -24,7 +24,7 @@ h1 {
 
 h2 {
     font-weight: 600;
-    font-size: clamp(.5rem, 1.7vw, 1.9rem)
+    font-size: clamp(.5rem, 2vw, 2.3rem)
 }
 
 h3 {
@@ -53,11 +53,9 @@ legend {
 }
 
 button {
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(.6rem, 1.3vw, 1.1rem);
-
-
-
+    letter-spacing: .03vw;
 }
 
 .blue {
@@ -73,23 +71,21 @@ button {
     height: 100%;
 }
 
-.banner img {
 
-    width: 100%;
-}
 
 .banner__content {
     position: absolute;
-    top: 80px;
-    left: 230px;
+    top: 20%;
+    left: 15%;
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-
+    gap: 2vw;
 }
 
-
+.banner__background{
+   width: 100%; 
+}
 .banner__content-text {
     font-size: 25px;
     color: white;
@@ -98,53 +94,21 @@ button {
 
 .banner__content-text p {
     font-weight: 600;
+    font-size: clamp(.3rem, 1.8vw, 2rem);
 }
 
 .fire {
     max-width: 35px;
+    width: 1.5vw;
 }
 
 .banner__content-button {
     width: 45%;
-
-    padding: 1rem;
+    padding: 1vw;
     color: white;
+    font-weight: 500;
 }
 
-.form-wrap {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fcfcfc;
-    /* box-shadow: 2px 4px 10px #c9c9c9; */
-    padding: 40px 60px;
-}
-
-
-.form {
-
-    width: 100%;
-    margin-top: 60px;
-}
-
-.form__item-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.form__item {
-    border: solid 1px #e4e4e4;
-    padding: 4px;
-    font-size: 1.3rem;
-    color: #999999;
-
-    display: flex;
-    align-items: center;
-}
 
 
 
@@ -154,34 +118,28 @@ button {
 }
 
 .button {
-    padding: clamp(.6rem, 1.5vw, 1rem) clamp(.6rem, 3vw, 3rem);;
+    padding: clamp(.6rem, 1.5vw, 1rem) clamp(.6rem, 3vw, 3rem);
     font-size: clamp(.6rem, 1.3vw, 1.1rem);
     font-weight: 500;
 }
 
 
 
-.form__item-input {
-    font-size: 1.2rem;
-    width: 10rem;
-}
 
-.form__item-input--widht {
-    max-width: 4rem;
-}
 
 .check {
     display: flex;
     gap: 15px;
     margin: 30px 0 0 30px;
-    font-size: 1.2rem;
+    font-size: clamp(.3rem, 1.5vw, 1.2rem);
     color: #999999;
 }
 
 .check a {
     color: #ff0c6d;
     text-decoration: underline;
-    font-size: 1.2rem;
+    font-size: clamp(.3rem, 1.5vw, 1.2rem);
+
 }
 
 .check input {
@@ -417,5 +375,3 @@ footer::after {
     background-color: #d9f036;
     height: 20px;
 }
-
-

@@ -65,7 +65,7 @@ header {
     flex-direction: column;
     align-items: center;
     align-self: center;
-
+gap: 1px;
 }
 
 .menu-icons {
@@ -73,6 +73,11 @@ header {
     justify-content: space-around;
     /* gap: 40px; */
     width: 20%;
+}
+
+.menu-icons img {
+    max-width: 24px;
+    width: 2.3vw;
 }
 
 .menu-icons::after {
@@ -161,14 +166,18 @@ header {
     vertical-align: middle;
     display: flex;
     align-items: center;
-    padding: clamp(.5rem, .85vw, .8rem);
+    padding: clamp(.5rem, 1vw, .8rem);
     color: #000;
+    gap: 1vw;
+}
+.nav__menu-button img {
+    width: 2.2vw;
+    max-width: 30px;
+}
+.nav__menu-button button {
+    background-color: transparent;
 }
 
-.nav__menu-button::before {
-    content: url(../img/icons/icon_button_personal.png);
-    margin-right: .5rem;
-}
 
 .burger {
     display: none;

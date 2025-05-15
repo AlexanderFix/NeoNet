@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-          
+
         </nav>
 
         <nav class="nav__menu wrapper">
@@ -66,30 +66,32 @@
                 <li><a href="#"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
                 <li><a href="#"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
             </ul>
+            <div class="nav__menu-button"><img src="img/icons/icon_button_personal.png" alt="">
+                <button>Личный кабинет</button>
+            </div>
 
-            <button class="nav__menu-button">Личный кабинет</button>
         </nav>
 
-  <div id="burger_wrapper" class="burger_wrapper">
-                <div id="burger_nav" class="burger_nav">
-                    <nav class="burger_nav_active">
-                        <ul class="burger_list">
-                            <li><a href="#">О компании</a>
-                                <hr>
-                            </li>
-                            <li><a href="#">Абонентам</a></li>
-                            <li><a href="#">Бизнесу</a></li>
-                            <li><a href="#">Сервис и помощь</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </nav>
-                </div>
+        <div id="burger_wrapper" class="burger_wrapper">
+            <div id="burger_nav" class="burger_nav">
+                <nav class="burger_nav_active">
+                    <ul class="burger_list">
+                        <li><a href="#">О компании</a>
+                            <hr>
+                        </li>
+                        <li><a href="#">Абонентам</a></li>
+                        <li><a href="#">Бизнесу</a></li>
+                        <li><a href="#">Сервис и помощь</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
             </div>
+        </div>
 
     </header>
     <main>
         <div class="banner">
-            <img src="img/banner.png" alt="">
+            <img class="banner__background" src="img/banner.png" alt="">
             <div class="banner__content">
                 <section class="banner__content-text">
                     <p>Стабильный</p>
@@ -109,12 +111,22 @@
                         <fieldset class="form__item">
                             <legend>Улица</legend>
 
-                            <select class="street" name="" id="">
+                            <!-- <select class="street" name="" id="">
                                 <option value="1">Махновича</option>
                                 <option value="2">Рябцева</option>
                                 <option value="3">Суворова</option>
-                            </select>
-
+                            </select> -->
+                            <div class="form__select" data-state="">
+                                <div class="form__select__title" data-default="Option 0"></div>
+                                <div class="form__select__content">
+                                  <input id="singleSelect0" class="form__select__input" type="radio" name="singleSelect" />
+                                  <label for="singleSelect0" class="form__select__label">Махновича</label>
+                                  <input id="singleSelect1" class="form__select__input" type="radio" name="singleSelect" />
+                                  <label for="singleSelect1" class="form__select__label">Рябцева</label>
+                                  <input id="singleSelect2" class="form__select__input" type="radio" name="singleSelect"  />
+                                  <label for="singleSelect2" class="form__select__label">Суворова</label>
+                                </div>
+                              </div>
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Дом</legend>
@@ -132,7 +144,7 @@
                             <legend>Телефон</legend>
                             <input class="form__item-input " type="tel" placeholder="+375(__)___-__-__">
                         </fieldset>
-                        <button class="button blue">Подключить</button>
+                        <button class="button blue" type="submit">Подключить</button>
                     </div>
                     <div class="check">
                         <input type="checkbox" name="" id="check-policy">
