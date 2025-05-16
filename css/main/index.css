@@ -17,10 +17,7 @@ body {
     padding: 0 10px;
 }
 
-h1 {
-    font-weight: 600;
-    font-size: 3.9vw;
-}
+
 
 h2 {
     font-weight: 600;
@@ -44,7 +41,6 @@ h6 {
 a {
     font-weight: 400;
     font-size: clamp(.5rem, 1.3vw, 1.1rem)
-    
 }
 
 p,
@@ -59,7 +55,8 @@ button {
     transition: .3s;
     letter-spacing: .03vw;
     border-radius: 10px;
-    background-color: #00abfe;color: white;
+    background-color: #00abfe;
+    color: white;
 }
 
 .button--border:hover {
@@ -88,9 +85,10 @@ button {
     gap: 2vw;
 }
 
-.banner__background{
-   width: 100%; 
+.banner__background {
+    width: 100%;
 }
+
 .banner__content-text {
     font-size: 25px;
     color: white;
@@ -100,6 +98,11 @@ button {
 .banner__content-text p {
     font-weight: 600;
     font-size: clamp(.3rem, 1.8vw, 2rem);
+}
+
+.banner--big-text {
+    font-weight: 600;
+    font-size: 3.9vw;
 }
 
 .fire {
@@ -149,95 +152,22 @@ button {
     transform: scale(1.5);
 }
 
-.tarrifs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    gap: 60px;
-    width: 100%;
-}
 
-
-.tarrifs__plans {
-    display: flex;
-    gap: 25px;
-    justify-content: space-around;
-}
-
-.tarrifs__plans-item {
-    font-size: 1.2rem;
-    max-width: 25.07%;
-    display: flex;
-    flex-direction: column;
-    /* box-shadow: 2px 4px 10px #c9c9c9; */
-    gap: 30px;
-    align-items: center;
-    padding: 35px;
-    position: relative;
-}
-
-.tarrifs__plans-item::after {
-    position: absolute;
-    content: '';
-    top: -10px;
-    height: 10px;
-    left: 0;
-    width: 100%;
-    background-color: #00abfe;
-}
-
-.tarrifs__plans-text {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.tarrifs__plans-text--padding {
-    padding: 0 10px;
-}
-
-.tarrifs__plans--big-text {
-    font-size: 3.1rem;
-    font-weight: 700;
-
-}
-
-.tarrifs__plans--normal-text {
-    font-weight: 500;
-}
-
-
-.tarrifs__plans-check--title {
-    color: #999999;
-    font-weight: 600;
-}
-
-.tarrifs__plans-check {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-
-.tarrifs__plans-check--footer {
-    font-size: 2.2rem;
-    font-weight: 600;
-}
 
 .map {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 25px;
-    gap: 30px;position: relative;
+    gap: 30px;
+    position: relative;
 }
 
 .map__check {
     text-decoration: underline;
     color: #b4b4b4;
     cursor: pointer;
-    
+
 }
 
 .news__item {

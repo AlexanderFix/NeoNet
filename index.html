@@ -98,7 +98,7 @@
             <div class="banner__content">
                 <section class="banner__content-text">
                     <p>Стабильный</p>
-                    <h1>ИНТЕРНЕТ</h1>
+                    <span class="banner--big-text">ИНТЕРНЕТ</span>
                     <p>до 250 <img class="fire" src="img/hotjar_6424088.png" alt=""> Мбит/c</p>
                 </section>
                 <button class="banner__content-button ">Подробнее</button>
@@ -111,28 +111,34 @@
                 <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="" class="form">
                     <div class="form__item-wrap">
-                        <fieldset class="form__item">
+                        <fieldset class="form__select form__item">
                             <legend>Улица</legend>
-<!--  -->
+                            <!--  -->
                             <!-- <select class="street" name="" id="">
                                 <option value="1">Махновича</option>
                                 <option value="2">Рябцева</option>
                                 <option value="3">Суворова</option>
                             </select> -->
-                            <div class="form__select" data-state="">
-                                <div class="form__select__title" data-default="Option 0"></div>
-                                <div class="form__select__content">
-                                    <input id="singleSelect0" class="form__select__input" type="radio"
-                                        name="singleSelect" />
-                                    <label for="singleSelect0" class="form__select__label">Махновича</label>
-                                    <input id="singleSelect1" class="form__select__input" type="radio"
-                                        name="singleSelect" />
-                                    <label for="singleSelect1" class="form__select__label">Рябцева</label>
-                                    <input id="singleSelect2" class="form__select__input" type="radio"
-                                        name="singleSelect" />
-                                    <label for="singleSelect2" class="form__select__label">Суворова</label>
-                                </div>
+
+                            <div class="form__select__title" data-default="Option 0">
+                                <span class="form__select__title-span">Лейтинята Рябцеваaaaaaaaaa</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#1f1f1f">
+                                    <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                </svg>
                             </div>
+                            <div class="form__select__content">
+                                <input id="singleSelect0" class="form__select__input" type="radio"
+                                    name="singleSelect" />
+                                <label for="singleSelect0" class="form__select__label">Махновича</label>
+                                <input id="singleSelect1" class="form__select__input" type="radio"
+                                    name="singleSelect" />
+                                <label for="singleSelect1" class="form__select__label">Рябцева</label>
+                                <input id="singleSelect2" class="form__select__input" type="radio"
+                                    name="singleSelect" />
+                                <label for="singleSelect2" class="form__select__label">Суворова</label>
+                            </div>
+
                         </fieldset>
                         <fieldset class="form__item">
                             <legend>Дом</legend>
@@ -162,175 +168,8 @@
             </section>
 
 
-            <section class="tarrifs ">
-                <h3>Выгодные тарифы для лучших клиентов</h3>
-                <div class="tarrifs__plans">
+            <section class="tariffs">
 
-                    <form action="" class="tarrifs__plans-item boxshadow">
-                        <section class="tarrifs__plans-text">
-                            <h6 class="tarrifs__plans--normal-text tarrifs__plans-text--padding">ИНТЕРНЕТ</h6>
-                            <p class="tarrifs__plans--big-text tarrifs__plans-text--padding">50 Мбит/с</p>
-                            <p class="tarrifs__plans--normal-text tarrifs__plans-text--padding">Стартовый пакет
-                                интернета и интерактивного
-                                телевидения
-                                <br>Всего от 18.90 руб. в месяц
-                            </p>
-                        </section>
-
-
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-                            <h6 class="tarrifs__plans-check--title ">ИНТЕРНЕТ</h6>
-                            <div class="">
-                                <input checked type="radio" name="internetCheck50" id="internetCheck501">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck501">Без роутера</label>
-                            </div>
-                            <div class="">
-                                <input type="radio" name="internetCheck50" id="internetCheck502">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck502">Роутер 2.4
-                                    ГГц</label>
-                            </div>
-                            <div class="">
-                                <input type="radio" name="internetCheck50" id="internetCheck503">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck503">Роутер 5 ГГц</label>
-                            </div>
-                        </fieldset>
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-                            <h6 class="tarrifs__plans-check--title">ТВ - УСЛУГИ</h6>
-                            <div class=""> <input checked type="radio" name="tvCheck50" id="tvCheck501">
-                                <label class="tarrifs__plans--normal-text" for="tvCheck501">Кабельное ТВ</label>
-                            </div>
-                            <div class=""> <input type="radio" name="tvCheck50" id="tvCheck502">
-                                <label class="tarrifs__plans--normal-text" for="tvCheck502">Интерактивное ТВ</label>
-                            </div>
-                        </fieldset>
-
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-
-                            <h6 class="tarrifs__plans-check--title">ТВ - ПРИСТАВКА</h6>
-                            <div class=""> <input checked type="radio" name="prefCheck50" id="prefCheck501">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck501">Без ТВ-приставки</label>
-                            </div>
-                            <div class=""> <input type="radio" name="prefCheck50" id="prefCheck502">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck502">Приставка FULL HD</label>
-                            </div>
-                            <div class=""> <input type="radio" name="prefCheck50" id="prefCheck503">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck503">ТВ-приставка 4К</label>
-                            </div>
-                        </fieldset>
-                        <p class="tarrifs__plans-check--footer">18.90. / месяц</p>
-                        <button type="submit" class="button ">Подключить</button>
-                    </form>
-
-
-                    <form action="" class="tarrifs__plans-item boxshadow">
-                        <section class="tarrifs__plans-text">
-                            <h6 class="tarrifs__plans--normal-text tarrifs__plans-text--padding">ИНТЕРНЕТ</h6>
-                            <p class="tarrifs__plans--big-text tarrifs__plans-text--padding ">100 Мбит/с</p>
-                            <p class="tarrifs__plans--normal-text tarrifs__plans-text--padding">
-                                Стартовый пакет интернета и интерактивного телевидения
-                                <br>Всего от 18.90 руб. в месяц
-                            </p>
-                        </section>
-
-
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-                            <h6 class="tarrifs__plans-check--title ">ИНТЕРНЕТ</h6>
-                            <div class="">
-                                <input checked type="radio" name="internetCheck100" id="internetCheck1001">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck1001">Без роутера</label>
-                            </div>
-                            <div class="">
-                                <input type="radio" name="internetCheck100" id="internetCheck1002">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck1002">Роутер 2.4
-                                    ГГц</label>
-                            </div>
-                            <div class="">
-                                <input type="radio" name="internetCheck100" id="internetCheck1003">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck1003">Роутер 5 ГГц</label>
-                            </div>
-                        </fieldset>
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-                            <h6 class="tarrifs__plans-check--title">ТВ - УСЛУГИ</h6>
-                            <div class=""> <input checked type="radio" name="tvCheck100" id="tvCheck1001">
-                                <label class="tarrifs__plans--normal-text" for="tvCheck1001">Кабельное ТВ</label>
-                            </div>
-                            <div class=""> <input type="radio" name="tvCheck100" id="tvCheck1002">
-                                <label class="tarrifs__plans--normal-text" for="tvCheck1002">Интерактивное ТВ</label>
-                            </div>
-                        </fieldset>
-
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-
-                            <h6 class="tarrifs__plans-check--title">ТВ - ПРИСТАВКА</h6>
-                            <div class=""> <input checked type="radio" name="prefCheck100" id="prefCheck1001">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck1001">Без ТВ-приставки</label>
-                            </div>
-                            <div class=""> <input type="radio" name="prefCheck100" id="prefCheck1002">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck1002">Приставка FULL HD</label>
-                            </div>
-                            <div class=""> <input type="radio" name="prefCheck100" id="prefCheck1003">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck1003">ТВ-приставка 4К</label>
-                            </div>
-                        </fieldset>
-                        <p class="tarrifs__plans-check--footer">18.90. / месяц</p>
-                        <button type="submit" class="button ">Подключить</button>
-                    </form>
-
-                    <form action="" class="tarrifs__plans-item boxshadow">
-                        <section class="tarrifs__plans-text">
-                            <h6 class="tarrifs__plans--normal-text tarrifs__plans-text--padding">ИНТЕРНЕТ</h6>
-                            <p class="tarrifs__plans--big-text tarrifs__plans-text--padding">250 Мбит/с</p>
-                            <p class="tarrifs__plans--normal-text tarrifs__plans-text--padding">Стартовый пакет
-                                интернета и интерактивного
-                                телевидения
-                                <br>Всего от 18.90 руб. в месяц
-                            </p>
-                        </section>
-
-
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-                            <h6 class="tarrifs__plans-check--title ">ИНТЕРНЕТ</h6>
-                            <div class="">
-                                <input checked type="radio" name="internetCheck250" id="internetCheck2501">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck2501">Без роутера</label>
-                            </div>
-                            <div class="">
-                                <input type="radio" name="internetCheck250" id="internetCheck2502">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck2502">Роутер 2.4
-                                    ГГц</label>
-                            </div>
-                            <div class="">
-                                <input type="radio" name="internetCheck250" id="internetCheck2503">
-                                <label class="tarrifs__plans--normal-text" for="internetCheck2503">Роутер 5 ГГц</label>
-                            </div>
-                        </fieldset>
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-                            <h6 class="tarrifs__plans-check--title">ТВ - УСЛУГИ</h6>
-                            <div class=""> <input checked type="radio" name="tvCheck250" id="tvCheck2501">
-                                <label class="tarrifs__plans--normal-text" for="tvCheck2501">Кабельное ТВ</label>
-                            </div>
-                            <div class=""> <input type="radio" name="tvCheck250" id="tvCheck2502">
-                                <label class="tarrifs__plans--normal-text" for="tvCheck2502">Интерактивное ТВ</label>
-                            </div>
-                        </fieldset>
-
-                        <fieldset class="tarrifs__plans-check tarrifs__plans-text--padding">
-
-                            <h6 class="tarrifs__plans-check--title">ТВ - ПРИСТАВКА</h6>
-                            <div class=""> <input checked type="radio" name="prefCheck250" id="prefCheck2501">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck2501">Без ТВ-приставки</label>
-                            </div>
-                            <div class=""> <input type="radio" name="prefCheck250" id="prefCheck2502">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck2502">Приставка FULL HD</label>
-                            </div>
-                            <div class=""> <input type="radio" name="prefCheck250" id="prefCheck2503">
-                                <label class="tarrifs__plans--normal-text" for="prefCheck2503">ТВ-приставка 4К</label>
-                            </div>
-                        </fieldset>
-                        <p class="tarrifs__plans-check--footer">18.90. / месяц</p>
-                        <button type="submit" class="button ">Подключить</button>
-                    </form>
-                </div>
             </section>
 
             <section class="form-wrap  boxshadow">
@@ -364,7 +203,7 @@
 
 
         <section class="map">
-         
+
             <script type="text/javascript" charset="utf-8" async
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
         </section>

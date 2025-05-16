@@ -26,13 +26,13 @@ burger_button.addEventListener('click', menuBurger)
 
 // Menu select start
 const selectSingle = document.querySelector('.form__select');
-const selectSingle_title = selectSingle.querySelector('.form__select__title');
+const selectSingle_title = selectSingle.querySelector('.form__select__title-span');
 const selectSingle_labels = selectSingle.querySelectorAll('.form__select__label');
 const selectSingle_input = document.getElementsByClassName('form__select__input');
 const selectSingle_content = document.querySelector('.form__select__content')
 
 // Toggle menu
-selectSingle_title.addEventListener('click', () => {
+selectSingle.addEventListener('click', () => {
     if (selectSingle_content.style.display == 'flex') {
         selectSingle_content.style.display = 'none'
     } else {

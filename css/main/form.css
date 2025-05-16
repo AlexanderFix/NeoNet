@@ -20,7 +20,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-  
+
 }
 
 .form__item {
@@ -30,8 +30,8 @@
   color: #999999;
   display: flex;
   align-items: center;
-  /* height: clamp(.3rem, 4vw, 50px); */
-  height: 50px;
+  height: clamp(.3rem, 4vw, 50px);
+  /* height: 50px; */
 }
 
 .form__item-input {
@@ -49,7 +49,8 @@
 .form__select {
   position: relative;
   /* max-width: 100%; */
-  width: 12vw;
+  /* width: 2vw; */
+  cursor: pointer;
 }
 
 .form__select[data-state="active"] .form__select__title::before {
@@ -74,11 +75,19 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  cursor: pointer;
+  justify-content: space-between;
   padding: 1px;
 }
 
-.form__select__title::before,
+.form__select__title-span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: clamp(.3rem, 13.5vw, 80%);
+  max-width: 150px;
+}
+
+/* .form__select__title::before,
 .form__select__title::after {
   content: "";
   position: absolute;
@@ -94,7 +103,7 @@
 
 .form__select__title::after {
   transform: translate(3px, -50%) rotate(-45deg);
-}
+} */
 
 .form__select__title:hover {
   border-color: #00abfe;
@@ -108,11 +117,11 @@
 
 .form__select__content {
   position: absolute;
-  top: 18px;
-    left: -8px;
+  top: clamp(.3rem, 3.5vw, 34px);
+  left: -1px;
   display: none;
   flex-direction: column;
-  width: calc(100% + 16px);
+  width: calc(100% + 2px);
   background-color: #ffffff;
   border: 1px solid #c7ccd1;
   border-top: none;
@@ -160,7 +169,8 @@
 .form-map {
   position: absolute;
   opacity: .8;
-  transition: .3s;margin: 0;
+  transition: .3s;
+  margin: 0;
   left: 25%;
   top: 10px;
 }
