@@ -1,3 +1,59 @@
+
+
+
+// slider tarrifs
+
+const sliderInternet = document.getElementById('slider-internet')
+const selectInternet = document.getElementById('select-internet')
+const selectRout = document.getElementById('select-rout')
+const sliderRout = document.getElementById('slider-rout')
+
+function change(slide, select) {
+    if (slide.value <= 0) {
+        select.style.left = slide.value + '%';
+        slide.style.background = `linear-gradient(to right, #00abfe ${slide.value}%, #bbbbbb ${slide.value}%)`;
+    } else if (slide.value >= 99) {
+        select.style.left = slide.value - 2 + '%';
+        slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
+    }
+    else {
+        if (slide == sliderRout) {
+            select.style.left = slide.value + '%';
+            slide.style.background = `linear-gradient(to right, #00abfe ${slide.value}%, #bbbbbb ${slide.value}%)`;
+
+        } else {
+            if (slide.value > 30 && slide.value < 35) {
+                select.style.left = slide.value - 2.5 + '%';
+                slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2.5}%, #bbbbbb ${slide.value - 2.5}%)`;
+            } else {
+                select.style.left = slide.value - 3 + '%';
+                slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 3}%, #bbbbbb ${slide.value - 3}%)`;
+            }
+        }
+
+    }
+}
+
+sliderInternet.oninput = () => { change(sliderInternet, selectInternet) };
+sliderRout.oninput = () => { change(sliderRout, selectRout) }
+
+// slider tarrifs end
+
+// radio tarrifs
+
+const cabTv = document.getElementById('cab-tv--wrap')
+
+cabTv.oninput = () => {
+   cabTv.value = '100';
+    console.log(cabTv.value);
+    
+}
+cabTv.addEventListener('click', ()=>{
+console.log(1);
+
+})
+
+
 // Burger start
 
 let burgerList = document.querySelectorAll('.burger_list')
@@ -64,7 +120,7 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
 
     });
 
-    
+
 
 }
 

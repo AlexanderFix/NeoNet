@@ -1,0 +1,143 @@
+h1 {
+    font-weight: 600;
+    font-size: clamp(.5rem, 2vw, 2.3rem)
+}
+
+.tariffs {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.tariffs__calc-wrap {
+    display: flex;
+    gap: 30px;
+
+}
+
+.tariffs__calc {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 75%;
+}
+
+.slider-wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.tariffs__calc-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#slider-rout,
+#slider-internet {
+    width: 100%;
+    -webkit-appearance: none;
+    background: #bbbbbb;
+    height: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+#slider-rout::-webkit-slider-thumb,
+#slider-internet::-webkit-slider-thumb
+ {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    z-index: 3;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+
+
+#select-internet,
+#select-rout {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-green);
+    z-index: 2;
+}
+
+
+.slider__value {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #bbbbbb;
+}
+
+.tariffs__connect {
+    color: #fff;
+    background-color: var(--color-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 20px 20px;
+    align-items: start;
+}
+
+.tariffs__connect img {
+    max-width: 35px;
+}
+
+.tariffs__connect {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.tariffs__connect-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tariffs__connect-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tariffs__connect--bigText {
+    font-size: clamp(.5rem, 2vw, 2.3rem);
+    font-weight: 500;
+
+}
+
+.tariffs__connect-button {
+    background-color: #fff;
+    color: var(--color-blue);
+}
+.tariffs__connect-button:hover {
+    background-color: var(--color-green);
+    box-shadow: 0px 0px 15px var(--color-green);
+    
+}
+.tariffs__connect a {
+    color: #fff;
+    text-decoration: underline;
+}
+.tariffs__connect a:hover {
+    color: var(--color-green);
+    
+}
+
+#cab-tv--wrap {
+    display: flex;
+    flex-direction: column;
+}

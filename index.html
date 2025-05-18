@@ -169,7 +169,76 @@
 
 
             <section class="tariffs">
+                <h1>NEONET. Тарифы на услуги для физических лиц</h1>
+                <div class="tariffs__content">
+                    <p>Мы рады видеть вас и готовы помочь с любыми вопросами, связанными с вашим интернет-подключением.
+                        Здесь вы найдете всю необходимую информацию для комфортного использования наших услуг
+                    </p>
+                    <p>
+                        Личный кабинет: Управляйте своим тарифом, проверяйте баланс и оплачивайте счета онлайн.
+                    </p>
+                </div>
+                <form action="" class="tariffs__calc-wrap">
+                    <section class="tariffs__calc">
 
+                        <h2>Соберите удобный тариф</h2>
+                        <div class="tariffs__calc-slider">
+                            <p>Скорость интернет (Мбит/с)</p>
+                            <div class="slider-wrap">
+                                <input type="range" id="slider-internet" value="0" max="100" step="33.33">
+                                <div id="select-internet"></div>
+                            </div>
+                            <div class="slider__value">
+                                <span>0</span>
+                                <span>50</span>
+                                <span>100</span>
+                                <span>250</span>
+                            </div>
+                        </div>
+                        <div class="tariffs__calc-slider">
+                            <p>Роутер</p>
+                            <div class="slider-wrap">
+                                <input type="range" id="slider-rout" value="0" max="100" step="50">
+                                <div id="select-rout"></div>
+                            </div>
+                            <div class="slider__value">
+                                <span>Без роутера</span>
+                                <span>Роутер 2.4 ГГц</span>
+                                <span>Роутер 5 ГГц</span>
+                            </div>
+                        </div>
+                        <div class="tariffs__calc-radio">
+                            <ul>
+                                <li id="cab-tv--wrap"> <label for="cab-tv">Кабельное ТВ</label>
+                                    <input type="range" id="cab-tv" min="0" max="100" value="0" step="1">
+                                </li>
+                            </ul>
+
+                        </div>
+                    </section>
+                    <div class="tariffs__connect">
+                        <p class="tariffs__connect--bigText">Тариф 50 мб/с</p>
+                        <p>Рекомендуется для нескольких пользователей, просмотра видео и онлайн игр.
+                        </p>
+                        <ul class="tariffs__connect-list">
+                            <li>
+                                <img src="img/icons/wifi-int.png" alt="">
+                                <p>Интернет 50 мб/с + Роутер 2.4 ГГц</p>
+                            </li>
+                            <li>
+                                <img src="img/icons/smart-tv_tar.png" alt="">
+                                <p>Интерактивное ТВ (500 каналов)</p>
+                            </li>
+                            <li>
+                                <img src="img/icons/wifi_tar.png" alt="">
+                                <p>ТВ-приставка (без приставки)</p>
+                            </li>
+                        </ul>
+                        <p class="tariffs__connect--bigText">21,70р./ месяц</p>
+                        <button class="button tariffs__connect-button">Подключить</button>
+                        <a href="">Или заказать консультацию специалиста</a>
+                    </div>
+                </form>
             </section>
 
             <section class="form-wrap  boxshadow">
@@ -204,8 +273,8 @@
 
         <section class="map">
 
-            <script type="text/javascript" charset="utf-8" async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+            <!-- <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script> -->
         </section>
         <div class="wrapper">
             <section class="news__operator ">
