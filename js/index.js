@@ -1,37 +1,60 @@
 
-
-
 // slider tarrifs
 
 const sliderInternet = document.getElementById('slider-internet')
 const selectInternet = document.getElementById('select-internet')
 const selectRout = document.getElementById('select-rout')
 const sliderRout = document.getElementById('slider-rout')
+const inet = document.getElementById('inet')
+const rout = document.getElementById('rout')
+const textInet = document.getElementsByClassName('value-tariffs')
+
+
+function addTextInet(params) {
+    textInet[0].textContent = `Тариф ${params} мб/с`
+    textInet[1].textContent = `Интернет ${params} мб/с`
+}
 
 function change(slide, select) {
-    if (slide.value <= 0) {
-        select.style.left = slide.value + '%';
-        slide.style.background = `linear-gradient(to right, #00abfe ${slide.value}%, #bbbbbb ${slide.value}%)`;
-    } else if (slide.value >= 99) {
-        select.style.left = slide.value - 2 + '%';
-        slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
-    }
-    else {
-        if (slide == sliderRout) {
-            select.style.left = slide.value + '%';
-            slide.style.background = `linear-gradient(to right, #00abfe ${slide.value}%, #bbbbbb ${slide.value}%)`;
 
-        } else {
-            if (slide.value > 30 && slide.value < 35) {
-                select.style.left = slide.value - 2.5 + '%';
-                slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2.5}%, #bbbbbb ${slide.value - 2.5}%)`;
-            } else {
+    select.style.left = slide.value + '%';
+    slide.style.background = `linear-gradient(to right, #00abfe ${Number(slide.value) + 2.00}%, #bbbbbb ${Number(slide.value) + 2.00}%)`;
+    switch (slide.value) {
+
+        case '33.33':
+            addTextInet('50');
+            break;
+        case '66.66':
+            addTextInet('100');
+            break;
+        case '99.99':
+            select.style.left = slide.value - 3 + '%';
+            slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
+            addTextInet('250');
+            break;
+
+        default:
+            break;
+    }
+ 
+    if (slide.id == 'slider-rout') {
+        switch (slide.value) {
+            case '0':
+                rout.textContent = '';
+                break;
+            case '50':
+                rout.textContent = '+ Роутер 2.4 ГГц';
+                break; case '100':
+                rout.textContent = '+ Роутер 5 ГГц';
                 select.style.left = slide.value - 3 + '%';
-                slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 3}%, #bbbbbb ${slide.value - 3}%)`;
-            }
-        }
+                slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
 
+                break;
+            default:
+                break;
+        }
     }
+
 }
 
 sliderInternet.oninput = () => { change(sliderInternet, selectInternet) };
@@ -39,19 +62,46 @@ sliderRout.oninput = () => { change(sliderRout, selectRout) }
 
 // slider tarrifs end
 
-// radio tarrifs
+// toggle tarrifs
 
-const cabTv = document.getElementById('cab-tv--wrap')
+const form = document.getElementById('tariffs__calc-wrap');
+const toggle = document.getElementsByClassName('toggle')
+const tarrifs = document.getElementsByClassName('tariffs__connect-list')
+const tv = document.getElementById('tv')
+const box = document.getElementById('box')
 
-cabTv.oninput = () => {
-   cabTv.value = '100';
-    console.log(cabTv.value);
-    
+for (let index = 0; index < toggle.length; index++) {
+
+    toggle[index].addEventListener('click', (e) => {
+
+
+        switch (toggle[index].children[0].id) {
+            case 'tvCable':
+                tv.textContent = 'Кабельное ТВ (500 каналов)'
+                break;
+            case 'tvCable':
+                tv.textContent = 'Кабельное ТВ (500 каналов)'
+                break;
+            case 'tvInteractive':
+                tv.textContent = 'Интерактивное ТВ (500 каналов)'
+                break;
+            case 'tvNoBox':
+                box.textContent = 'Без приставки'
+                break;
+            case 'tvFullHD':
+                box.textContent = 'ТВ-приставка FULL HD'
+                break;
+            case 'tv4k':
+                box.textContent = 'ТВ-приставка 4K'
+                break;
+            default:
+                break;
+        }
+
+    });
+
 }
-cabTv.addEventListener('click', ()=>{
-console.log(1);
-
-})
+// toggle tarrifs end
 
 
 // Burger start
@@ -109,8 +159,6 @@ selectSingle.addEventListener('click', () => {
 
 // Close when click to option
 for (let i = 0; i < selectSingle_labels.length; i++) {
-
-
 
     selectSingle_labels[i].addEventListener('click', (evt) => {
         selectSingle_title.textContent = evt.target.textContent;

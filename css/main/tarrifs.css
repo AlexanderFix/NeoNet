@@ -10,6 +10,12 @@ h1 {
     gap: 60px;
 }
 
+.tariffs__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .tariffs__calc-wrap {
     display: flex;
     gap: 30px;
@@ -27,6 +33,7 @@ h1 {
     width: 100%;
     position: relative;
     display: flex;
+    padding: 0 5px;
     align-items: center;
 }
 
@@ -48,8 +55,7 @@ h1 {
 
 
 #slider-rout::-webkit-slider-thumb,
-#slider-internet::-webkit-slider-thumb
- {
+#slider-internet::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
@@ -58,9 +64,15 @@ h1 {
     position: relative;
 }
 
-
-
-
+#slider-rout::-moz-range-thumb ,
+#slider-internet::-moz-range-thumb  {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    z-index: 3;
+    cursor: pointer;
+    position: relative;
+}
 
 #select-internet,
 #select-rout {
@@ -73,12 +85,76 @@ h1 {
     z-index: 2;
 }
 
+#slider-internet {
+    background: linear-gradient(to right, #00abfe 33.33%, #bbbbbb 33.33%)
+}
+
+#select-internet {
+    left: 33.33%;
+}
 
 .slider__value {
+    position: relative;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+
+    /* justify-content: space-between; */
     color: #bbbbbb;
+}
+
+.slider__value span {
+    position: absolute;
+}
+
+.tariffs__calc-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.toggle {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 30%;
+    gap: 10px;
+
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle-label {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    background: #ccc;
+    border-radius: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle input:checked+.toggle-label {
+    background: #00bfff;
+}
+
+.toggle input:checked+.toggle-label::after {
+    transform: translateX(24px);
+    background: #d4ff38;
 }
 
 .tariffs__connect {
@@ -122,22 +198,24 @@ h1 {
 .tariffs__connect-button {
     background-color: #fff;
     color: var(--color-blue);
+
+    padding: clamp(.6rem, 1.5vw, 1rem) clamp(.6rem, 3vw, 3rem);
+    font-size: clamp(.6rem, 1.3vw, 1.1rem);
+    font-weight: 600;
 }
+
 .tariffs__connect-button:hover {
     background-color: var(--color-green);
     box-shadow: 0px 0px 15px var(--color-green);
-    
+
 }
+
 .tariffs__connect a {
     color: #fff;
     text-decoration: underline;
 }
+
 .tariffs__connect a:hover {
     color: var(--color-green);
-    
-}
 
-#cab-tv--wrap {
-    display: flex;
-    flex-direction: column;
 }
