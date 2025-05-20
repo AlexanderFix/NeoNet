@@ -19,23 +19,8 @@ function change(slide, select) {
 
     select.style.left = slide.value + '%';
     slide.style.background = `linear-gradient(to right, #00abfe ${Number(slide.value) + 2.00}%, #bbbbbb ${Number(slide.value) + 2.00}%)`;
-    switch (slide.value) {
+  
 
-        case '0':
-            addTextInet('50');
-            break;
-        case '50':
-            addTextInet('100');
-            break;
-        case '100':
-            select.style.left = slide.value - 3 + '%';
-            slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
-            addTextInet('250');
-            break;
-
-        default:
-            break;
-    }
  
     if (slide.id == 'slider-rout') {
         switch (slide.value) {
@@ -53,6 +38,24 @@ function change(slide, select) {
             default:
                 break;
         }
+    } else {
+            switch (slide.value) {
+
+        case '0':
+            addTextInet('50');
+            break;
+        case '50':
+            addTextInet('100');
+            break;
+        case '100':
+            select.style.left = slide.value - 3 + '%';
+            slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
+            addTextInet('250');
+            break;
+
+        default:
+            break;
+    }
     }
 
 }
