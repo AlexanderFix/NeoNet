@@ -21,13 +21,13 @@ function change(slide, select) {
     slide.style.background = `linear-gradient(to right, #00abfe ${Number(slide.value) + 2.00}%, #bbbbbb ${Number(slide.value) + 2.00}%)`;
     switch (slide.value) {
 
-        case '33.33':
+        case '0':
             addTextInet('50');
             break;
-        case '66.66':
+        case '50':
             addTextInet('100');
             break;
-        case '99.99':
+        case '100':
             select.style.left = slide.value - 3 + '%';
             slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
             addTextInet('250');

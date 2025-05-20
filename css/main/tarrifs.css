@@ -85,13 +85,7 @@ h1 {
     z-index: 2;
 }
 
-#slider-internet {
-    background: linear-gradient(to right, #00abfe 33.33%, #bbbbbb 33.33%)
-}
 
-#select-internet {
-    left: 33.33%;
-}
 
 .slider__value {
     position: relative;
