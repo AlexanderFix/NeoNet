@@ -53,6 +53,9 @@ h1 {
     cursor: pointer;
 }
 
+#slider-internet {
+    background: black;
+}
 
 #slider-rout::-webkit-slider-thumb,
 #slider-internet::-webkit-slider-thumb {

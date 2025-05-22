@@ -29,7 +29,8 @@ function change(slide, select) {
                 break;
             case '50':
                 rout.textContent = '+ Роутер 2.4 ГГц';
-                break; case '100':
+                break;
+            case '100':
                 rout.textContent = '+ Роутер 5 ГГц';
                 select.style.left = slide.value - 3 + '%';
                 slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
