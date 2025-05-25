@@ -18,7 +18,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 /* 
@@ -66,10 +66,7 @@ span {
 button {
     font-weight: 400;
     font-size: clamp(.6rem, 1.3vw, 1.1rem);
-    transition: .3s;
-    letter-spacing: .03vw;
-    background-color: #00abfe;
-    color: white;
+
 }
 
 .button--border:hover {
@@ -82,6 +79,13 @@ button {
 .grid {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    gap: 80px 10px;
+}
+
+.extended__news-grid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
     gap: 80px 10px;
 }
 
@@ -181,6 +185,10 @@ button {
     padding: clamp(.6rem, 1.5vw, 1rem) clamp(.6rem, 3vw, 3rem);
     font-size: clamp(.6rem, 1.3vw, 1.1rem);
     font-weight: 500;
+    transition: .3s;
+    letter-spacing: .03vw;
+    background-color: #00abfe;
+    color: white;
 }
 
 
@@ -294,6 +302,65 @@ button {
     text-align: center;
 }
 
+.other__news {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.news--text-center {
+    align-items: center;
+
+}
+
+.news--text-center a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.extended__news {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.extended__news img {
+    width: 70%;
+}
+
+.extended__news-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+}
+
+.extended__news-aside {
+    justify-content: space-around;
+    height: 100%;
+}
+
+.extended__news-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.extended__news-item img {
+    width: 100%;
+}
+
+.news-text--gap {
+    gap: 20px;
+    padding: 20px 20px;
+}
+.news__operator--extended {
+    margin: 0;
+}
 .button__news {
     background: none;
     border: 2px solid #00abfe;

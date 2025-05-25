@@ -1,9 +1,0 @@
-.other__news {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;   
-
-}
-.news__operator-text {
-    align-items: center;
-}
