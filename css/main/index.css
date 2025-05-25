@@ -29,11 +29,12 @@ h1{
 
 h2 {
     font-weight: 600;
-    font-size: clamp(.5rem, 2vw, 2.3rem)
+    font-size: clamp(.5rem, 2vw, 2.3rem);
 }
 
 h3 {
-    font-size: 1.9vw;
+    font-size: clamp(.5rem, 2vw, 2.9rem);
+
     font-weight: 500;
 }
 
@@ -225,6 +226,8 @@ button {
     width: 30%;
     display: flex;
     flex-direction: column;
+    height: clamp(.3rem, 30.5vw, 500px);
+    max-height: 500px;
 }
 
 .news__operator {
@@ -270,8 +273,9 @@ button {
 
 .news__item-wrap {
     display: flex;
-    justify-content: space-between;
-    height: 500px;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 
@@ -309,11 +313,23 @@ footer {
     margin-top: 200px;
     background-color: #000;
     color: white;
-    display: flex;
-    justify-content: space-around;
+
     height: 300px;
     padding-top: 40px;
     position: relative;
+}
+
+.footer-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img {
+    max-width: 500px;
 }
 
 footer a {
