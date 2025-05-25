@@ -244,6 +244,10 @@ button {
     gap: 25px;
     margin-top: 70px;
 }
+.news__operator button {
+    width: 16.5%;
+    margin: 0 auto;
+}
 
 .news__operator-title {
     display: flex;
