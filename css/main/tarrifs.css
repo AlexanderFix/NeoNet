@@ -44,9 +44,11 @@ h1 {
 }
 
 #slider-rout,
-#slider-internet {
+#slider-internet,
+#slider-tv,
+#slider-business {
     width: 100%;
-    -webkit-appearance: none;
+    appearance: none;
     background: #bbbbbb;
     height: 5px;
     border-radius: 2px;
@@ -54,11 +56,13 @@ h1 {
 }
 
 #slider-internet {
-    background: black;
+    background: linear-gradient(to right, #bbb 0%, #00abfe 33.33%, #bbb 33.33%);
 }
 
 #slider-rout::-webkit-slider-thumb,
-#slider-internet::-webkit-slider-thumb {
+#slider-internet::-webkit-slider-thumb,
+#slider-tv::-webkit-slider-thumb,
+#slider-business::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
@@ -67,8 +71,10 @@ h1 {
     position: relative;
 }
 
-#slider-rout::-moz-range-thumb ,
-#slider-internet::-moz-range-thumb  {
+#slider-rout::-moz-range-thumb,
+#slider-internet::-moz-range-thumb,
+#slider-tv::-moz-range-thumb,
+#slider-business::-moz-range-thumb {
     -webkit-appearance: none;
     height: 20px;
     width: 20px;
@@ -78,7 +84,9 @@ h1 {
 }
 
 #select-internet,
-#select-rout {
+#select-rout,
+#select-tv,
+#select-business {
     height: 20px;
     width: 20px;
     position: absolute;

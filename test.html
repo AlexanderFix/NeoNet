@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="extended__news-grid">
+        <aside>
+            <ul class="aside">
+                <li class="aside__menu"><a href="{% url 'subscribers:subscribers' %}">Информация</a></li>
+                <li class="aside__menu"><a href="{% url 'subscribers:news_company' %}">Новости компании</a></li>
+                <li class="aside__menu"><a href="">Работы на сетях</a></li>
+            </ul>
+
+        </aside>
+        <section class="news__operator news__operator--extended">
+            <div class="wrapper">
+                <h1>{{ news.name }}</h1>
+                <div class="extended__news">
+                    <img src="{{ news.image.url }}" alt="{{ news.name }}">
+                    <section class="extended__news-text">
+                        <h4>{{ news.short_description }}</h4>
+                        <p>{{ news.description }}</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

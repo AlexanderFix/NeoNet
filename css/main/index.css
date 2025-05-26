@@ -63,6 +63,10 @@ span {
     font-weight: 400;
 }
 
+img {
+    width: 100%;
+}
+
 button {
     font-weight: 400;
     font-size: clamp(.6rem, 1.3vw, 1.1rem);
@@ -80,6 +84,13 @@ button {
     display: grid;
     grid-template-columns: 1fr 4fr;
     gap: 80px 10px;
+}
+
+.grid__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
 }
 
 .extended__news-grid {
@@ -117,12 +128,6 @@ button {
     color: var(--color-blue);
 }
 
-.grid__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 60px;
-}
 
 .banner {
     position: relative;
@@ -141,8 +146,19 @@ button {
     gap: 2vw;
 }
 
+.banner__content a {
+    color: #fff;
+    font-weight: 500;
+    transition: .3s;
+    letter-spacing: .03vw;
+    background-color: #00abfe;
+    text-align: center;
+}
+
 .banner__background {
     width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 
 .banner__content-text {
@@ -231,11 +247,11 @@ button {
 }
 
 .news__item {
-    width: 30%;
+    /* width: 30%; */
     display: flex;
     flex-direction: column;
-    height: clamp(.3rem, 30.5vw, 500px);
-    max-height: 500px;
+    height: clamp(.3rem, 35.5vw, 450px);
+    max-height: 450px;
 }
 
 .news__operator {
@@ -244,10 +260,9 @@ button {
     gap: 25px;
     margin-top: 70px;
 }
+
 .news__operator button {
-    width: 16.5%;
     margin: 0 auto;
-    
 }
 
 .news__operator-title {
@@ -285,10 +300,11 @@ button {
 }
 
 .news__item-wrap {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    flex-wrap: wrap;
+    width: 100%;
+
 }
 
 
@@ -352,7 +368,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
 }
 
 .extended__news-item img {
@@ -363,9 +378,11 @@ button {
     gap: 20px;
     padding: 20px 20px;
 }
+
 .news__operator--extended {
     margin: 0;
 }
+
 .button__news {
     background: none;
     border: 2px solid #00abfe;
@@ -385,7 +402,6 @@ footer {
     margin-top: 200px;
     background-color: #000;
     color: white;
-
     height: 300px;
     padding-top: 40px;
     position: relative;

@@ -1,0 +1,169 @@
+.business {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.business__grid {
+    grid-row: 1/4;
+}
+
+.business__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.business__list-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: clamp(.3rem, 1.3vw, 1.2rem);
+    font-weight: 500;
+}
+
+.tariffs__business-slide {
+    width: 50%;
+}
+
+.tariffs__business-connect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+}
+
+.tariffs__connect-summ {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    align-items: start;
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+.tariffs__connect-summ a {
+    font-size: clamp(.3rem, 1.6vw, 1.4rem);
+}
+
+.tariffs__connect-summ button {
+    font-size: clamp(.3rem, 1.6vw, 1.5rem);
+}
+
+.tariffs__connect-time {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tariffs__connect-time::before {
+    display: block;
+    content: '';
+    background-image: url(/img/icons/time_7698966.svg);
+    background-size: contain;
+    width: clamp(.3rem, 2.3vw, 3rem);
+    height: clamp(.3rem, 2.3vw, 3rem);
+}
+
+.tariffs__business-connect li {
+    flex-direction: column;
+    align-items: start;
+    width: 70%;
+}
+
+.tariffs__connect-list p {
+    font-size: clamp(.3rem, 1.6vw, 1.4rem);
+    font-weight: 500;
+}
+
+.wifi {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.wifi--bigText {
+    font-size: clamp(.3rem, 1.6vw, 1.2rem)
+}
+
+.wifi__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(.3rem, 4.6vw, 5.2rem);
+}
+
+.wifi__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: 600;
+    font-size: clamp(.3rem, 1.6vw, 1.2rem);
+
+}
+
+.wifi__list-item li {
+    list-style: disc;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.price__title {
+    font-size: clamp(.3rem, 1.6vw, 1.5rem);
+    color: #999999;
+    font-weight: 600;
+}
+
+.price__table {
+    border-spacing: 0px 10px;
+}
+
+.price__table td {
+    font-size: clamp(.3rem, 1.6vw, 1.2rem);
+    padding: 5px;
+}
+
+.price__table tr:nth-child(even) {
+    background-color: #d8f0fc;
+}
+
+.projects__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.projects img {
+    width: 22%;
+}
+
+.projects__wrap-watch {
+    display: block;
+    text-align: end;
+    width: 100%;
+    color: var(--color-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.connect {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.connect a {
+    color: var(--color-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 600;
+}
