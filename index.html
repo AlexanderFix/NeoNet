@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main/index.css">
 </head>
@@ -101,7 +104,7 @@
                     <span class="banner--big-text">ИНТЕРНЕТ</span>
                     <p>до 250 <img class="fire" src="img/hotjar_6424088.png" alt=""> Мбит/c</p>
                 </div>
-                <button class="banner__content-button ">Подробнее</button>
+                <a class="banner__content-button ">Подробнее</a>
 
             </div>
 
@@ -128,17 +131,13 @@
                                 </svg>
                             </div>
                             <div class="form__select__content">
-                                <input id="singleSelect0" class="form__select__input" type="radio"
-                                    name="singleSelect" >
+                                <input id="singleSelect0" class="form__select__input" type="radio" name="singleSelect">
                                 <label for="singleSelect0" class="form__select__label">Махновича</label>
-                                <input id="singleSelect1" class="form__select__input" type="radio"
-                                    name="singleSelect" >
+                                <input id="singleSelect1" class="form__select__input" type="radio" name="singleSelect">
                                 <label for="singleSelect1" class="form__select__label">Рябцева</label>
-                                <input id="singleSelect2" class="form__select__input" type="radio"
-                                    name="singleSelect" >
+                                <input id="singleSelect2" class="form__select__input" type="radio" name="singleSelect">
                                 <label for="singleSelect2" class="form__select__label">Суворова</label>
-                                <input id="singleSelect3" class="form__select__input" type="radio"
-                                    name="singleSelect" >
+                                <input id="singleSelect3" class="form__select__input" type="radio" name="singleSelect">
                                 <label for="singleSelect3" class="form__select__label">Героев обороны</label>
                             </div>
 
@@ -183,24 +182,28 @@
                 </div>
                 <form action="#" id="tariffs__calc-wrap" class="tariffs__calc-wrap">
                     <section class="tariffs__calc">
-
                         <h2>Соберите удобный тариф</h2>
+
+                        <!-- слайдер интернета -->
                         <div class="tariffs__calc-slider">
                             <p>Скорость интернет (Мбит/с)</p>
                             <div class="slider-wrap">
-                                <input type="range" id="slider-internet" value="0" max="100" step="50">
-                                <div id="select-internet"></div>
+                                <input type="range" id="slider-internet" value="33.33" max="100" step="33.33" />
+                                <div id="select-internet" style="left: 33.33%"></div>
                             </div>
                             <div class="slider__value">
-                                <span style="left: 1%;">50</span>
-                                <span style="left: 50%;">100</span>
+                                <span style="left: 1%;">Без интернета</span>
+                                <span style="left: 33.33%;">50</span>
+                                <span style="left: 66%;">100</span>
                                 <span style="left: 96%;">250</span>
                             </div>
                         </div>
+
+                        <!-- слайдер роутера -->
                         <div class="tariffs__calc-slider">
                             <p>Роутер</p>
                             <div class="slider-wrap">
-                                <input type="range" id="slider-rout" value="0" max="100" step="50">
+                                <input type="range" id="slider-rout" value="0" max="100" step="50" />
                                 <div id="select-rout"></div>
                             </div>
                             <div class="slider__value">
@@ -209,56 +212,59 @@
                                 <span style="left: 86%;">Роутер 5 ГГц</span>
                             </div>
                         </div>
+                        <div class="tariffs__calc-slider">
+                            <p>Кабельное ТВ</p>
+                            <div class="slider-wrap">
+                                <input type="range" id="slider-tv" value="0" max="100" step="50" />
+                                <div id="select-tv"></div>
+                            </div>
+                            <div class="slider__value">
+                                <span style="left: 0%;">Без ТВ</span>
+                                <span style="left: 45.5%;">12 Каналов</span>
+                                <span style="left: 86%;">105 каналов</span>
+                            </div>
+                        </div>
+
+
+                        <!-- Выбор ТВ -->
                         <div class="tariffs__calc-toggle">
                             <label class="toggle">
-                                 Кабельное ТВ
-                                <input type="radio" id="tvCable" name="tv">
-                                <span class="toggle-label"></span>
-
-                            </label>
-                            <label class="toggle">
-                                Интерактивное ТВ
-                                <input type="radio" id="tvInteractive" name="tv" checked>
-                                <span class="toggle-label"></span>
-                            </label>
-                            <label class="toggle">
-                                Без ТВ-приставки
-                                <input type="radio" id="tvNoBox" name="tvBox" checked>
-                                <span class="toggle-label"></span>
-                            </label>
-                            <label class="toggle">
-                                Приставка FULL HD
-                                <input type="radio" id="tvFullHD" name="tvBox">
-                                <span class="toggle-label"></span>
-                            </label>
-                            <label class="toggle">
-                                ТВ приставка 4K
-                                <input type="radio" id="tv4k" name="tvBox">
-                                <span class="toggle-label"></span>
+                                <input type="checkbox" id="tvInteractive" />
+                                <span class="toggle-label"></span> Интерактивное ТВ
                             </label>
 
+                            <!-- Выбор приставки -->
+                            <label class="toggle">
+                                <input type="checkbox" id="tvFullHD" name="tvBox" />
+                                <span class="toggle-label"></span> ТВ-приставка FULL HD
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="tv4k" name="tvBox" />
+                                <span class="toggle-label"></span> ТВ-приставка 4K
+                            </label>
                         </div>
                     </section>
+
+                    <!-- Итоговая информация -->
                     <div class="tariffs__connect">
-                        <p class="tariffs__connect--bigText value-tariffs">Тариф 50 мб/с</p>
-                        <p>Рекомендуется для нескольких пользователей, просмотра видео и онлайн игр.
-                        </p>
+                        <p class="tariffs__connect--bigText value-tariffs">Тариф 50 Мбит/с</p>
+                        <p>Рекомендуется для нескольких пользователей, просмотра видео и онлайн игр.</p>
                         <ul class="tariffs__connect-list">
                             <li>
-                                <img src="img/icons/wifi-int.png" alt="">
-                                <p class="value-tariffs" id="inet">Интернет 50 мб/с</p>
+                                <img src="{% static 'img/icons/wifi-int.png' %}" alt="" />
+                                <p class="value-tariffs">Интернет 50 Мбит/с</p>
                                 <p id="rout"></p>
                             </li>
                             <li>
-                                <img src="img/icons/smart-tv_tar.png" alt="">
-                                <p id="tv">Интерактивное ТВ (500 каналов)</p>
+                                <img src="{% static 'img/icons/smart-tv_tar.png' %}" alt="" />
+                                <p id="tv">Без ТВ</p>
                             </li>
                             <li>
-                                <img src="img/icons/wifi_tar.png" alt="">
+                                <img src="{% static 'img/icons/wifi_tar.png' %}" alt="" />
                                 <p id="box">Без приставки</p>
                             </li>
                         </ul>
-                        <p class="tariffs__connect--bigText">21,70р./ месяц</p>
+                        <p id="final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
                         <button class="tariffs__connect-button">Подключить</button>
                         <a href="">Или заказать консультацию специалиста</a>
                     </div>
@@ -419,13 +425,13 @@
                                 <div class="form__select__title" data-default="Option 0"></div>
                                 <div class="form__select__content">
                                     <input id="singleSelect100" class="form__select__input" type="radio"
-                                        name="singleSelect" >
+                                        name="singleSelect">
                                     <label for="singleSelect100" class="form__select__label">Махновича</label>
                                     <input id="singleSelect110" class="form__select__input" type="radio"
-                                        name="singleSelect" >
+                                        name="singleSelect">
                                     <label for="singleSelect110" class="form__select__label">Рябцева</label>
                                     <input id="singleSelect120" class="form__select__input" type="radio"
-                                        name="singleSelect" >
+                                        name="singleSelect">
                                     <label for="singleSelect120" class="form__select__label">Суворова</label>
                                 </div>
                             </div>
@@ -460,41 +466,41 @@
     <footer>
         <div class="footer-wrap">
             <div class="footer__about footer__item">
-            <img src="img/footer_icon.png" alt="">
-            <p> ООО «Сетевые инновации»
-                <br> Брест, Варшавское шоссе 11
-                <br>info@neonet.by
-            </p>
-        </div>
-        <div class="footer__info footer__item">
-            <h5>ИНФОРМАЦИЯ</h5>
-            <ul class="footer__list">
-                <li><a href="#">Кабинет пользователя </a></li>
-                <li><a href="#"> Приложение для Android</a></li>
-                <li><a href="#"> Приложение для iPhone</a></li>
-                <li><a href="#"> Политика обработки персональных данных</a></li>
-            </ul>
-        </div>
-        <div class="footer__contacts footer__item">
-            <h5><strong>КОНТАКТЫ</strong></h5>
-            <ul class="footer__list">
-                <li><a href="tel:+375297450222">+375 29 7450222 (МТС) </a></li>
-                <li><a href="tel:+375447745022">+375 44 7745022 (А1)</a></li>
-                <li><a href="mailto:support@neonet.by">support@neonet.by / техподдержка</a></li>
-                <li><a href="viber://chat?number=+375333356343">Viber (+375 33 3356343)</a></li>
-            </ul>
+                <img src="img/footer_icon.png" alt="">
+                <p> ООО «Сетевые инновации»
+                    <br> Брест, Варшавское шоссе 11
+                    <br>info@neonet.by
+                </p>
+            </div>
+            <div class="footer__info footer__item">
+                <h5>ИНФОРМАЦИЯ</h5>
+                <ul class="footer__list">
+                    <li><a href="#">Кабинет пользователя </a></li>
+                    <li><a href="#"> Приложение для Android</a></li>
+                    <li><a href="#"> Приложение для iPhone</a></li>
+                    <li><a href="#"> Политика обработки персональных данных</a></li>
+                </ul>
+            </div>
+            <div class="footer__contacts footer__item">
+                <h5><strong>КОНТАКТЫ</strong></h5>
+                <ul class="footer__list">
+                    <li><a href="tel:+375297450222">+375 29 7450222 (МТС) </a></li>
+                    <li><a href="tel:+375447745022">+375 44 7745022 (А1)</a></li>
+                    <li><a href="mailto:support@neonet.by">support@neonet.by / техподдержка</a></li>
+                    <li><a href="viber://chat?number=+375333356343">Viber (+375 33 3356343)</a></li>
+                </ul>
 
-            <ul class="footer__contacts-icons">
+                <ul class="footer__contacts-icons">
 
-                <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a></li>
-                <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
-                <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+                    <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
 
-            </ul>
+                </ul>
 
+            </div>
         </div>
-        </div>
-        
+
     </footer>
     <script src="js/index.js"></script>
 </body>
