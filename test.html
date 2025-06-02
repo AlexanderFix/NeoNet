@@ -1,24 +1,76 @@
-<div class="wrapper">
-    <div class="extended__news-grid">
-        <aside>
-            <ul class="aside">
-                <li class="aside__menu"><a href="{% url 'subscribers:subscribers' %}">Информация</a></li>
-                <li class="aside__menu"><a href="{% url 'subscribers:news_company' %}">Новости компании</a></li>
-                <li class="aside__menu"><a href="">Работы на сетях</a></li>
-            </ul>
+<!DOCTYPE html>
+<html lang="ru">
 
-        </aside>
-        <section class="news__operator news__operator--extended">
-            <div class="wrapper">
-                <h1>{{ news.name }}</h1>
-                <div class="extended__news">
-                    <img src="{{ news.image.url }}" alt="{{ news.name }}">
-                    <section class="extended__news-text">
-                        <h4>{{ news.short_description }}</h4>
-                        <p>{{ news.description }}</p>
-                    </section>
-                </div>
-            </div>
-        </section>
+<head>
+    <meta charset="UTF-8">
+    <title>Градиентные переключатели</title>
+    <style>
+        .switch-group {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .switch-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .switch-label input {
+            display: none;
+        }
+
+        .slider {
+            position: relative;
+            width: 65px;
+            height: 31px;
+            border-radius: 999px;
+            background: linear-gradient(to right, #ccc, #999);
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .slider::before {
+            content: "";
+            position: absolute;
+            width: 27px;
+            height: 27px;
+            top: 2px;
+            left: 5px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #ffffff, #dddddd);
+
+            transition: 0.3s;
+            
+        }
+
+        input:checked+.slider {
+            background: linear-gradient(to right, #c8ff00, #00ff85);
+            
+        }
+
+        input:checked+.slider::before {
+            transform: translateX(100%);
+            background: linear-gradient(to right, #dddddd, #ffffff);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="switch-group">
+        <label class="switch-label">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+            Пакет семейный
+        </label>
+
+        <label class="switch-label">
+            <input type="checkbox">
+            <span class="slider"></span>
+            Пакет 18+
+        </label>
     </div>
-</div>
+</body>
+
+</html>
