@@ -15,7 +15,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1280px;
+    max-width: 1170px;
     margin: 0 auto;
     width: 100%;
     padding: 0 15px;
@@ -29,7 +29,7 @@ h1{
 
 h2 {
     font-weight: 600;
-    font-size: clamp(.5rem, 2vw, 2.3rem);
+    font-size: clamp(.5rem, 2vw, 30px);
 }
 
 h3 {
@@ -49,7 +49,7 @@ h6 {
 
 a {
     font-weight: 400;
-    font-size: clamp(.5rem, 1.3vw, 1.1rem);
+    font-size: clamp(.5rem, 1.3vw, 15px);
 }
 
 p,
@@ -59,7 +59,7 @@ legend {
 }
 
 span {
-    font-size: clamp(.3rem, 1.3vw, 1.2rem);
+    font-size: clamp(.3rem, 1.3vw, 18px);
     font-weight: 400;
 }
 
@@ -69,7 +69,7 @@ img {
 
 button {
     font-weight: 400;
-    font-size: clamp(.6rem, 1.3vw, 1.1rem);
+    font-size: clamp(.6rem, 1.3vw, 16px);
 
 }
 
@@ -153,6 +153,7 @@ button {
     letter-spacing: .03vw;
     background-color: #00abfe;
     text-align: center;
+    font-size: clamp(.5rem, 1.3vw, 15px);
 }
 
 .banner__background {
@@ -169,12 +170,12 @@ button {
 
 .banner__content-text p {
     font-weight: 600;
-    font-size: clamp(.3rem, 1.8vw, 2rem);
+    font-size: clamp(.3rem, 1.8vw, 36px);
 }
 
 .banner--big-text {
     font-weight: 600;
-    font-size: 3.9vw;
+    font-size: 72px;
 }
 
 .fire {
@@ -199,12 +200,13 @@ button {
 
 .button {
     padding: clamp(.6rem, 1.5vw, 1rem) clamp(.6rem, 3vw, 3rem);
-    font-size: clamp(.6rem, 1.3vw, 1.1rem);
+    font-size: clamp(.6rem, 1.3vw, 16px);
     font-weight: 500;
     transition: .3s;
     letter-spacing: .03vw;
     background-color: #00abfe;
     color: white;
+    border-radius: 3px;
 }
 
 
@@ -212,14 +214,14 @@ button {
     display: flex;
     gap: 15px;
     margin: 30px 0 0 30px;
-    font-size: clamp(.3rem, 1.5vw, 1.2rem);
+    font-size: clamp(.3rem, 1.5vw, 14px);
     color: #999999;
 }
 
 .check a {
     color: #ff0c6d;
     text-decoration: underline;
-    font-size: clamp(.3rem, 1.5vw, 1.2rem);
+    font-size: clamp(.3rem, 1.5vw, 14px);
 
 }
 
@@ -243,7 +245,6 @@ button {
     text-decoration: underline;
     color: #b4b4b4;
     cursor: pointer;
-
 }
 
 .news__item {
@@ -400,6 +401,43 @@ button {
 
 footer {
     margin-top: 200px;
+}
+
+.footer__nav {
+    background-color: #d9f036;
+    width: 100%;
+    color: #000;
+    display: flex;
+    height: 55px;
+    align-items: center;
+}
+
+.footer__nav a {
+    color: #000;
+    font-size: clamp(.5rem, 1.3vw, 16px);
+}
+
+
+
+
+.footer__nav a:visited {
+    color: #000;
+}
+
+.footer__nav li:hover a {
+    color: #00abfe;
+}
+
+.footer--font:hover {
+    color: #00abfe;
+}
+
+.footer--font {
+    font-weight: 600;
+}
+
+.footer {
+
     background-color: #000;
     color: white;
     height: 300px;
@@ -408,10 +446,10 @@ footer {
 }
 
 .footer-wrap {
-    max-width: 1280px;
+    max-width: 1170px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
 }
@@ -446,16 +484,16 @@ footer a:visited {
 
 }
 
-.footer__item p {
-    line-height: 1.5rem;
-}
+/* .footer__item p {
+    line-height: 14px;
+} */
 
 .footer__contacts-icons {
     display: flex;
     gap: 30px;
 }
 
-footer::after {
+/* footer::after {
     content: '';
     position: absolute;
     top: -20px;
@@ -463,4 +501,4 @@ footer::after {
     width: 100%;
     background-color: #d9f036;
     height: 20px;
-}
+} */

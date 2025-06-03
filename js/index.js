@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Кэширование DOM-элементов
   const sliderInternet = document.getElementById("slider-internet");
   const selectInternet = document.getElementById("select-internet");
+  const fillInternet = document.getElementById("internet-fill");
   const sliderRout = document.getElementById("slider-rout");
   const selectRout = document.getElementById("select-rout");
+  const fillRout = document.getElementById("rout-fill");
   const sliderTv = document.getElementById("slider-tv");
   const selectTv = document.getElementById("select-tv");
+  const fillTV = document.getElementById("tv-fill");
   const rout = document.getElementById("rout");
   const textInet = document.getElementsByClassName("value-tariffs");
   const priceDisplay = document.getElementById("final-price");
@@ -46,9 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // Функция fullLength для корректировки отображения слайдера (например, при выборе тарифа 250 мб/с)
-  function fullLength(slide, select) {
+  function fullLength(slide, select, fill) {
     select.style.left = (slide.value - 3) + '%';
-    slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
+    fill.style.width = `${slide.value}%`
+    // slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
   }
 
   // Функция обновления отображения ТВ-опций
@@ -121,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     totalPrice += prices.internet[getInternetKey(sliderInternet.value)] || 0;
     totalPrice += prices.router[getRouterKey(sliderRout.value)] || 0;
-    
+
     let tvKey = getTvKey(sliderTv.value);
     let tvPrice = prices.tv[tvKey] || 0;
     if (tvKey === "extendedTV" && sliderInternet.value !== "0") {
@@ -138,18 +142,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Функция обработки изменений слайдеров
-  function change(slide, select) {
+  function change(slide, select, fill) {
 
     // Общий стандарт обновления стилей для слайдеров, кроме интернет-слайдера
-    if (slide.id !== "slider-internet") {
-      const val = parseFloat(slide.value);
-      select.style.left = `calc(${val}% - ${select.offsetWidth / 2}px)`;
-      slide.style.background = `linear-gradient(to right, #00abfe ${val}%, #bbbbbb ${val}%)`;
-    } else {
-      // Для интернет-слайдера – исходное позиционирование
-      select.style.left = slide.value + "%";
-      slide.style.background = `linear-gradient(to right, #00abfe ${slide.value}%, #bbbbbb ${slide.value}%)`;
-    }
+    // if (slide.id !== "slider-internet") {
+    //   const val = parseFloat(slide.value);
+    //   select.style.left = `calc(${val}% - ${select.offsetWidth / 2}px)`;
+    //   fill.style.width = `${slide.value}%`
+    // } else {
+    //   // Для интернет-слайдера – исходное позиционирование
+    select.style.left = slide.value + "%";
+    fill.style.width = `${slide.value}%`
+    // }
 
     if (slide.id === "slider-internet") {
       let speed = "";
@@ -158,26 +162,24 @@ document.addEventListener("DOMContentLoaded", function () {
       else if (slide.value === "66.66") speed = "100 мб/с";
       else speed = "250 мб/с";
 
-      slide.style.background = `linear-gradient(to right, #bbb 0%, #00abfe ${slide.value}%, #bbb ${slide.value}%)`;
 
       // Если выбран тариф 250 мб/с, то если на роутере сейчас стоит 2.4 ГГц, переводим его в 5 ГГц
       if (speed === "250 мб/с") {
-        fullLength(slide, select);
-        slide.style.background = `linear-gradient(to right, #bbb 0%, #00abfe ${slide.value}%, #bbb ${slide.value}%)`;
+        fullLength(slide, select, fill);
         if (sliderRout.value === "50") {
           // Переключаем роутер в режим 5 ГГц
           selectRout.style.left = (slide.value - 3) + '%';
           sliderRout.value = "100";
-          sliderRout.style.background = `linear-gradient(to right, #00abfe ${(slide.value - 2)}%, #bbbbbb ${(slide.value - 2)}%)`;
+          fillRout.style.width = '100%'
         }
       }
       textInet[0].textContent = slide.value === "0" ? "Без интернета" : `Тариф ${speed}`;
       textInet[1].textContent = slide.value === "0" ? "Без интернета" : `Интернет ${speed}`;
-      
+
     } else if (slide.id === "slider-rout") {
       sliderRout.step = sliderInternet.value === "99.99" ? "100" : "50";
       if (slide.value === "100") {
-        fullLength(slide, select);
+        fullLength(slide, select, fill);
       }
     } else if (slide.id === "slider-tv") {
       let tvText = "";
@@ -201,9 +203,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Подписываем обработчики событий для слайдеров
-  sliderInternet.addEventListener("input", () => change(sliderInternet, selectInternet));
-  sliderRout.addEventListener("input", () => change(sliderRout, selectRout));
-  sliderTv.addEventListener("input", () => change(sliderTv, selectTv));
+  sliderInternet.addEventListener("input", () => change(sliderInternet, selectInternet, fillInternet));
+  sliderRout.addEventListener("input", () => change(sliderRout, selectRout, fillRout));
+  sliderTv.addEventListener("input", () => change(sliderTv, selectTv, fillTV));
 
   // Обработка переключения чекбоксов и радио для ТВ-приставок и опций
   toggle.forEach(input => {
@@ -245,21 +247,21 @@ document.addEventListener("DOMContentLoaded", function () {
 let burgerList = document.querySelectorAll('.burger_list')
 
 function menuBurger() {
-    burger_wrapper.classList.toggle('active_burger')
-    burger_nav.classList.toggle('active_burger')
-    document.body.classList.toggle('lock')
-    burger_menu.classList.toggle('burger_active')
-    header.classList.toggle('header_active')
+  burger_wrapper.classList.toggle('active_burger')
+  burger_nav.classList.toggle('active_burger')
+  document.body.classList.toggle('lock')
+  burger_menu.classList.toggle('burger_active')
+  header.classList.toggle('header_active')
 }
 
 burgerList.forEach(item => {
-    item.addEventListener('click', () => {
-        burger_wrapper.classList.remove('active_burger')
-        burger_nav.classList.remove('active_burger')
-        document.body.classList.remove('lock')
-        burger_menu.classList.remove('burger_active')
-        header.classList.remove('header_active')
-    })
+  item.addEventListener('click', () => {
+    burger_wrapper.classList.remove('active_burger')
+    burger_nav.classList.remove('active_burger')
+    document.body.classList.remove('lock')
+    burger_menu.classList.remove('burger_active')
+    header.classList.remove('header_active')
+  })
 });
 
 burger_button.addEventListener('click', menuBurger)
@@ -275,18 +277,18 @@ const selectSingle_content = document.querySelector('.form__select__content')
 
 // Toggle menu
 selectSingle.addEventListener('click', () => {
-    if (selectSingle_content.style.display == 'flex') {
-        selectSingle_content.style.display = 'none'
-    } else {
-        selectSingle_content.style.display = 'flex'
-    }
+  if (selectSingle_content.style.display == 'flex') {
+    selectSingle_content.style.display = 'none'
+  } else {
+    selectSingle_content.style.display = 'flex'
+  }
 
-    if ('active' === selectSingle.getAttribute('data-state')) {
-        selectSingle.setAttribute('data-state', '');
+  if ('active' === selectSingle.getAttribute('data-state')) {
+    selectSingle.setAttribute('data-state', '');
 
-    } else {
-        selectSingle.setAttribute('data-state', 'active');
-    }
+  } else {
+    selectSingle.setAttribute('data-state', 'active');
+  }
 
 
 
@@ -296,13 +298,13 @@ selectSingle.addEventListener('click', () => {
 // Close when click to option
 for (let i = 0; i < selectSingle_labels.length; i++) {
 
-    selectSingle_labels[i].addEventListener('click', (evt) => {
-        selectSingle_title.textContent = evt.target.textContent;
-        selectSingle.setAttribute('data-state', '',);
+  selectSingle_labels[i].addEventListener('click', (evt) => {
+    selectSingle_title.textContent = evt.target.textContent;
+    selectSingle.setAttribute('data-state', '',);
 
-        selectSingle_content.style.display = 'none';
+    selectSingle_content.style.display = 'none';
 
-    });
+  });
 
 
 

@@ -104,7 +104,7 @@
                     <span class="banner--big-text">ИНТЕРНЕТ</span>
                     <p>до 250 <img class="fire" src="img/hotjar_6424088.png" alt=""> Мбит/c</p>
                 </div>
-                <a class="banner__content-button ">Подробнее</a>
+                <a class="banner__content-button">Подробнее</a>
 
             </div>
 
@@ -114,49 +114,58 @@
                 <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="#" class="form">
                     <div class="form__item-wrap">
-                        <fieldset class="form__select form__item">
-                            <legend>Улица</legend>
-                            <!--  -->
-                            <!-- <select class="street" name="" id="">
+                        <div class="form__item-wrapper">
+                            <p>Улица</p>
+                            <fieldset class="form__select form__item">
+
+
+                                <!--  -->
+                                <!-- <select class="street" name="" id="">
                                 <option value="1">Махновича</option>
                                 <option value="2">Рябцева</option>
                                 <option value="3">Суворова</option>
                             </select> -->
 
-                            <div class="form__select__title" data-default="Option 0">
-                                <span class="form__select__title-span">Героев обороны</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                    width="24px" fill="#1f1f1f">
-                                    <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-                                </svg>
-                            </div>
-                            <div class="form__select__content">
-                                <input id="singleSelect0" class="form__select__input" type="radio" name="singleSelect">
-                                <label for="singleSelect0" class="form__select__label">Махновича</label>
-                                <input id="singleSelect1" class="form__select__input" type="radio" name="singleSelect">
-                                <label for="singleSelect1" class="form__select__label">Рябцева</label>
-                                <input id="singleSelect2" class="form__select__input" type="radio" name="singleSelect">
-                                <label for="singleSelect2" class="form__select__label">Суворова</label>
-                                <input id="singleSelect3" class="form__select__input" type="radio" name="singleSelect">
-                                <label for="singleSelect3" class="form__select__label">Героев обороны</label>
-                            </div>
+                                <div class="form__select__title" data-default="Option 0">
+                                    <span class="form__select__title-span">Героев обороны</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#1f1f1f">
+                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                    </svg>
+                                </div>
+                                <div class="form__select__content">
+                                    <input id="singleSelect0" class="form__select__input" type="radio"
+                                        name="singleSelect">
+                                    <label for="singleSelect0" class="form__select__label">Махновича</label>
+                                    <input id="singleSelect1" class="form__select__input" type="radio"
+                                        name="singleSelect">
+                                    <label for="singleSelect1" class="form__select__label">Рябцева</label>
+                                    <input id="singleSelect2" class="form__select__input" type="radio"
+                                        name="singleSelect">
+                                    <label for="singleSelect2" class="form__select__label">Суворова</label>
+                                    <input id="singleSelect3" class="form__select__input" type="radio"
+                                        name="singleSelect">
+                                    <label for="singleSelect3" class="form__select__label">Героев обороны</label>
+                                </div>
 
+                            </fieldset>
+                        </div>
+                        <div class="form__item-wrapper">
+                            <p>Дом</p>
+                            <input name="home" class="form__item form__item-input--widht" type="text">
+                        </div>
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Кв-ра</p>
+                            <input name="appart" class="form__item form__item-input--widht" type="text">
                         </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Дом</legend>
-                            <input class="form__item-input form__item-input--widht" type="text">
+                        <fieldset class="form__item-wrapper">
+                            <p>Имя</p>
+                            <input class="form__item " type="text">
                         </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Кв-ра</legend>
-                            <input class="form__item-input form__item-input--widht" type="text">
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Имя</legend>
-                            <input class="form__item-input " type="text">
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Телефон</legend>
-                            <input class="form__item-input " type="tel" placeholder="+375(__)___-__-__">
+                        <fieldset class="form__item-wrapper">
+                            <p>Телефон</p>
+                            <input name="tel" class="form__item " type="tel" placeholder="+375(__)___-__-__">
                         </fieldset>
                         <button class="button  button--border" type="submit">Подключить</button>
                     </div>
@@ -188,8 +197,10 @@
                         <div class="tariffs__calc-slider">
                             <p>Скорость интернет (Мбит/с)</p>
                             <div class="slider-wrap">
+                                <div class="slider-fill" id="internet-fill"></div>
                                 <input type="range" id="slider-internet" value="33.33" max="100" step="33.33" />
                                 <div id="select-internet" style="left: 33.33%"></div>
+
                             </div>
                             <div class="slider__value">
                                 <span style="left: 1%;">Без интернета</span>
@@ -203,6 +214,7 @@
                         <div class="tariffs__calc-slider">
                             <p>Роутер</p>
                             <div class="slider-wrap">
+                                <div class="slider-fill" id="rout-fill"></div>
                                 <input type="range" id="slider-rout" value="0" max="100" step="50" />
                                 <div id="select-rout"></div>
                             </div>
@@ -215,6 +227,7 @@
                         <div class="tariffs__calc-slider">
                             <p>Кабельное ТВ</p>
                             <div class="slider-wrap">
+                                <div class="slider-fill" id="tv-fill"></div>
                                 <input type="range" id="slider-tv" value="0" max="100" step="50" />
                                 <div id="select-tv"></div>
                             </div>
@@ -464,43 +477,63 @@
     </main>
 
     <footer>
-        <div class="footer-wrap">
-            <div class="footer__about footer__item">
-                <img src="img/footer_icon.png" alt="">
-                <p> ООО «Сетевые инновации»
-                    <br> Брест, Варшавское шоссе 11
-                    <br>info@neonet.by
-                </p>
+        <nav class="footer__nav">
+            <div class="footer-wrap">
+                <ul class="fixed__menu-list">
+                    <li><a href="/about.html">О компании</a>
+                    </li>
+                    <li><a href="/subscriber.html">Абонентам</a>
+                    </li>
+                    <li><a href="/business.html">Бизнесу</a>
+                    </li>
+                    <li><a href="/service.html">Сервис и помощь</a>
+                    </li>
+                    <li><a href="contact.vcf">Контакты</a>
+                    </li>
+                </ul>
+                <a href="#" class="footer--font">НАВЕРХ</a>
             </div>
-            <div class="footer__info footer__item">
-                <h5>ИНФОРМАЦИЯ</h5>
-                <ul class="footer__list">
-                    <li><a href="#">Кабинет пользователя </a></li>
-                    <li><a href="#"> Приложение для Android</a></li>
-                    <li><a href="#"> Приложение для iPhone</a></li>
-                    <li><a href="#"> Политика обработки персональных данных</a></li>
-                </ul>
-            </div>
-            <div class="footer__contacts footer__item">
-                <h5><strong>КОНТАКТЫ</strong></h5>
-                <ul class="footer__list">
-                    <li><a href="tel:+375297450222">+375 29 7450222 (МТС) </a></li>
-                    <li><a href="tel:+375447745022">+375 44 7745022 (А1)</a></li>
-                    <li><a href="mailto:support@neonet.by">support@neonet.by / техподдержка</a></li>
-                    <li><a href="viber://chat?number=+375333356343">Viber (+375 33 3356343)</a></li>
-                </ul>
 
-                <ul class="footer__contacts-icons">
+        </nav>
+        <div class="footer">
+            <div class="footer-wrap">
+                <div class="footer__about footer__item">
+                    <img src="img/footer_icon.png" alt="">
+                    <p> ООО «Сетевые инновации»
+                        <br> Брест, Варшавское шоссе 11
+                        <br>info@neonet.by
+                    </p>
+                </div>
+                <div class="footer__info footer__item">
+                    <h5><strong>ИНФОРМАЦИЯ</strong></h5>
+                    <ul class="footer__list">
+                        <li><a href="#">Кабинет пользователя </a></li>
+                        <li><a href="#"> Приложение для Android</a></li>
+                        <li><a href="#"> Приложение для iPhone</a></li>
+                        <li><a href="#"> Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contacts footer__item">
+                    <h5><strong>КОНТАКТЫ</strong></h5>
+                    <ul class="footer__list">
+                        <li><a href="tel:+375297450222">+375 29 7450222 (МТС) </a></li>
+                        <li><a href="tel:+375447745022">+375 44 7745022 (А1)</a></li>
+                        <li><a href="mailto:support@neonet.by">support@neonet.by / техподдержка</a></li>
+                        <li><a href="viber://chat?number=+375333356343">Viber (+375 33 3356343)</a></li>
+                    </ul>
 
-                    <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+                    <ul class="footer__contacts-icons">
 
-                </ul>
+                        <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
 
+                    </ul>
+
+                </div>
             </div>
         </div>
-
     </footer>
     <script src="js/index.js"></script>
 </body>

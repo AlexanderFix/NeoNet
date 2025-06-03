@@ -34,16 +34,15 @@
     flex-direction: column;
     gap: 40px;
 }
+
 .vacancies__menu {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.vacancies__menu a{
+
+.vacancies__menu a {
     color: var(--color-blue);
     text-decoration: underline;
     text-underline-offset: 2px;
 }
-
-
-

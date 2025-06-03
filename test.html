@@ -1,76 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Градиентные переключатели</title>
-    <style>
-        .switch-group {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+  <meta charset="UTF-8">
+  <title>Слайдер с перекрытием</title>
+  <style>
+    body {
+      padding: 50px;
+      background: #fff;
+      font-family: sans-serif;
+    }
 
-        .switch-label {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            cursor: pointer;
-        }
+    .slider-wrapper {
+      position: relative;
+      height: 24px;
+    }
 
-        .switch-label input {
-            display: none;
-        }
+    .slider-track {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 8px;
+      background-color: #bbb;
+      border-radius: 4px;
+      z-index: 1;
+    }
 
-        .slider {
-            position: relative;
-            width: 65px;
-            height: 31px;
-            border-radius: 999px;
-            background: linear-gradient(to right, #ccc, #999);
-            margin-right: 10px;
-            transition: 0.3s;
-        }
+    .slider-fill {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 8px;
+      background-color: #00caff;
+      border-radius: 4px 0 0 4px;
+      z-index: 2;
+      pointer-events: none;
+    }
 
-        .slider::before {
-            content: "";
-            position: absolute;
-            width: 27px;
-            height: 27px;
-            top: 2px;
-            left: 5px;
-            border-radius: 50%;
-            background: linear-gradient(to right, #ffffff, #dddddd);
+    .slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 24px;
+      background: transparent;
+      position: relative;
+      z-index: 3;
+    }
 
-            transition: 0.3s;
-            
-        }
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #d8ff32;
+      cursor: pointer;
+      border: none;
+      margin-top: -8px;
+      z-index: 4;
+      position: relative;
+    }
 
-        input:checked+.slider {
-            background: linear-gradient(to right, #c8ff00, #00ff85);
-            
-        }
-
-        input:checked+.slider::before {
-            transform: translateX(100%);
-            background: linear-gradient(to right, #dddddd, #ffffff);
-        }
-    </style>
+    .slider::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #d8ff32;
+      cursor: pointer;
+      border: none;
+    }
+  </style>
 </head>
-
 <body>
-    <div class="switch-group">
-        <label class="switch-label">
-            <input type="checkbox" checked>
-            <span class="slider"></span>
-            Пакет семейный
-        </label>
 
-        <label class="switch-label">
-            <input type="checkbox">
-            <span class="slider"></span>
-            Пакет 18+
-        </label>
-    </div>
+  <div class="slider-wrapper">
+    <div class="slider-track"></div>
+    <div class="slider-fill" id="sliderFill"></div>
+    <input type="range" min="0" max="100" value="30" class="slider" id="rangeSlider">
+  </div>
+
+  <script>
+    const slider = document.getElementById("rangeSlider");
+    const fill = document.getElementById("sliderFill");
+
+    function updateFill() {
+       console.log(slider.id);
+        
+      const percent = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+      fill.style.width = percent + "%";
+    }
+
+    slider.addEventListener("input", updateFill);
+    updateFill();
+  </script>
+
 </body>
-
 </html>

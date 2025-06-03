@@ -13,7 +13,7 @@ h1 {
 .tariffs__content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
 
 .tariffs__calc-wrap {
@@ -55,9 +55,10 @@ h1 {
     cursor: pointer;
 }
 
-#slider-internet {
+/* #slider-internet {
+   
     background: linear-gradient(to right, #bbb 0%, #00abfe 33.33%, #bbb 33.33%);
-}
+} */
 
 #slider-rout::-webkit-slider-thumb,
 #slider-internet::-webkit-slider-thumb,
@@ -87,16 +88,29 @@ h1 {
 #select-rout,
 #select-tv,
 #select-business {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     position: absolute;
     border-radius: 50%;
     cursor: pointer;
     background-color: var(--color-green);
-    z-index: 2;
+    z-index: 5;
 }
 
+.slider-fill {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 11px;
+    background: #00caff;
+    border-radius: 4px 0 0 4px;
+    z-index: 2;
+    pointer-events: none;
+}
 
+#internet-fill {
+    width: 33.33%;
+}
 
 .slider__value {
     position: relative;
@@ -132,10 +146,10 @@ h1 {
 
 .toggle-label {
     position: relative;
-    width: 48px;
-    height: 24px;
+    width: 76px;
+    height: 30px;
     background: #ccc;
-    border-radius: 12px;
+    border-radius: 30px;
     margin-right: 10px;
     cursor: pointer;
     transition: 0.3s;
@@ -144,10 +158,10 @@ h1 {
 .toggle-label::after {
     content: '';
     position: absolute;
-    top: 3px;
+    top: 2px;
     left: 3px;
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
     background: #fff;
     border-radius: 50%;
     transition: 0.3s;
@@ -158,7 +172,7 @@ h1 {
 }
 
 .toggle input:checked+.toggle-label::after {
-    transform: translateX(24px);
+    transform: translateX(45px);
     background: #d4ff38;
 }
 
