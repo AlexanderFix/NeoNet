@@ -1,7 +1,7 @@
 .business {
     display: flex;
     flex-direction: column;
-    gap: 45px;
+    gap: 40px;
 }
 
 .business__grid {
@@ -19,6 +19,11 @@
     gap: 5px;
     font-size: clamp(.3rem, 1.3vw, 1.2rem);
     font-weight: 500;
+}
+
+.tariffs {
+    margin-top: 0;
+    gap: 40px;
 }
 
 .tariffs__business-slide {
@@ -58,7 +63,7 @@
 .tariffs__connect-time::before {
     display: block;
     content: '';
-    background-image: url(/img/icons/time_7698966.svg);
+    background-image: url(../img/icons/time_7698966.svg);
     background-size: contain;
     width: clamp(.3rem, 2.3vw, 3rem);
     height: clamp(.3rem, 2.3vw, 3rem);
@@ -107,13 +112,14 @@
 .price {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 45px;
 }
 
 .price__title {
-    font-size: clamp(.3rem, 1.6vw, 1.5rem);
+    font-size: clamp(.3rem, 1.6vw, 18px);
     color: #999999;
     font-weight: 600;
+    text-align: start;
 }
 
 .price__table {
@@ -121,7 +127,7 @@
 }
 
 .price__table td {
-    font-size: clamp(.3rem, 1.6vw, 1.2rem);
+    font-size: clamp(.3rem, 1.6vw, 16px);
     padding: 5px;
 }
 
@@ -159,6 +165,7 @@
     flex-direction: column;
     align-items: start;
     gap: 20px;
+    font-size: clamp(.5rem, 1.3vw, 16px);
 }
 
 .connect a {
@@ -166,4 +173,66 @@
     text-decoration: underline;
     text-underline-offset: 2px;
     font-weight: 600;
+}
+
+.video__table-item tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.video__table {
+    border-spacing: 0px 40px;
+}
+
+.video__table td {
+    vertical-align: top;
+    font-size: clamp(.3rem, 1.6vw, 16px);
+    padding: 10px;
+}
+
+.video__table th {
+    padding: 0 10px;
+}
+
+.archive {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.archive__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.archive__list li {
+    font-size: clamp(.3rem, 1.6vw, 16px);
+    list-style: disc;
+}
+
+.archive__list ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    gap: 20px;
+}
+
+.archive__table {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.archive__table-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.archive__table-item--widht {
+    width: 40%;
+}
+
+.connect__video {
+    margin: 15px;
 }

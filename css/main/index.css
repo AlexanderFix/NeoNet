@@ -59,7 +59,7 @@ legend {
 }
 
 span {
-    font-size: clamp(.3rem, 1.3vw, 18px);
+    font-size: clamp(.3rem, 1.3vw, 12px);
     font-weight: 400;
 }
 
@@ -83,7 +83,7 @@ button {
 .grid {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    gap: 80px 10px;
+    gap: 60px 30px;
 }
 
 .grid__wrapper {
@@ -126,6 +126,7 @@ button {
 
 .path--blue {
     color: var(--color-blue);
+    text-decoration: underline;
 }
 
 
