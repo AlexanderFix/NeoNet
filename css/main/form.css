@@ -90,6 +90,7 @@
   text-overflow: ellipsis;
   width: clamp(.3rem, 13.5vw, 80%);
   max-width: 150px;
+  font-size: clamp(.3rem, 1.3vw, 18px);
 }
 
 /* .form__select__title::before,

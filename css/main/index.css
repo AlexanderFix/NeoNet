@@ -44,8 +44,12 @@ h4 {
 }
 
 h6 {
-    font-size: 1.2rem;
+    font-size: clamp(.3rem, 1.6vw, 18px);
+    color: #999999;
+    font-weight: 600;
+    text-align: start;
 }
+
 
 a {
     font-weight: 400;
@@ -54,9 +58,10 @@ a {
 
 p,
 legend {
-    font-size: clamp(.3rem, 1.3vw, 1.2rem);
+    font-size: clamp(.3rem, 1.3vw, 16px);
     font-weight: 400;
 }
+
 
 span {
     font-size: clamp(.3rem, 1.3vw, 12px);
@@ -133,20 +138,28 @@ button {
 .banner {
     position: relative;
     width: 100%;
+    background-image: url(../../img/banner.png);
+    height: 480px;
+    background-size: cover;
 }
 
 
 
 .banner__content {
-    position: absolute;
+    /* position: absolute;
     top: 20%;
-    left: 15%;
+    left: 15%; */
     z-index: 1;
     display: flex;
     flex-direction: column;
     gap: 2vw;
 }
-
+.wrapper__banner {
+    justify-content: center;
+    height: 100%;
+    display: flex;flex-direction: column;
+    align-items: start;
+}
 .banner__content a {
     color: #fff;
     font-weight: 500;
@@ -398,6 +411,32 @@ button {
     gap: 30px;
     margin-top: 90px;
     font-size: 1.2rem;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 55px;
+}
+
+.grid__contacts {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    gap: 45px;
+}
+
+.grid__contacts-item {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+
+.contacts__item {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 footer {

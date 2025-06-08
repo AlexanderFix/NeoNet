@@ -21,7 +21,7 @@
     font-weight: 500;
 }
 
-.tariffs {
+.tariffs__business {
     margin-top: 0;
     gap: 40px;
 }
@@ -34,12 +34,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px;
+    width: 100%;
 }
 
 .tariffs__connect-summ {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 25px;
     height: 100%;
     align-items: start;
     grid-column: 2/3;
@@ -47,17 +49,20 @@
 }
 
 .tariffs__connect-summ a {
-    font-size: clamp(.3rem, 1.6vw, 1.4rem);
+    font-size: clamp(.3rem, 1.6vw, 16px);
+    font-weight: 600;
 }
 
 .tariffs__connect-summ button {
-    font-size: clamp(.3rem, 1.6vw, 1.5rem);
+    font-size: clamp(.3rem, 1.6vw, 16px);
 }
 
 .tariffs__connect-time {
     display: flex;
     align-items: center;
     gap: 15px;
+    font-size: clamp(.3rem, 1.6vw, 16px);
+    font-weight: 500;
 }
 
 .tariffs__connect-time::before {
@@ -65,19 +70,26 @@
     content: '';
     background-image: url(../img/icons/time_7698966.svg);
     background-size: contain;
-    width: clamp(.3rem, 2.3vw, 3rem);
-    height: clamp(.3rem, 2.3vw, 3rem);
+    width: clamp(.3rem, 3.3vw, 35px);
+    height: clamp(.3rem, 3.3vw, 35px);
 }
 
 .tariffs__business-connect li {
     flex-direction: column;
     align-items: start;
     width: 70%;
+    height: 100%;
 }
 
-.tariffs__connect-list p {
-    font-size: clamp(.3rem, 1.6vw, 1.4rem);
+
+.tariffs__business--bigText {
+    font-size: clamp(.3rem, 1.6vw, 30px);
     font-weight: 500;
+}
+
+.value-tariffs {
+    font-size: clamp(.3rem, 1.6vw, 14px);
+    line-height: 16px;
 }
 
 .wifi {
