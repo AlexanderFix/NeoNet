@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница | NEONET | Интернет-провайдер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main/index.css">
+    <link rel="stylesheet" href="css/business.css">
+
+</head>
+
+<body>
+
+    <header id="header">
+
+        <nav class="fixed__menu-wrap">
+            <div class="fixed__menu wrapper">
+
+                <ul class="fixed__menu-list ">
+                    <li><a href="./about.html">О компании</a>
+                    </li>
+                    <li><a href="./subscriber.html">Абонентам</a>
+                    </li>
+                    <li><a href="./business.html">Бизнесу</a>
+                    </li>
+                    <li><a href="./service.html">Сервис и помощь</a>
+                    </li>
+                    <li><a href="./contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <ul class="menu-icons">
+                    <li><a href="#"><img src="img/icons/icon_viber.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+                </ul>
+
+                <div class="fixed__menu-support">
+                    <p>Служба поддержки</p>
+                    <a href="tel:375297450222">+375 29 7450222 (МТС)</a>
+                </div>
+
+                <div class="burger">
+
+                    <div class="logo center">
+                        <img src="img/logo.png" alt="">
+                    </div>
+
+                    <div class="burger_button" id="burger_button">
+                        <div class="burger_menu" id="burger_menu"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+
+        <nav class="nav__menu wrapper">
+            <div class="logo center">
+                <img src="img/logo.png" alt="">
+            </div>
+
+            <ul class="nav__menu-list">
+                <li><a href="#"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
+                <li><a href="/tv.html"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
+                <li><a href="/video.html"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
+            </ul>
+            <div class="nav__menu-button"><img src="img/icons/icon_button_personal.png" alt="">
+                <button>Личный кабинет</button>
+            </div>
+
+        </nav>
+
+        <div id="burger_wrapper" class="burger_wrapper">
+            <div id="burger_nav" class="burger_nav">
+                <nav class="burger_nav_active">
+                    <ul class="burger_list">
+                        <li><a href="#">О компании</a>
+                            <hr>
+                        </li>
+                        <li><a href="#">Абонентам</a></li>
+                        <li><a href="#">Бизнесу</a></li>
+                        <li><a href="#">Сервис и помощь</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="path">
+            <div class="wrapper path__wrapper">
+                <span class="path--blue">Главная</span><span class="path--blue">/ Абонентам</span><span>/ Тарифы</span>
+            </div>
+        </div>
+        <div class="wrapper">
+            <section class="tariffs">
+                <h1>NEONET. Тарифы на услуги для физических лиц</h1>
+                <div class="tariffs__content">
+                    <p>Мы рады видеть вас и готовы помочь с любыми вопросами, связанными с вашим интернет-подключением.
+                        Здесь вы найдете всю необходимую информацию для комфортного использования наших услуг
+                    </p>
+                    <p>
+                        Личный кабинет: Управляйте своим тарифом, проверяйте баланс и оплачивайте счета онлайн.
+                    </p>
+                </div>
+                <form action="#" id="tariffs__calc-wrap" class="tariffs__calc-wrap">
+                    <section class="tariffs__calc">
+                        <h2>Соберите удобный тариф</h2>
+
+                        <!-- слайдер интернета -->
+                        <div class="tariffs__calc-slider">
+                            <p>Скорость интернет (Мбит/с)</p>
+                            <div class="slider-wrap">
+                                <div class="slider-fill" id="internet-fill"></div>
+                                <input type="range" id="slider-internet" value="33.33" max="100" step="33.33" />
+                                <div id="select-internet" style="left: 33.33%"></div>
+
+                            </div>
+                            <div class="slider__value">
+                                <span style="left: 1%;">Без интернета</span>
+                                <span style="left: 33.33%;">50</span>
+                                <span style="left: 66%;">100</span>
+                                <span style="left: 96%;">250</span>
+                            </div>
+                        </div>
+
+                        <!-- слайдер роутера -->
+                        <div class="tariffs__calc-slider">
+                            <p>Роутер</p>
+                            <div class="slider-wrap">
+                                <div class="slider-fill" id="rout-fill"></div>
+                                <input type="range" id="slider-rout" value="0" max="100" step="50" />
+                                <div id="select-rout"></div>
+                            </div>
+                            <div class="slider__value">
+                                <span style="left: 0%;">Без роутера</span>
+                                <span style="left: 43.2%;">Роутер 2.4 ГГц</span>
+                                <span style="left: 86%;">Роутер 5 ГГц</span>
+                            </div>
+                        </div>
+                        <div class="tariffs__calc-slider">
+                            <p>Кабельное ТВ</p>
+                            <div class="slider-wrap">
+                                <div class="slider-fill" id="tv-fill"></div>
+                                <input type="range" id="slider-tv" value="0" max="100" step="50" />
+                                <div id="select-tv"></div>
+                            </div>
+                            <div class="slider__value">
+                                <span style="left: 0%;">Без ТВ</span>
+                                <span style="left: 45.5%;">12 Каналов</span>
+                                <span style="left: 86%;">105 каналов</span>
+                            </div>
+                        </div>
+
+
+                        <!-- Выбор ТВ -->
+                        <div class="tariffs__calc-toggle">
+                            <label class="toggle">
+                                <input type="checkbox" id="tvInteractive" />
+                                <span class="toggle-label"></span> Интерактивное ТВ
+                            </label>
+
+                            <!-- Выбор приставки -->
+                            <label class="toggle">
+                                <input type="checkbox" id="tvFullHD" name="tvBox" />
+                                <span class="toggle-label"></span> ТВ-приставка FULL HD
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" id="tv4k" name="tvBox" />
+                                <span class="toggle-label"></span> ТВ-приставка 4K
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- Итоговая информация -->
+                    <div class="tariffs__connect">
+                        <p class="tariffs__connect--bigText value-tariffs">Тариф 50 Мбит/с</p>
+                        <p>Рекомендуется для нескольких пользователей, просмотра видео и онлайн игр.</p>
+                        <ul class="tariffs__connect-list">
+                            <li>
+                                <img src="img/icons/wifi-int.png" alt="" />
+                                <p class="value-tariffs">Интернет 50 Мбит/с</p>
+                                <p id="rout"></p>
+                            </li>
+                            <li>
+                                <img src="img/icons/smart-tv_tar.png" alt="" />
+                                <p id="tv">Без ТВ</p>
+                            </li>
+                            <li>
+                                <img src="img/icons/wifi_tar.png" alt="" />
+                                <p id="box">Без приставки</p>
+                            </li>
+                        </ul>
+                        <p id="final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
+                        <button class="tariffs__connect-button">Подключить</button>
+                        <a href="">Или заказать консультацию специалиста</a>
+                    </div>
+                </form>
+            </section>
+            <section class="price__internet">
+                <h2>Дополнительные услуги</h2>
+                <table class="internet__table">
+                    <thead>
+                        <tr>
+                            <th class="price__title">УСЛУГА</th>
+                            <th></th>
+                            <th class="price__title">СТОИМОСТЬ</th>
+                        </tr>
+                    </thead>
+                    <tbody class="video__table-item">
+
+                        <tr>
+                            <td class="table--widht"><strong>Настройка абонентского интернет оборудования с выездом
+                                    специалиста</strong></td>
+                            <td></td>
+                            <td class="table--short"><strong>от 150 руб</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Прокладка кабеля UTP открытым способом (за 1 метр, с учётом стоимости
+                                    материалов)</strong></td>
+                            <td></td>
+                            <td><strong>от 150 руб</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Расшивка интернет розетки (ethernet, rj-45)</strong></td>
+                            <td></td>
+                            <td><strong>от 150 руб</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Прокладка телевизионного кабеля открытым способом
+                                    (с учётом стоимости телевизионного кабеля за 1 метр)</strong></td>
+                            <td></td>
+                            <td><strong>от 150 руб</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Замена/установка делителя или штекера
+                                    (с учетом стоимости материалов, 1 шт.)</strong></td>
+                            <td></td>
+                            <td><strong>от 150 руб</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Вызов специалиста для возврата оборудования</strong></td>
+                            <td></td>
+                            <td><strong>от 150 руб</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+        </div>
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <nav class="footer__nav">
+            <div class="footer-wrap">
+                <ul class="fixed__menu-list">
+                    <li><a href="/about.html">О компании</a>
+                    </li>
+                    <li><a href="/subscriber.html">Абонентам</a>
+                    </li>
+                    <li><a href="/business.html">Бизнесу</a>
+                    </li>
+                    <li><a href="/service.html">Сервис и помощь</a>
+                    </li>
+                    <li><a href="contact.vcf">Контакты</a>
+                    </li>
+                </ul>
+                <a href="#" class="footer--font">НАВЕРХ</a>
+            </div>
+
+        </nav>
+        <div class="footer">
+            <div class="footer-wrap">
+                <div class="footer__about footer__item">
+                    <img src="img/footer_icon.png" alt="">
+                    <p> ООО «Сетевые инновации»
+                        <br> Брест, Варшавское шоссе 11
+                        <br>info@neonet.by
+                    </p>
+                </div>
+                <div class="footer__info footer__item">
+                    <h5><strong>ИНФОРМАЦИЯ</strong></h5>
+                    <ul class="footer__list">
+                        <li><a href="#">Кабинет пользователя </a></li>
+                        <li><a href="#"> Приложение для Android</a></li>
+                        <li><a href="#"> Приложение для iPhone</a></li>
+                        <li><a href="#"> Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contacts footer__item">
+                    <h5><strong>КОНТАКТЫ</strong></h5>
+                    <ul class="footer__list">
+                        <li><a href="tel:+375297450222">+375 29 7450222 (МТС) </a></li>
+                        <li><a href="tel:+375447745022">+375 44 7745022 (А1)</a></li>
+                        <li><a href="mailto:support@neonet.by">support@neonet.by / техподдержка</a></li>
+                        <li><a href="viber://chat?number=+375333356343">Viber (+375 33 3356343)</a></li>
+                    </ul>
+
+                    <ul class="footer__contacts-icons">
+
+                        <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

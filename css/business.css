@@ -248,3 +248,32 @@
 .connect__video {
     margin: 15px;
 }
+
+.price__internet{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 130px;
+}
+
+.internet__table {
+    border-spacing: 0px 15px;
+    
+}
+
+/* .internet__table td {
+    font-size: clamp(.3rem, 1.6vw, 16px);
+    padding: 20px;
+} */
+
+.internet__table td:nth-child(odd) {
+    font-size: clamp(.3rem, 1.6vw, 16px);
+    padding: 20px;
+    width: 80%;
+}
+
+.internet__table td:nth-child(3) {
+    font-size: clamp(.3rem, 1.6vw, 16px);
+    padding: 20px 20px 20px 0;
+    width: 10%;
+}

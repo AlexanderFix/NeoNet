@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const box = document.getElementById("box");
   const toggle = document.querySelectorAll("input[type=checkbox], input[type=radio]");
   const tvBox = document.getElementsByName("tvBox");
+  const cookie = document.getElementById("cookie");
+  const cookieReject = document.getElementById("cookie-reject");
+  const cookieAccept = document.getElementById("cookie-accept");
+
+
 
   let basePrice = 0;
   let cableTVText = "Без ТВ";  // Текущий текст для ТВ-слайдера
@@ -50,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция fullLength для корректировки отображения слайдера (например, при выборе тарифа 250 мб/с)
   function fullLength(slide, select, fill) {
-    select.style.left = (slide.value - 3) + '%';
+    select.style.left = (slide.value - 2) + '%';
     fill.style.width = `${slide.value}%`
     // slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
   }
@@ -168,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fullLength(slide, select, fill);
         if (sliderRout.value === "50") {
           // Переключаем роутер в режим 5 ГГц
-          selectRout.style.left = (slide.value - 3) + '%';
+          selectRout.style.left = (slide.value - 2) + '%';
           sliderRout.value = "100";
           fillRout.style.width = '100%'
         }
@@ -189,11 +194,10 @@ document.addEventListener("DOMContentLoaded", function () {
         tvText = "Базовый пакет (12 каналов)";
       } else if (slide.value === "100") {
         tvText = "Расширенный пакет (105 каналов)";
+        fullLength(slide, select, fill);
       }
       cableTVText = tvText;
       const val = parseFloat(slide.value);
-      select.style.left = `calc(${val}% - ${select.offsetWidth / 2}px)`;
-      slide.style.background = `linear-gradient(to right, #00abfe ${val}%, #bbbbbb ${val}%)`;
       updateTVDisplay();
     }
 
@@ -237,6 +241,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateRouterDisplay();
   updatePrice();
+  
+  
+  
+//Cookie start
+
+let timer = setTimeout(() => {
+  cookie.style.right = '5%';
+} ,2000)
+
+cookieAccept.addEventListener('click', (e)=>{
+  cookie.style.display = 'none'
+  e.preventDefault()
+})
+cookieReject.addEventListener('click', (e)=>{
+  cookie.style.display = 'none'
+  e.preventDefault()
+})
+//Cookie end
+
 });
 
 
@@ -312,3 +335,5 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
 
 
 // Menu select end
+
+
