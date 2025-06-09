@@ -155,12 +155,15 @@ button {
     flex-direction: column;
     gap: 2vw;
 }
+
 .wrapper__banner {
     justify-content: center;
     height: 100%;
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: start;
 }
+
 .banner__content a {
     color: #fff;
     font-weight: 500;
@@ -395,9 +398,6 @@ button {
     padding: 20px 20px;
 }
 
-.news__operator--extended {
-    margin: 0;
-}
 
 .button__news {
     background: none;
@@ -455,7 +455,7 @@ footer {
 
 .footer__nav a {
     color: #000;
-    font-size: clamp(.5rem, 1.3vw, 16px);
+   font-size: clamp(.5rem, 1.3vw, 16px);
 }
 
 
@@ -494,13 +494,21 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+.footer__item h5{
+    font-size: clamp(.5rem, 1.3vw, 14px);
 
+}
+.footer__about p{
+    font-size: clamp(.5rem, 1.3vw, 14px);
+    
+}
 footer img {
     max-width: 500px;
 }
 
 footer a {
     color: white;
+    font-size: clamp(.5rem, 1.3vw, 14px);
 }
 
 footer li:hover a {
@@ -570,15 +578,17 @@ footer a:visited {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
+
 .cookie__button-wrap {
     display: flex;
     gap: 25px;
 }
-.cookie__button{
+
+.cookie__button {
     width: 200px;
 }
+
 .cookie__reject {
     background-color: #cccccc;
     color: #6d6d6d;
 }
-

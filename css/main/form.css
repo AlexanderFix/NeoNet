@@ -25,7 +25,7 @@
   align-items: end;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
 .form__item {
@@ -37,7 +37,7 @@
   align-items: center;
   height: clamp(.3rem, 4vw, 50px);
   /* height: 50px; */
-  max-width: 180px;
+  max-width: 200px;
 }
 
 .form__item-input {
@@ -123,7 +123,8 @@
 
 .form__select__content {
   position: absolute;
-  top: clamp(.3rem, 2.7vw, 34px);
+  top: clamp(.3rem, 3.7vw, 48px);
+  /* top: 2.7vw; */
   left: -1px;
   display: none;
   flex-direction: column;

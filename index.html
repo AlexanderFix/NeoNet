@@ -63,12 +63,12 @@
         </nav>
 
         <nav class="nav__menu wrapper">
-            <div class="logo center">
+            <a href="/" class="logo center">
                 <img src="img/logo.png" alt="">
-            </div>
+            </a>
 
             <ul class="nav__menu-list">
-                <li><a href="#"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
+                <li><a href="/internet.html"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
                 <li><a href="/tv.html"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
                 <li><a href="/video.html"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
             </ul>
@@ -292,6 +292,10 @@
                                 <img src="img/icons/wifi_tar.png" alt="" />
                                 <p id="box">Без приставки</p>
                             </li>
+                            <li>
+                                <img src="img/icons/video_10402668.png" alt="" />
+                                <p id="movie">Онлайн кинотеатр</p>
+                            </li>
                         </ul>
                         <p id="final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
                         <button class="tariffs__connect-button">Подключить</button>
@@ -300,30 +304,35 @@
                 </form>
             </section>
 
-            <section class="form-wrap  boxshadow">
-                <h2>Проверьте адрес на возможность подключения</h2>
+            <section class="form-wrap boxshadow">
+                <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="#" class="form">
                     <div class="form__item-wrap">
 
-                        <fieldset class="form__item">
-                            <legend>Город</legend>
-                            <input class="form__item-input" placeholder="Брест" type="text">
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Улица</legend>
-                            <input class="form__item-input" type="text">
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Дом</legend>
-                            <input class="form__item-input form__item-input--widht" type="text">
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Корпус</legend>
-                            <input class="form__item-input form__item-input--widht" type="text">
-                        </fieldset>
-                        <button class="button button--border">Подключить</button>
-                    </div>
 
+                        <fieldset class="form__item-wrapper">
+                            <p>Город</p>
+                            <input name="home" class="form__item" type="text" placeholder="Брест">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Улица</p>
+                            <input name="appart" class="form__item " type="text">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper ">
+                            <p>Дом</p>
+                            <input name="appart" class="form__item form__item-input--widht" type="text">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Корпус</p>
+                            <input name="appart" class="form__item  form__item-input--widht" type="text">
+                        </fieldset>
+
+                        <button class="button button--border" type="submit">Подключить</button>
+                    </div>
+                    
                 </form>
             </section>
         </div>
@@ -447,43 +456,81 @@
             <section class="form-wrap  boxshadow">
                 <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="#" class="form">
-
                     <div class="form__item-wrap">
-                        <fieldset class="form__item">
-                            <div class="form__select" data-state="">
-                                <div class="form__select__title" data-default="Option 0"></div>
-                                <div class="form__select__content">
-                                    <input id="singleSelect100" class="form__select__input" type="radio"
-                                        name="singleSelect">
-                                    <label for="singleSelect100" class="form__select__label">Махновича</label>
-                                    <input id="singleSelect110" class="form__select__input" type="radio"
-                                        name="singleSelect">
-                                    <label for="singleSelect110" class="form__select__label">Рябцева</label>
-                                    <input id="singleSelect120" class="form__select__input" type="radio"
-                                        name="singleSelect">
-                                    <label for="singleSelect120" class="form__select__label">Суворова</label>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Дом</legend>
-                            <input class="form__item-input form__item-input--widht" type="text">
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Кв-ра</legend>
-                            <input class="form__item-input form__item-input--widht" type="text">
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Имя</legend>
-                            <input class="form__item-input " type="text">
-                        </fieldset>
-                        <fieldset class="form__item">
-                            <legend>Телефон</legend>
-                            <input class="form__item-input " type="tel" placeholder="+375(__)___-__-__">
-                        </fieldset>
-                        <button class="button button--border">Подключить</button>
-                    </div>
 
+                        <!-- Выбор улицы -->
+                        <fieldset class="form__item-wrapper">
+                            <p>Улица</p>
+                            <fieldset class="form__select form__item">
+
+
+                                <!--  -->
+                                <!-- <select class="street" name="" id="">
+                                <option value="1">Махновича</option>
+                                <option value="2">Рябцева</option>
+                                <option value="3">Суворова</option>
+                            </select> -->
+
+                                <div class="form__select__title" data-default="Option 0">
+                                    <span class="form__select__title-span">Героев обороны</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#1f1f1f">
+                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                    </svg>
+                                </div>
+                                <div class="form__select__content">
+                                    <input id="singleSelect001" class="form__select__input" type="radio"
+                                        name="singleSelect">
+                                    <label for="singleSelect001" class="form__select__label">Махновича</label>
+                                    <input id="singleSelect101" class="form__select__input" type="radio"
+                                        name="singleSelect">
+                                    <label for="singleSelect101" class="form__select__label">Рябцева</label>
+                                    <input id="singleSelect201" class="form__select__input" type="radio"
+                                        name="singleSelect">
+                                    <label for="singleSelect201" class="form__select__label">Суворова</label>
+                                    <input id="singleSelect301" class="form__select__input" type="radio"
+                                        name="singleSelect">
+                                    <label for="singleSelect301" class="form__select__label">Героев обороны</label>
+                                </div>
+
+                            </fieldset>
+                        </fieldset>
+
+                        <!-- Номер дома -->
+                        <fieldset class="form__item-wrapper">
+                            <p>Дом</p>
+                            <input name="home" class="form__item form__item-input--widht" type="text">
+                        </fieldset>
+
+                        <!-- Квартира -->
+                        <fieldset class="form__item-wrapper">
+                            <p>Кв-ра</p>
+                            <input name="appart" class="form__item form__item-input--widht" type="text">
+                        </fieldset>
+
+                        <!-- Имя -->
+                        <fieldset class="form__item-wrapper">
+                            <p>Имя</p>
+                            <input class="form__item" type="text" id="name2" name="name" required minlength="2"
+                                maxlength="50" pattern="^[А-Яа-яЁё\s]+$" placeholder="Введите ваше имя">
+                        </fieldset>
+
+                        <!-- Телефон -->
+                        <fieldset class="form__item-wrapper">
+                            <p>Телефон</p>
+                            <input class="form__item" type="tel" id="phone2" name="phone" required
+                                value="+375(__)___-__-__" onfocus="setCursorPosition(this)"
+                                pattern="\+375\(\d{2}\)\d{3}-\d{2}-\d{2}">
+                        </fieldset>
+
+                        <button class="button button--border" type="submit">Подключить</button>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" name="check-policy" id="check-policy2">
+                        <label for="check-policy">Я ознакомлен(а) с <a href="#">Политикой</a> и согласен(а) на обработку
+                            персональных данных.</label>
+
+                    </div>
                 </form>
             </section>
         </div>
