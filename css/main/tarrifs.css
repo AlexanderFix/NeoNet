@@ -48,12 +48,15 @@
     height: 5px;
     border-radius: 2px;
     cursor: pointer;
+    -webkit-appearance: none;
 }
+
 
 /* #slider-internet {
    
     background: linear-gradient(to right, #bbb 0%, #00abfe 33.33%, #bbb 33.33%);
 } */
+
 
 #slider-rout::-webkit-slider-thumb,
 #slider-internet::-webkit-slider-thumb,
