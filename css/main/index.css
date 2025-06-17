@@ -1063,6 +1063,7 @@ footer a:visited {
     gap: 30px;
     padding: 30px 35px;
     transition: .3s;
+    z-index: 900;
 }
 
 .cookie__title {
