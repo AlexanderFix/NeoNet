@@ -1051,7 +1051,8 @@ footer a:visited {
     position: fixed;
     right: -100%;
     bottom: 3%;
-    width: 590px;
+    max-width: 590px;
+    width: 90%;
     /* height: 290px; */
     background-color: #efefef;
     border: #00abfe 2px solid;
@@ -1081,6 +1082,7 @@ footer a:visited {
 
 .cookie__button {
     width: 200px;
+    
 }
 
 .cookie__reject {
@@ -1271,6 +1273,16 @@ footer a:visited {
         display: none;
     }
 
+    .cookie {
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .cookie__button {
+    width: 120px;
+    
+}
+
 }
 
 @media (max-width: 400px) {
@@ -1287,6 +1299,13 @@ footer a:visited {
 
     .footer__about {
         gap: 15px;
+    }.cookie {
+        padding: 5px 10px;
     }
+        .cookie__button {
+    padding: 10px;
+        }.cookie__title {
+    font-size: 20px;
+}
 
 }
