@@ -55,8 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция fullLength для корректировки отображения слайдера (например, при выборе тарифа 250 мб/с)
   function fullLength(slide, select, fill) {
-    select.style.left = (slide.value - 2) + '%';
-    fill.style.width = `${slide.value}%`
+    if (window.innerWidth < 768) {
+      select.style.left = (slide.value - 7) + '%';
+      fill.style.width = `${slide.value - 6}%`
+    } else {
+      select.style.left = (slide.value - 2) + '%';
+      fill.style.width = `${slide.value}%`
+    }
+
     // slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
   }
 
@@ -173,9 +179,15 @@ document.addEventListener("DOMContentLoaded", function () {
         fullLength(slide, select, fill);
         if (sliderRout.value === "50") {
           // Переключаем роутер в режим 5 ГГц
-          selectRout.style.left = (slide.value - 2) + '%';
-          sliderRout.value = "100";
-          fillRout.style.width = '100%'
+          if (window.innerWidth < 768) {
+            selectRout.style.left = (slide.value - 7) + '%';
+            sliderRout.value = "100";
+            fillRout.style.width = (slide.value - 7) + '%';
+          } else {
+            selectRout.style.left = (slide.value - 2) + '%';
+            sliderRout.value = "100";
+            fillRout.style.width = (slide.value - 2) + '%';
+          }
         }
       }
       textInet[0].textContent = slide.value === "0" ? "Без интернета" : `Тариф ${speed}`;
@@ -241,24 +253,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateRouterDisplay();
   updatePrice();
-  
-  
-  
-//Cookie start
 
-let timer = setTimeout(() => {
-  cookie.style.right = '5%';
-} ,2000)
 
-cookieAccept.addEventListener('click', (e)=>{
-  cookie.style.display = 'none'
-  e.preventDefault()
-})
-cookieReject.addEventListener('click', (e)=>{
-  cookie.style.display = 'none'
-  e.preventDefault()
-})
-//Cookie end
+
+  //Cookie start
+
+  let timer = setTimeout(() => {
+    cookie.style.right = '5%';
+  }, 2000)
+
+  cookieAccept.addEventListener('click', (e) => {
+    cookie.style.display = 'none'
+    e.preventDefault()
+  })
+  cookieReject.addEventListener('click', (e) => {
+    cookie.style.display = 'none'
+    e.preventDefault()
+  })
+  //Cookie end
 
 });
 
@@ -267,28 +279,16 @@ cookieReject.addEventListener('click', (e)=>{
 
 // Burger start
 
-let burgerList = document.querySelectorAll('.burger_list')
+let burgerButton = document.querySelector('.burger__button')
+let burgerMenu = document.querySelector('.burger__menu')
 
-function menuBurger() {
-  burger_wrapper.classList.toggle('active_burger')
-  burger_nav.classList.toggle('active_burger')
+
+burgerButton.addEventListener('click', () => {
+
+
+  burgerMenu.classList.toggle('open')
   document.body.classList.toggle('lock')
-  burger_menu.classList.toggle('burger_active')
-  header.classList.toggle('header_active')
-}
-
-burgerList.forEach(item => {
-  item.addEventListener('click', () => {
-    burger_wrapper.classList.remove('active_burger')
-    burger_nav.classList.remove('active_burger')
-    document.body.classList.remove('lock')
-    burger_menu.classList.remove('burger_active')
-    header.classList.remove('header_active')
-  })
-});
-
-burger_button.addEventListener('click', menuBurger)
-
+})
 //Burger end
 
 // Menu select start

@@ -22,8 +22,8 @@
 
         <nav class="fixed__menu-wrap">
             <div class="fixed__menu wrapper">
-
-                <ul class="fixed__menu-list ">
+                <div class="burger__button"><span></span><span></span><span></span></div>
+                <ul class="fixed__menu-list">
                     <li><a href="./about.html">О компании</a>
                     </li>
                     <li><a href="./subscriber.html">Абонентам</a>
@@ -35,6 +35,29 @@
                     <li><a href="./contacts.html">Контакты</a>
                     </li>
                 </ul>
+                <div class="burger__menu">
+                    <ul class="burger__menu-list">
+                        <li><a href="./about.html">О компании</a>
+                        </li>
+                        <li><a href="./subscriber.html">Абонентам</a>
+                        </li>
+                        <li><a href="./business.html">Бизнесу</a>
+                        </li>
+                        <li class="service__burger"><a href="./service.html">Сервис и помощь <img
+                                    src="img/icons/arrow_16519535.png" alt=""></a>
+                            <ul>
+                                <li><a href="">Настройки интернета</a></li>
+                                <li><a href="">Настройки телевидения</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./contacts.html">Контакты</a>
+                        </li>
+                        <li><a class="burger__menu-button" href=""><img src="img/icons/email.png" alt="">
+                                <p>Отправить заявку на подключение</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <ul class="menu-icons">
                     <li><a href="#"><img src="img/icons/icon_viber.png" alt=""></a></li>
@@ -46,74 +69,59 @@
                     <p>Служба поддержки</p>
                     <a href="tel:375297450222">+375 29 7450222 (МТС)</a>
                 </div>
+                <a class="nav__menu-button burger"><img src="img/icons/icon_button_personal.png" alt="">
+                    <p>Личный кабинет</p>
+                </a>
 
-                <div class="burger">
-
-                    <div class="logo center">
-                        <img src="img/logo.png" alt="">
-                    </div>
-
-                    <div class="burger_button" id="burger_button">
-                        <div class="burger_menu" id="burger_menu"></div>
-                    </div>
-                </div>
             </div>
 
 
         </nav>
+        <div class="wrapper">
+            <nav class="nav__menu">
+                <a href="/" class="logo center">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <a href="/" class="logo__mobile center">
+                    <img src="img/logo_mobile.png" alt="">
+                </a>
 
-        <nav class="nav__menu wrapper">
-            <a href="/" class="logo center">
-                <img src="img/logo.png" alt="">
-            </a>
 
-            <ul class="nav__menu-list">
-                <li><a href="/internet.html"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
-                <li><a href="/tv.html"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
-                <li><a href="/video.html"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
-            </ul>
-            <div class="nav__menu-button"><img src="img/icons/icon_button_personal.png" alt="">
-                <button>Личный кабинет</button>
-            </div>
+                <ul class="nav__menu-list">
+                    <li><a href="/internet.html"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
+                    <li><a href="/tv.html"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
+                    <li><a href="/video.html"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
+                </ul>
+                <a class="nav__menu-button"><img src="img/icons/icon_button_personal.png" alt="">
+                    <p>Личный кабинет</p>
+                </a>
 
-        </nav>
-
-        <div id="burger_wrapper" class="burger_wrapper">
-            <div id="burger_nav" class="burger_nav">
-                <nav class="burger_nav_active">
-                    <ul class="burger_list">
-                        <li><a href="#">О компании</a>
-                            <hr>
-                        </li>
-                        <li><a href="#">Абонентам</a></li>
-                        <li><a href="#">Бизнесу</a></li>
-                        <li><a href="#">Сервис и помощь</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
+            </nav>
         </div>
+
 
     </header>
     <main>
         <div class="banner">
-            <!-- <img class="banner__background" src="img/banner.png" alt=""> -->
             <div class="wrapper wrapper__banner">
-                <div class="banner__content">
-                    <div class="banner__content-text">
-                        <p>Стабильный</p>
-                        <span class="banner--big-text">ИНТЕРНЕТ</span>
-                        <p>до 250 <img class="fire" src="img/hotjar_6424088.png" alt=""> Мбит/c</p>
+                <div class="banner__content-wrap">
+                    <div class="banner__content">
+                        <div class="banner__content-text">
+                            <p>Стабильный</p>
+                            <span class="banner--big-text">ИНТЕРНЕТ</span>
+                            <p>до 250 <img class="fire" src="img/hotjar_6424088.png" alt=""> Мбит/c</p>
+                        </div>
+                        <a class="banner__content-button">Подробнее</a>
                     </div>
-                    <a class="banner__content-button">Подробнее</a>
-
+                    <img class="banner__img" src="img/ban.png" alt="">
                 </div>
+
             </div>
 
 
         </div>
-        <div class="wrapper">
-            <section class="form-wrap boxshadow">
+        <div class="wrapper flex__wrapper">
+            <section class="form-wrap boxshadow form-wrap--950">
                 <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="#" class="form">
                     <div class="form__item-wrap">
@@ -193,6 +201,9 @@
                     </div>
                 </form>
             </section>
+            <a class="burger__menu-button form__button" href=""><img src="img/icons/email_8182863.png" alt="">
+                <p>Отправить заявку на подключение</p>
+            </a>
 
 
             <section class="tariffs">
@@ -218,11 +229,11 @@
                                 <div id="select-internet" style="left: 33.33%"></div>
 
                             </div>
-                            <div class="slider__value">
-                                <span style="left: 1%;">Без интернета</span>
-                                <span style="left: 33.33%;">50</span>
-                                <span style="left: 66%;">100</span>
-                                <span style="left: 96%;">250</span>
+                            <div class="slider__value slider__value-inet">
+                                <span>Без интернета</span>
+                                <span>50</span>
+                                <span>100</span>
+                                <span>250</span>
                             </div>
                         </div>
 
@@ -234,10 +245,10 @@
                                 <input type="range" id="slider-rout" value="0" max="100" step="50" />
                                 <div id="select-rout"></div>
                             </div>
-                            <div class="slider__value">
-                                <span style="left: 0%;">Без роутера</span>
-                                <span style="left: 43.2%;">Роутер 2.4 ГГц</span>
-                                <span style="left: 86%;">Роутер 5 ГГц</span>
+                            <div class="slider__value slider__value-rout">
+                                <span>Без роутера</span>
+                                <span>Роутер 2.4 ГГц</span>
+                                <span>Роутер 5 ГГц</span>
                             </div>
                         </div>
                         <div class="tariffs__calc-slider">
@@ -247,10 +258,10 @@
                                 <input type="range" id="slider-tv" value="0" max="100" step="50" />
                                 <div id="select-tv"></div>
                             </div>
-                            <div class="slider__value">
-                                <span style="left: 0%;">Без ТВ</span>
-                                <span style="left: 45.5%;">12 Каналов</span>
-                                <span style="left: 86%;">105 каналов</span>
+                            <div class="slider__value slider__value-tv">
+                                <span>Без ТВ</span>
+                                <span>12 Каналов</span>
+                                <span>105 каналов</span>
                             </div>
                         </div>
 
@@ -277,7 +288,8 @@
                     <!-- Итоговая информация -->
                     <div class="tariffs__connect">
                         <p class="tariffs__connect--bigText value-tariffs">Тариф 50 Мбит/с</p>
-                        <p>Рекомендуется для нескольких пользователей, просмотра видео и онлайн игр.</p>
+                        <p class="tariffs__connect--mobile">Рекомендуется для нескольких пользователей, просмотра видео
+                            и онлайн игр.</p>
                         <ul class="tariffs__connect-list">
                             <li>
                                 <img src="img/icons/wifi-int.png" alt="" />
@@ -332,19 +344,21 @@
 
                         <button class="button button--border" type="submit">Подключить</button>
                     </div>
-                    
+
                 </form>
             </section>
+            <a class="check__adress"><img src="img/icons/pin_5216349.png" alt="">
+                Проверить адрес на возможность подключения</a>
         </div>
 
 
 
-        <div class="map">
+        <!-- <div class="map">
 
             <script type="text/javascript" charset="utf-8" async
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
-        </div>
-        <div class="wrapper">
+        </div> -->
+        <div class="wrapper flex__wrapper">
             <section class="news__operator ">
                 <h3>Новости оператора</h3>
                 <div class="news__operator-title">
@@ -453,7 +467,7 @@
                     Присоединяйтесь к NEONET и откройте для себя новые возможности в мире цифровых технологий!</p>
 
             </section>
-            <section class="form-wrap  boxshadow">
+            <section class="form-wrap  boxshadow form-wrap--950">
                 <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="#" class="form">
                     <div class="form__item-wrap">
@@ -533,6 +547,9 @@
                     </div>
                 </form>
             </section>
+            <a class="burger__menu-button form__button" href=""><img src="img/icons/email_8182863.png" alt="">
+                <p>Отправить заявку на подключение</p>
+            </a>
         </div>
 
 
@@ -561,11 +578,16 @@
         <div class="footer">
             <div class="footer-wrap">
                 <div class="footer__about footer__item">
-                    <img src="img/footer_icon.png" alt="">
+                    <a class="footer__logo" href=""><img src="img/footer_icon.png" alt=""></a>
+
+                    <a href="/" class="icon__mobile center">
+                        <img src="img/icons/footer_logo.png" alt="">
+                    </a>
                     <p> ООО «Сетевые инновации»
                         <br> Брест, Варшавское шоссе 11
                         <br>info@neonet.by
                     </p>
+                    <a class="icon__mobile" href="#"><img src="img/icons/icon_tg.png" alt=""></a>
                 </div>
                 <div class="footer__info footer__item">
                     <h5><strong>ИНФОРМАЦИЯ</strong></h5>
