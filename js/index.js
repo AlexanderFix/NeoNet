@@ -55,12 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция fullLength для корректировки отображения слайдера (например, при выборе тарифа 250 мб/с)
   function fullLength(slide, select, fill) {
-    if (window.innerWidth < 768) {
-      select.style.left = (slide.value - 7) + '%';
-      fill.style.width = `${slide.value - 6}%`
-    } else {
-      select.style.left = (slide.value - 2) + '%';
+
+    if (slide.value > 95) {
       fill.style.width = `${slide.value}%`
+      select.style.left = (slide.value - 3) + '%';
+    } else {
+      select.style.left = (slide.value - 3) + '%';
+      fill.style.width = `${Number(slide.value) + 2}%`
+
     }
 
     // slide.style.background = `linear-gradient(to right, #00abfe ${slide.value - 2}%, #bbbbbb ${slide.value - 2}%)`;
@@ -163,7 +165,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // } else {
     //   // Для интернет-слайдера – исходное позиционирование
     select.style.left = slide.value + "%";
-    fill.style.width = `${slide.value}%`
+    fill.style.width = `${Number(slide.value) + 2}%`
+
+
     // }
 
     if (slide.id === "slider-internet") {
@@ -176,18 +180,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Если выбран тариф 250 мб/с, то если на роутере сейчас стоит 2.4 ГГц, переводим его в 5 ГГц
       if (speed === "250 мб/с") {
+        console.log(slide.value);
+
         fullLength(slide, select, fill);
         if (sliderRout.value === "50") {
           // Переключаем роутер в режим 5 ГГц
-          if (window.innerWidth < 768) {
-            selectRout.style.left = (slide.value - 7) + '%';
-            sliderRout.value = "100";
-            fillRout.style.width = (slide.value - 7) + '%';
-          } else {
-            selectRout.style.left = (slide.value - 2) + '%';
-            sliderRout.value = "100";
-            fillRout.style.width = (slide.value - 2) + '%';
-          }
+          selectRout.style.left = (slide.value - 3) + '%';
+          sliderRout.value = "100";
+          fillRout.style.width = (slide.value) + '%';
+
         }
       }
       textInet[0].textContent = slide.value === "0" ? "Без интернета" : `Тариф ${speed}`;
