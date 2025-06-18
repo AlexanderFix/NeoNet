@@ -79,6 +79,7 @@
     appearance: none;
     height: 20px;
     width: 20px;
+    opacity: 0;
     z-index: 3;
     cursor: pointer;
     position: relative;
@@ -410,9 +411,6 @@
         display: none;
     }
 
-    .slider-wrap {
-        width: 95%;
-    }
 
     .slider__value-inet span:nth-child(2) {
         left: 34.33%;
@@ -437,10 +435,6 @@
     }
 
 
-    .slider__value-tv span:nth-child(2) {
-        left: 45.5%;
-    }
-
     .slider__value-tv span:nth-child(3) {
         left: 86%;
     }
@@ -457,14 +451,6 @@
 
     .tariffs__connect img {
         width: 25px;
-    }
-
-    #slider-rout,
-    #slider-internet,
-    #slider-tv,
-    #slider-business {
-        width: 97%;
-
     }
 
 }
@@ -486,7 +472,7 @@
 
 @media (max-width: 400px) {
     .slider__value-inet span:nth-child(1) {
-        width: 50px;
+        width: 100px;
     }
 
     .slider__value-rout span:nth-child(2) {
@@ -500,5 +486,8 @@
     .slider__value-tv span:nth-child(3) {
         left: 75%;
 
+    }
+    .slider__value-tv span:nth-child(2) {
+        left: 43.5%;
     }
 }
