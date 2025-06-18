@@ -30,10 +30,7 @@
     display: flex;
     padding: 0 5px;
     align-items: center;
-    cursor: pointer;
-    border-radius: 2px;
-    background: #bbbbbb;
-    height: 5px;
+
 }
 
 .tariffs__calc-slider {
@@ -48,12 +45,11 @@
 #slider-business {
     width: 100%;
     appearance: none;
-    background: #bbbbbb;
-    height: 0;
-    border-radius: 2px;
+    height: 5px;
     cursor: pointer;
-    -webkit-appearance: none;
-    /* overflow: hidden; */
+    border-radius: 2px;
+    background: #bbbbbb;
+    height: 5px;
 }
 
 
@@ -71,6 +67,7 @@
     height: 20px;
     width: 20px;
     z-index: 3;
+    opacity: 0;
     cursor: pointer;
     position: relative;
 }
