@@ -11,7 +11,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main/index.css">
-
 </head>
 
 <body>
@@ -60,27 +59,21 @@
 
         </nav>
 
-        <div class="wrapper">
-            <nav class="nav__menu">
-                <a href="/" class="logo center">
-                    <img src="img/logo.png" alt="">
-                </a>
-                <a href="/" class="logo__mobile center">
-                    <img src="img/logo_mobile.png" alt="">
-                </a>
+        <nav class="nav__menu wrapper">
+            <a href="/" class="logo center">
+                <img src="img/logo.png" alt="">
+            </a>
 
+            <ul class="nav__menu-list">
+                <li><a href="/internet.html"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
+                <li><a href="/tv.html"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
+                <li><a href="/video.html"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
+            </ul>
+            <div class="nav__menu-button"><img src="img/icons/icon_button_personal.png" alt="">
+                <button>Личный кабинет</button>
+            </div>
 
-                <ul class="nav__menu-list">
-                    <li><a href="/internet.html"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
-                    <li><a href="/tv.html"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
-                    <li><a href="/video.html"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
-                </ul>
-                <a class="nav__menu-button"><img src="img/icons/icon_button_personal.png" alt="">
-                    <p>Личный кабинет</p>
-                </a>
-
-            </nav>
-        </div>
+        </nav>
 
         <div id="burger_wrapper" class="burger_wrapper">
             <div id="burger_nav" class="burger_nav">
@@ -102,60 +95,61 @@
     <main>
         <div class="path">
             <div class="wrapper path__wrapper">
-                <span class="path--blue">Главная</span><span>/ Абонентам</span>
+                <span class="path--blue">Главная</span><span>/ Сервис</span>
             </div>
-
         </div>
-        <div class="wrapper flex__wrapper">
+        <div class="wrapper">
             <section class="grid__wrapper">
-                <h1>NEONET. Абонентам</h1>
-
+                <h1>Сервис и помощь</h1>
                 <div class="grid__service">
-                    
-                        <a class="tv tv--inter">
-                            <img src="img/icons/megaphone-svgrepo-com (1).svg" alt="">
-                            <h2>НОВОСТИ КОМПАНИИ</h2>
-                        </a>
-                        <a class="tv tv--cable">
-                            <img src="img/icons/birth_of_a_setting_with_a_spanner_and_a_screwdriver_svgrepo_com.svg" alt="">
-                            <h2>РАБОТЫ НА СЕТЯХ</h2>
-                        </a>
+                    <a href="#" class="grid__item">
+                        <section class="grid__item-title">
+                            <h2>ИНТЕРНЕТ</h2>
+                            <img class="grid__item-img" src="img/icons/connection_service.png" alt="">
+                        </section>
+                        <p>Вопросы связанные с настройкой и подключением к сети интернет.
+                            Наиболее распространенные решения и проблемы.</p>
+                    </a>
+                    <a href="#" class="grid__item">
+                        <section class="grid__item-title">
+                            <h2>КАБЕЛЬНОЕ ТВ</h2>
+                            <img class="grid__item-img grid__item--size" src="img/icons/online_service.png" alt="">
 
-                    
-                        <a class="tv tv--inter">
-                            <img src="img/icons/document-svgrepo-com.svg" alt="">
-                            <h2>ДОКУМЕНТЫ ДЛЯ ПОДКЛЮЧЕНИЯ</h2>
-                        </a>
-                        <a class="tv tv--cable">
-                            <img src="img/icons/coin-svgrepo-com.svg" alt="">
-                            <h2>ОПЛАТА</h2>
-                        </a>
-                        <a class="tv tv--inter">
-                            <img src="img/icons/map-location-pin-svgrepo-com.svg" alt="">
-                            <h2>ЗОНА ПОКРЫТИЯ</h2>
-                        </a>
-                        <a class="tv tv--cable">
-                            <img src="img/icons/app-svgrepo-com.svg" alt="">
-                            <h2>ПРИЛОЖЕНИЕ</h2>
-                        </a>
+                        </section>
+                        <p>Вопросы связанные с настройкой и подключением к сети интернет.
+                            Наиболее распространенные решения и проблемы.</p>
+                    </a>
+                    <a href="#" class="grid__item">
+                        <section class="grid__item-title">
+                            <h2>ИНТЕРАКТИВНОЕ ТВ</h2>
+                            <img class="grid__item-img grid__item--size" src="img/icons/smart-tv_service.png" alt="">
+                        </section>
+                        <p>Вопросы связанные с настройкой и подключением к сети интернет.
+                            Наиболее распространенные решения и проблемы.</p>
 
-                    
+                    </a>
+                    <a href="#" class="grid__item">
+                        <section class="grid__item-title">
+                            <h2>ВИДЕОНАБЛЮДЕНИЕ</h2>
+                            <img class="grid__item-img" src="img/icons/cctv_service.png" alt="">
+                        </section>
+                        <p>Вопросы связанные с настройкой и подключением к сети интернет.
+                            Наиболее распространенные решения и проблемы.</p>
+                    </a>
                 </div>
-
-
             </section>
 
 
-           
-
 
         </div>
 
 
 
+        </div>
+
     </main>
 
-    <footer>
+   <footer>
         <nav class="footer__nav">
             <div class="footer-wrap">
                 <ul class="fixed__menu-list">
@@ -168,7 +162,7 @@
                     <li><a href="/service.html">Сервис и помощь</a>
                     </li>
                     <li><a href="/contacts.html">Контакты</a>
-                   </li>
+                    </li>
                 </ul>
                 <a href="#" class="footer--font">НАВЕРХ</a>
             </div>
@@ -214,7 +208,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/form.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

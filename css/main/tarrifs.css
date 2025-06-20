@@ -3,12 +3,14 @@
     display: flex;
     flex-direction: column;
     gap: 60px;
+    text-align: center;
 }
 
 .tariffs__content {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    text-align: center;
 }
 
 .tariffs__calc-wrap {
@@ -22,6 +24,8 @@
     flex-direction: column;
     gap: 40px;
     width: 75%;
+    text-align: start;
+    justify-content: space-between;
 }
 
 .slider-wrap {
@@ -198,6 +202,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-align: start;
 }
 
 .tariffs__connect-list {
@@ -369,9 +374,6 @@
         gap: 30px;
     }
 
-    .tariffs__content p:nth-child(2) {
-        display: none;
-    }
 
     .tariffs__calc-wrap {
         flex-direction: column;

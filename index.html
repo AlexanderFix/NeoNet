@@ -9,9 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main/index.css">
 </head>
@@ -67,7 +64,10 @@
 
                 <div class="fixed__menu-support">
                     <p>Служба поддержки</p>
-                    <a href="tel:375297450222">+375 29 7450222 (МТС)</a>
+                    <div class="wrap__tel"><a href="tel:375297450222">+375 29 7450222 (МТС)</a>
+                        <hr>
+                    </div>
+
                 </div>
                 <a class="nav__menu-button burger"><img src="img/icons/icon_button_personal.png" alt="">
                     <p>Личный кабинет</p>
@@ -121,7 +121,274 @@
 
         </div>
         <div class="wrapper flex__wrapper">
-            <section class="form-wrap boxshadow form-wrap--950">
+
+            <a class="burger__menu-button form__button" href=""><img src="img/icons/email_8182863.png" alt="">
+                <p>Отправить заявку на подключение</p>
+            </a>
+
+
+            <section class="tariffs">
+                <div class="tariffs__content">
+                    <h1>NEONET. Тарифы на услуги для физических лиц</h1>
+
+                    <form action="#" id="tariffs__calc-wrap" class="tariffs__calc-wrap">
+                        <section class="tariffs__calc">
+                            <h2>Соберите удобный тариф</h2>
+
+                            <!-- слайдер интернета -->
+                            <div class="tariffs__calc-slider">
+                                <p>Скорость интернет (Мбит/с)</p>
+                                <div class="slider-wrap">
+                                    <div class="slider-fill" id="internet-fill"></div>
+                                    <input type="range" id="slider-internet" value="33.33" max="100" step="33.33" />
+                                    <div id="select-internet" style="left: 33.33%"></div>
+
+                                </div>
+                                <div class="slider__value slider__value-inet">
+                                    <span>Без интернета</span>
+                                    <span>50</span>
+                                    <span>100</span>
+                                    <span>250</span>
+                                </div>
+                            </div>
+
+                            <!-- слайдер роутера -->
+                            <div class="tariffs__calc-slider">
+                                <p>Роутер</p>
+                                <div class="slider-wrap">
+                                    <div class="slider-fill" id="rout-fill"></div>
+                                    <input type="range" id="slider-rout" value="0" max="100" step="50" />
+                                    <div id="select-rout"></div>
+                                </div>
+                                <div class="slider__value slider__value-rout">
+                                    <span>Без роутера</span>
+                                    <span>Роутер 2.4 ГГц</span>
+                                    <span>Роутер 5 ГГц</span>
+                                </div>
+                            </div>
+                            <div class="tariffs__calc-slider">
+                                <p>Кабельное ТВ</p>
+                                <div class="slider-wrap">
+                                    <div class="slider-fill" id="tv-fill"></div>
+                                    <input type="range" id="slider-tv" value="0" max="100" step="50" />
+                                    <div id="select-tv"></div>
+                                </div>
+                                <div class="slider__value slider__value-tv">
+                                    <span>Без ТВ</span>
+                                    <span>12 Каналов</span>
+                                    <span>105 каналов</span>
+                                </div>
+                            </div>
+
+
+                            <!-- Выбор ТВ -->
+                            <div class="tariffs__calc-toggle">
+                                <label class="toggle">
+                                    <input type="checkbox" id="tvInteractive" />
+                                    <span class="toggle-label"></span> Интерактивное ТВ
+                                </label>
+
+                                <!-- Выбор приставки -->
+                                <label class="toggle">
+                                    <input type="checkbox" id="tvFullHD" name="tvBox" />
+                                    <span class="toggle-label"></span> ТВ-приставка FULL HD
+                                </label>
+                                <label class="toggle">
+                                    <input type="checkbox" id="tv4k" name="tvBox" />
+                                    <span class="toggle-label"></span> ТВ-приставка 4K
+                                </label>
+                            </div>
+                        </section>
+
+                        <!-- Итоговая информация -->
+                        <div class="tariffs__connect">
+                            <p class="tariffs__connect--bigText value-tariffs">Тариф 50 Мбит/с</p>
+                            <p class="tariffs__connect--mobile">Рекомендуется для нескольких пользователей, просмотра
+                                видео
+                                и онлайн игр.</p>
+                            <ul class="tariffs__connect-list">
+                                <li>
+                                    <img src="img/icons/wifi-int.png" alt="" />
+                                    <p class="value-tariffs">Интернет 50 Мбит/с</p>
+                                    <p id="rout"></p>
+                                </li>
+                                <li>
+                                    <img src="img/icons/smart-tv_tar.png" alt="" />
+                                    <p id="tv">Без ТВ</p>
+                                </li>
+                                <li>
+                                    <img src="img/icons/wifi_tar.png" alt="" />
+                                    <p id="box">Без приставки</p>
+                                </li>
+                                <li>
+                                    <img src="img/icons/video_10402668.png" alt="" />
+                                    <p id="movie">Онлайн кинотеатр</p>
+                                </li>
+                            </ul>
+                            <p id="final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
+                            <button class="tariffs__connect-button">Подключить</button>
+                            <a href="">Или заказать консультацию специалиста</a>
+                        </div>
+                    </form>
+            </section>
+
+            <section class="form-wrap boxshadow">
+                <h2>Отправьте заявку на подключение к интернету</h2>
+                <form action="#" class="form">
+                    <div class="form__item-wrap">
+
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Город</p>
+                            <input name="home" class="form__item" type="text" placeholder="Брест">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Улица</p>
+                            <input name="appart" class="form__item " type="text">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper ">
+                            <p>Дом</p>
+                            <input name="appart" class="form__item form__item-input--widht" type="text">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Корпус</p>
+                            <input name="appart" class="form__item  form__item-input--widht" type="text">
+                        </fieldset>
+
+                        <button class="button button--border" type="submit">Подключить</button>
+                    </div>
+
+                </form>
+            </section>
+            <a class="check__adress"><img src="img/icons/pin_5216349.png" alt="">
+                Проверить адрес на возможность подключения</a>
+        </div>
+
+
+
+        <div class="map wrapper">
+
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        <div class="wrapper flex__wrapper">
+            <section class="news__operator ">
+                <h3>Новости оператора</h3>
+                <div class="news__operator-title boxshadow">
+                    <img src="img/newstitle.png" alt="">
+                    <section class="news__operator-text">
+                        <h4>Сегодня 12 марта, с 12:00 до 14:30 ожидаются перебои в работе сети</h4>
+                        <p>Будет недоступно ряд веб-сайтов и сетевых сервисов. Возможны проблемы в месенджерах</p>
+                        <button class="button button__news button--border">Подробнее</button>
+                        <a class="mobile__news" href="#">Читать дальше</a>
+                    </section>
+                </div>
+                <div class="news__item-wrap">
+                    <div class="news__item boxshadow">
+                        <img src="img/newstitle.png" alt="">
+                        <section class="news__operator-text  news--height">
+                            <h4>Удобный переезд, когда интернет переезжает с вами</h4>
+                            <p>Планируете переезд - мы с вами! Воспользуйтесь услугой переезд и будьте всегда на связи
+                            </p>
+                            <button class="button button__news button--border">Подробнее</button>
+                            <a class="mobile__news" href="#">Читать дальше</a>
+                        </section>
+                    </div>
+                    <div class="news__item boxshadow">
+
+                        <img src="img/newspic1.png" alt="">
+                        <section class="news__operator-text news--height">
+                            <h4>Мега предложение для новых абонентов NEONET</h4>
+                            <p>Экономьте на подключении при переходе от других операторов до 50% от абонентской платы
+                            </p>
+                            <button class="button button__news button--border">Подробнее</button>
+                            <a class="mobile__news" href="#">Читать дальше</a>
+                        </section>
+                    </div>
+                    <div class="news__item boxshadow">
+
+                        <img src="img/newspic1.png" alt="">
+                        <section class="news__operator-text news--height">
+                            <h4>Телевидение KOTTV и Интернет - идеально вместе</h4>
+                            <p>Пользуйтесь интернетом KOTTV т подключайте интерактивное телевидение на 10 руб./месяц!
+                            </p>
+                            <button class="button button__news button--border">Подробнее</button>
+
+                            <!-- <a href="#">Читать дальше</a> -->
+                        </section>
+                    </div>
+                </div>
+
+
+            </section>
+            <section class="news ">
+                <h3>Новости</h3>
+
+                <div class="news__item-wrap">
+                    <div class="news__item boxshadow">
+                        <img src="img/newspic2.png" alt="">
+                        <section class="news-text news--height">
+                            <h4>AMEDIATEKA на KOTTV</h4>
+                            <p>Смотрите на любых устройствах с KOTTV</p>
+                            <button class="button button__news button--border">Подробнее</button>
+                        </section>
+                    </div>
+                    <div class="news__item boxshadow">
+
+                        <img src="img/newspic2.png" alt="">
+                        <section class="news-text news--height">
+                            <h4>Новогодние праздники с онлайн кинотеатрами</h4>
+                            <p>Удобная оплата и возможность кредита в личном кабинете</p>
+                            <button class="button button__news button--border">Подробнее</button>
+                        </section>
+                    </div>
+                    <div class="news__item boxshadow">
+
+                        <img src="img/newspic2.png" alt="">
+                        <section class="news-text news--height">
+                            <h4>только для абонентов KOTTV - книжный сервис</h4>
+                            <p>Наслаждайтесь любимыми книгами, подкастами вместе с NEONET</p>
+                            <button class="button button__news button--border">Подробнее</button>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about ">
+                <h2>Провайдер домашнего Интернета и телевидения NEONET</h2>
+
+                <p><strong>NEONET</strong> — это современный интернет-провайдер, стремящийся предоставить своим клиентам
+                    высокоскоростной и надежный доступ к мировой сети. Наша миссия — соединять людей и технологии,
+                    создавая условия для комфортной и продуктивной жизни в цифровом мире.
+                </p>
+                <p> <strong>Наши ценности:</strong>
+                    Инновации: Мы постоянно внедряем передовые технологии, чтобы обеспечить нашим клиентам лучший опыт
+                    использования интернета.</p>
+
+                <p><strong>Надежность:</strong> Стабильное подключение и высокая скорость — наши приоритеты. Мы
+                    гарантируем минимальные простои и быструю техническую поддержку.</p>
+
+
+                <p> <strong>Клиентоориентированность:</strong> Ваши потребности — наша главная забота. Мы всегда готовы
+                    выслушать и предложить оптимальные решения для вашего бизнеса или дома.</p>
+
+                <p> <strong>Почему выбирают NEONET?</strong>
+                    <br> Высокая скорость: Благодаря современной инфраструктуре, мы обеспечиваем высокую скорость
+                    интернета для всех наших клиентов.
+                </p>
+
+                <p><strong>Гибкие тарифы:</strong> Мы предлагаем разнообразные тарифные планы, которые подходят как для
+                    частных пользователей, так и для корпоративных клиентов.</p>
+
+                <p> <strong>Профессиональная поддержка:</strong> Наша команда экспертов всегда готова помочь с любыми
+                    вопросами и проблемами.
+                    Присоединяйтесь к NEONET и откройте для себя новые возможности в мире цифровых технологий!</p>
+
+            </section>
+            <section class="form-wrap boxshadow form-wrap--950 none">
                 <h2>Отправьте заявку на подключение к интернету</h2>
                 <form action="#" class="form">
                     <div class="form__item-wrap">
@@ -204,352 +471,6 @@
             <a class="burger__menu-button form__button" href=""><img src="img/icons/email_8182863.png" alt="">
                 <p>Отправить заявку на подключение</p>
             </a>
-
-
-            <section class="tariffs">
-                <h1>NEONET. Тарифы на услуги для физических лиц</h1>
-                <div class="tariffs__content">
-                    <p>Мы рады видеть вас и готовы помочь с любыми вопросами, связанными с вашим интернет-подключением.
-                        Здесь вы найдете всю необходимую информацию для комфортного использования наших услуг
-                    </p>
-                    <p>
-                        Личный кабинет: Управляйте своим тарифом, проверяйте баланс и оплачивайте счета онлайн.
-                    </p>
-                </div>
-                <form action="#" id="tariffs__calc-wrap" class="tariffs__calc-wrap">
-                    <section class="tariffs__calc">
-                        <h2>Соберите удобный тариф</h2>
-
-                        <!-- слайдер интернета -->
-                        <div class="tariffs__calc-slider">
-                            <p>Скорость интернет (Мбит/с)</p>
-                            <div class="slider-wrap">
-                                <div class="slider-fill" id="internet-fill"></div>
-                                <input type="range" id="slider-internet" value="33.33" max="100" step="33.33" />
-                                <div id="select-internet" style="left: 33.33%"></div>
-
-                            </div>
-                            <div class="slider__value slider__value-inet">
-                                <span>Без интернета</span>
-                                <span>50</span>
-                                <span>100</span>
-                                <span>250</span>
-                            </div>
-                        </div>
-
-                        <!-- слайдер роутера -->
-                        <div class="tariffs__calc-slider">
-                            <p>Роутер</p>
-                            <div class="slider-wrap">
-                                <div class="slider-fill" id="rout-fill"></div>
-                                <input type="range" id="slider-rout" value="0" max="100" step="50" />
-                                <div id="select-rout"></div>
-                            </div>
-                            <div class="slider__value slider__value-rout">
-                                <span>Без роутера</span>
-                                <span>Роутер 2.4 ГГц</span>
-                                <span>Роутер 5 ГГц</span>
-                            </div>
-                        </div>
-                        <div class="tariffs__calc-slider">
-                            <p>Кабельное ТВ</p>
-                            <div class="slider-wrap">
-                                <div class="slider-fill" id="tv-fill"></div>
-                                <input type="range" id="slider-tv" value="0" max="100" step="50" />
-                                <div id="select-tv"></div>
-                            </div>
-                            <div class="slider__value slider__value-tv">
-                                <span>Без ТВ</span>
-                                <span>12 Каналов</span>
-                                <span>105 каналов</span>
-                            </div>
-                        </div>
-
-
-                        <!-- Выбор ТВ -->
-                        <div class="tariffs__calc-toggle">
-                            <label class="toggle">
-                                <input type="checkbox" id="tvInteractive" />
-                                <span class="toggle-label"></span> Интерактивное ТВ
-                            </label>
-
-                            <!-- Выбор приставки -->
-                            <label class="toggle">
-                                <input type="checkbox" id="tvFullHD" name="tvBox" />
-                                <span class="toggle-label"></span> ТВ-приставка FULL HD
-                            </label>
-                            <label class="toggle">
-                                <input type="checkbox" id="tv4k" name="tvBox" />
-                                <span class="toggle-label"></span> ТВ-приставка 4K
-                            </label>
-                        </div>
-                    </section>
-
-                    <!-- Итоговая информация -->
-                    <div class="tariffs__connect">
-                        <p class="tariffs__connect--bigText value-tariffs">Тариф 50 Мбит/с</p>
-                        <p class="tariffs__connect--mobile">Рекомендуется для нескольких пользователей, просмотра видео
-                            и онлайн игр.</p>
-                        <ul class="tariffs__connect-list">
-                            <li>
-                                <img src="img/icons/wifi-int.png" alt="" />
-                                <p class="value-tariffs">Интернет 50 Мбит/с</p>
-                                <p id="rout"></p>
-                            </li>
-                            <li>
-                                <img src="img/icons/smart-tv_tar.png" alt="" />
-                                <p id="tv">Без ТВ</p>
-                            </li>
-                            <li>
-                                <img src="img/icons/wifi_tar.png" alt="" />
-                                <p id="box">Без приставки</p>
-                            </li>
-                            <li>
-                                <img src="img/icons/video_10402668.png" alt="" />
-                                <p id="movie">Онлайн кинотеатр</p>
-                            </li>
-                        </ul>
-                        <p id="final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
-                        <button class="tariffs__connect-button">Подключить</button>
-                        <a href="">Или заказать консультацию специалиста</a>
-                    </div>
-                </form>
-            </section>
-
-            <section class="form-wrap boxshadow">
-                <h2>Отправьте заявку на подключение к интернету</h2>
-                <form action="#" class="form">
-                    <div class="form__item-wrap">
-
-
-                        <fieldset class="form__item-wrapper">
-                            <p>Город</p>
-                            <input name="home" class="form__item" type="text" placeholder="Брест">
-                        </fieldset>
-
-                        <fieldset class="form__item-wrapper">
-                            <p>Улица</p>
-                            <input name="appart" class="form__item " type="text">
-                        </fieldset>
-
-                        <fieldset class="form__item-wrapper ">
-                            <p>Дом</p>
-                            <input name="appart" class="form__item form__item-input--widht" type="text">
-                        </fieldset>
-
-                        <fieldset class="form__item-wrapper">
-                            <p>Корпус</p>
-                            <input name="appart" class="form__item  form__item-input--widht" type="text">
-                        </fieldset>
-
-                        <button class="button button--border" type="submit">Подключить</button>
-                    </div>
-
-                </form>
-            </section>
-            <a class="check__adress"><img src="img/icons/pin_5216349.png" alt="">
-                Проверить адрес на возможность подключения</a>
-        </div>
-
-
-
-        <!-- <div class="map">
-
-            <script type="text/javascript" charset="utf-8" async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
-        </div> -->
-        <div class="wrapper flex__wrapper">
-            <section class="news__operator ">
-                <h3>Новости оператора</h3>
-                <div class="news__operator-title">
-                    <img src="img/newstitle.png" alt="">
-                    <section class="news__operator-text">
-                        <h4>Сегодня 12 марта, с 12:00 до 14:30 ожидаются перебои в работе сети</h4>
-                        <p>Будет недоступно ряд веб-сайтов и сетевых сервисов. Возможны проблемы в месенджерах</p>
-                        <a href="#">Читать дальше</a>
-                    </section>
-                </div>
-                <div class="news__item-wrap">
-                    <div class="news__item boxshadow">
-                        <img src="img/newspic1.png" alt="">
-                        <section class="news__operator-text news--height">
-                            <h4>Удобный переезд, когда интернет переезжает с вами</h4>
-                            <p>Планируете переезд - мы с вами! Воспользуйтесь услугой переезд и будьте всегда на связи
-                            </p>
-                            <a href="#">Читать дальше</a>
-                        </section>
-                    </div>
-                    <div class="news__item boxshadow">
-
-                        <img src="img/newspic1.png" alt="">
-                        <section class="news__operator-text news--height">
-                            <h4>Мега предложение для новых абонентов NEONET</h4>
-                            <p>Экономьте на подключении при переходе от других операторов до 50% от абонентской платы
-                            </p>
-                            <a href="#">Читать дальше</a>
-                        </section>
-                    </div>
-                    <div class="news__item boxshadow">
-
-                        <img src="img/newspic1.png" alt="">
-                        <section class="news__operator-text news--height">
-                            <h4>Телевидение KOTTV и Интернет - идеально вместе</h4>
-                            <p>Пользуйтесь интернетом KOTTV т подключайте интерактивное телевидение на 10 руб./месяц!
-                            </p>
-                            <a href="#">Читать дальше</a>
-                        </section>
-                    </div>
-                </div>
-
-
-            </section>
-            <section class="news ">
-                <h3>Новости</h3>
-
-                <div class="news__item-wrap">
-                    <div class="news__item boxshadow">
-                        <img src="img/newspic2.png" alt="">
-                        <section class="news-text news--height">
-                            <h4>AMEDIATEKA на KOTTV</h4>
-                            <p>Смотрите на любых устройствах с KOTTV</p>
-                            <button class="button button__news button--border">Подробнее</button>
-                        </section>
-                    </div>
-                    <div class="news__item boxshadow">
-
-                        <img src="img/newspic2.png" alt="">
-                        <section class="news-text news--height">
-                            <h4>Новогодние праздники с онлайн кинотеатрами</h4>
-                            <p>Удобная оплата и возможность кредита в личном кабинете</p>
-                            <button class="button button__news button--border">Подробнее</button>
-                        </section>
-                    </div>
-                    <div class="news__item boxshadow">
-
-                        <img src="img/newspic2.png" alt="">
-                        <section class="news-text news--height">
-                            <h4>только для абонентов KOTTV - книжный сервис</h4>
-                            <p>Наслаждайтесь любимыми книгами, подкастами вместе с NEONET</p>
-                            <button class="button button__news button--border">Подробнее</button>
-                        </section>
-                    </div>
-                </div>
-            </section>
-
-            <section class="about ">
-                <h2>Провайдер домашнего Интернета и телевидения NEONET</h2>
-
-                <p><strong>NEONET</strong> — это современный интернет-провайдер, стремящийся предоставить своим клиентам
-                    высокоскоростной и надежный доступ к мировой сети. Наша миссия — соединять людей и технологии,
-                    создавая условия для комфортной и продуктивной жизни в цифровом мире.
-                </p>
-                <p> <strong>Наши ценности:</strong>
-                    Инновации: Мы постоянно внедряем передовые технологии, чтобы обеспечить нашим клиентам лучший опыт
-                    использования интернета.</p>
-
-                <p><strong>Надежность:</strong> Стабильное подключение и высокая скорость — наши приоритеты. Мы
-                    гарантируем минимальные простои и быструю техническую поддержку.</p>
-
-
-                <p> <strong>Клиентоориентированность:</strong> Ваши потребности — наша главная забота. Мы всегда готовы
-                    выслушать и предложить оптимальные решения для вашего бизнеса или дома.</p>
-
-                <p> <strong>Почему выбирают NEONET?</strong>
-                    <br> Высокая скорость: Благодаря современной инфраструктуре, мы обеспечиваем высокую скорость
-                    интернета для всех наших клиентов.
-                </p>
-
-                <p><strong>Гибкие тарифы:</strong> Мы предлагаем разнообразные тарифные планы, которые подходят как для
-                    частных пользователей, так и для корпоративных клиентов.</p>
-
-                <p> <strong>Профессиональная поддержка:</strong> Наша команда экспертов всегда готова помочь с любыми
-                    вопросами и проблемами.
-                    Присоединяйтесь к NEONET и откройте для себя новые возможности в мире цифровых технологий!</p>
-
-            </section>
-            <section class="form-wrap  boxshadow form-wrap--950">
-                <h2>Отправьте заявку на подключение к интернету</h2>
-                <form action="#" class="form">
-                    <div class="form__item-wrap">
-
-                        <!-- Выбор улицы -->
-                        <fieldset class="form__item-wrapper">
-                            <p>Улица</p>
-                            <fieldset class="form__select form__item">
-
-
-                                <!--  -->
-                                <!-- <select class="street" name="" id="">
-                                <option value="1">Махновича</option>
-                                <option value="2">Рябцева</option>
-                                <option value="3">Суворова</option>
-                            </select> -->
-
-                                <div class="form__select__title" data-default="Option 0">
-                                    <span class="form__select__title-span">Героев обороны</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                        width="24px" fill="#1f1f1f">
-                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-                                    </svg>
-                                </div>
-                                <div class="form__select__content">
-                                    <input id="singleSelect001" class="form__select__input" type="radio"
-                                        name="singleSelect">
-                                    <label for="singleSelect001" class="form__select__label">Махновича</label>
-                                    <input id="singleSelect101" class="form__select__input" type="radio"
-                                        name="singleSelect">
-                                    <label for="singleSelect101" class="form__select__label">Рябцева</label>
-                                    <input id="singleSelect201" class="form__select__input" type="radio"
-                                        name="singleSelect">
-                                    <label for="singleSelect201" class="form__select__label">Суворова</label>
-                                    <input id="singleSelect301" class="form__select__input" type="radio"
-                                        name="singleSelect">
-                                    <label for="singleSelect301" class="form__select__label">Героев обороны</label>
-                                </div>
-
-                            </fieldset>
-                        </fieldset>
-
-                        <!-- Номер дома -->
-                        <fieldset class="form__item-wrapper">
-                            <p>Дом</p>
-                            <input name="home" class="form__item form__item-input--widht" type="text">
-                        </fieldset>
-
-                        <!-- Квартира -->
-                        <fieldset class="form__item-wrapper">
-                            <p>Кв-ра</p>
-                            <input name="appart" class="form__item form__item-input--widht" type="text">
-                        </fieldset>
-
-                        <!-- Имя -->
-                        <fieldset class="form__item-wrapper">
-                            <p>Имя</p>
-                            <input class="form__item" type="text" id="name2" name="name" required minlength="2"
-                                maxlength="50" pattern="^[А-Яа-яЁё\s]+$" placeholder="Введите ваше имя">
-                        </fieldset>
-
-                        <!-- Телефон -->
-                        <fieldset class="form__item-wrapper">
-                            <p>Телефон</p>
-                            <input class="form__item" type="tel" id="phone2" name="phone" required
-                                value="+375(__)___-__-__" onfocus="setCursorPosition(this)"
-                                pattern="\+375\(\d{2}\)\d{3}-\d{2}-\d{2}">
-                        </fieldset>
-
-                        <button class="button button--border" type="submit">Подключить</button>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" name="check-policy" id="check-policy2">
-                        <label for="check-policy">Я ознакомлен(а) с <a href="#">Политикой</a> и согласен(а) на обработку
-                            персональных данных.</label>
-
-                    </div>
-                </form>
-            </section>
-            <a class="burger__menu-button form__button" href=""><img src="img/icons/email_8182863.png" alt="">
-                <p>Отправить заявку на подключение</p>
-            </a>
         </div>
 
 
@@ -578,16 +499,21 @@
         <div class="footer">
             <div class="footer-wrap">
                 <div class="footer__about footer__item">
+                    <ul class="footer__contacts-icons icon__mobile">
+
+                        <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+
+                    </ul>
                     <a class="footer__logo" href=""><img src="img/footer_icon.png" alt=""></a>
 
-                    <a href="/" class="icon__mobile center">
-                        <img src="img/icons/footer_logo.png" alt="">
-                    </a>
+
                     <p> ООО «Сетевые инновации»
                         <br> Брест, Варшавское шоссе 11
-                        <br>info@neonet.by
+                        <br> info@neonet.by
                     </p>
-                    <a class="icon__mobile" href="#"><img src="img/icons/icon_tg.png" alt=""></a>
                 </div>
                 <div class="footer__info footer__item">
                     <h5><strong>ИНФОРМАЦИЯ</strong></h5>
