@@ -691,24 +691,23 @@ button {
     margin: 15px;
 }
 
-.price__internet {
+/* .price__internet {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    /* margin-top: 130px; */
 }
 
 .internet__table {
     border-spacing: 0px 15px;
 
-}
+} */
 
 /* .internet__table td {
     font-size: clamp(.3rem, 1.6vw, 16px);
     padding: 20px;
 } */
 
-.internet__table td:nth-child(odd) {
+/* .internet__table td:nth-child(odd) {
     font-size: clamp(.3rem, 1.6vw, 16px);
     padding: 20px;
     width: 80%;
@@ -718,6 +717,32 @@ button {
     font-size: clamp(.3rem, 1.6vw, 16px);
     padding: 20px 20px 20px 0;
     width: 10%;
+} */
+.price__internet {
+    cursor: pointer;
+}
+
+.price__internet li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.price__internet li:nth-last-child(even) {
+    background-color: #f2f2f2;
+
+}
+
+.price__list {
+    overflow: hidden;
+    height: 0;
+    transition: .5s;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.active__list {
+    height: 350px;
 }
 
 .grid__service {
@@ -1050,9 +1075,11 @@ footer a:visited {
 .mobile__news {
     display: none;
 }
+
 .icon__mobile {
     display: none;
 }
+
 @media (max-width: 1200px) {
     .banner__content {
         margin-left: 80px;
@@ -1220,17 +1247,19 @@ footer a:visited {
     .footer-wrap {
         justify-content: center;
     }
-.icon__mobile {
-    display: flex;
-    justify-content: center;
-}
+
+    .icon__mobile {
+        display: flex;
+        justify-content: center;
+    }
+
     .footer__about {
         gap: 10px;
         width: 100%;
         justify-content: center;
     }
 
-    
+
 
     .footer img {
         max-width: 150px;
@@ -1249,10 +1278,11 @@ footer a:visited {
         width: 120px;
 
     }
-.footer__about {
-text-align: center;
-line-height: 15px;
-}
+
+    .footer__about {
+        text-align: center;
+        line-height: 15px;
+    }
 }
 
 @media (max-width: 400px) {
