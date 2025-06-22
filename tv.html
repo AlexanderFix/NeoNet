@@ -23,8 +23,8 @@
 
         <nav class="fixed__menu-wrap">
             <div class="fixed__menu wrapper">
-
-                <ul class="fixed__menu-list ">
+                <div class="burger__button"><span></span><span></span><span></span></div>
+                <ul class="fixed__menu-list">
                     <li><a href="./about.html">О компании</a>
                     </li>
                     <li><a href="./subscriber.html">Абонентам</a>
@@ -36,33 +36,51 @@
                     <li><a href="./contacts.html">Контакты</a>
                     </li>
                 </ul>
+                <div class="burger__menu">
+                    <ul class="burger__menu-list">
+                        <li><a href="./about.html">О компании</a>
+                        </li>
+                        <li><a href="./subscriber.html">Абонентам</a>
+                        </li>
+                        <li><a href="./business.html">Бизнесу</a>
+                        </li>
+                        <li class="service__burger" id="service__burger"><a>Сервис и помощь <span
+                                    class="arrow burger__arrow" id="arrow"></span></a>
+                            <ul id="service__burger-list" class="service__burger-list">
+                                <li><a href="#">Настройки интернета</a></li>
+                                <li><a href="#">Настройки телевидения</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./contacts.html">Контакты</a>
+                        </li>
+                        <li><a class="burger__menu-button" href=""><img src="img/icons/email.png" alt="">
+                                <p>Отправить заявку на подключение</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <ul class="menu-icons">
-                    <li><a href="#"><img src="img/icons/icon_viber.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/viber-chat-app-svgrepo-com.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/telegram-svgrepo-com.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/vk-outline-svgrepo-com.svg" alt=""></a></li>
                 </ul>
 
                 <div class="fixed__menu-support">
                     <p>Служба поддержки</p>
-                    <a href="tel:375297450222">+375 29 7450222 (МТС)</a>
-                </div>
-
-                <div class="burger">
-
-                    <div class="logo center">
-                        <img src="img/logo.png" alt="">
+                    <div class="wrap__tel"><a href="tel:375297450222">+375 29 7450222 (МТС)</a>
+                        <hr>
                     </div>
 
-                    <div class="burger_button" id="burger_button">
-                        <div class="burger_menu" id="burger_menu"></div>
-                    </div>
                 </div>
+                <a class="nav__menu-button burger"><img src="img/icons/icon_button_personal.png" alt="">
+                    <p>Личный кабинет</p>
+                </a>
+
             </div>
 
 
         </nav>
-
         <div class="wrapper">
             <nav class="nav__menu">
                 <a href="/" class="logo center">
@@ -75,8 +93,8 @@
 
                 <ul class="nav__menu-list">
                     <li><a href="/internet.html"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
-                    <li><a href="/tv.html"><img src="img/icons/smart-grid__item_5017412.png" alt="">Телевидение</a></li>
-                    <li><a href="/video.html"><img src="img/icons/ccgrid__item_12176956.png" alt="">Видеонаблюдение</a></li>
+                    <li><a href="/tv.html"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
+                    <li><a href="/video.html"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
                 </ul>
                 <a class="nav__menu-button"><img src="img/icons/icon_button_personal.png" alt="">
                     <p>Личный кабинет</p>
@@ -85,21 +103,6 @@
             </nav>
         </div>
 
-        <div id="burger_wrapper" class="burger_wrapper">
-            <div id="burger_nav" class="burger_nav">
-                <nav class="burger_nav_active">
-                    <ul class="burger_list">
-                        <li><a href="#">О компании</a>
-                            <hr>
-                        </li>
-                        <li><a href="#">Абонентам</a></li>
-                        <li><a href="#">Бизнесу</a></li>
-                        <li><a href="#">Сервис и помощь</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
 
     </header>
     <main>
@@ -112,18 +115,53 @@
         <div class="wrapper flex__wrapper">
             <h1>Телевидние от NEONET</h1>
             <div class="grid">
-                <a href="extendedBussines.html" class="grid__item grid--inter">
-                    <div class="grid__title"> <img src="img/icons/grid__item-svgrepo-com.svg" alt="">
-                        <h2>ИНТЕРАКТИВНОЕ ТВ</h2>
-                    </div>
-                    <span class="fill-grid"></span>
-                </a>
-                <a href="wifiHotSpot.html" class="grid__item grid--cable">
-                    <div class="grid__title"> <img src="img/icons/grid__item-svgrepo-com (1).svg" alt="">
-                        <h2>КАБЕЛЬНОЕ ТВ</h2>
-                    </div>
-                    <span class="fill-grid"></span>
-                </a>
+                <a href="#" class="grid__item grid--inter">
+                        <div class="grid__title">
+                            <svg fill="#000" viewBox="0 -6 46 46" stroke="none">
+
+                                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                <g id="SVGRepo_iconCarrier">
+                                    <path id="_24.TV" data-name="24.TV"
+                                        d="M46,37H2a1,1,0,0,1-1-1V8A1,1,0,0,1,2,7H46a1,1,0,0,1,1,1V36A1,1,0,0,1,46,37ZM45,9H3V35H45ZM21,16a.975.975,0,0,1,.563.2l7.771,4.872a.974.974,0,0,1,.261,1.715l-7.974,4.981A.982.982,0,0,1,21,28a1,1,0,0,1-1-1V17A1,1,0,0,1,21,16ZM15,39H33a1,1,0,0,1,0,2H15a1,1,0,0,1,0-2Z"
+                                        transform="translate(-1 -7)" fill-rule="evenodd" />
+                                </g>
+
+                            </svg>
+                            <h2>ИНТЕРАКТИВНОЕ ТВ</h2>
+                        </div>
+                        <span class="fill-grid"></span>
+                    </a>
+                <a href="#" class="grid__item grid--cable">
+                        <div class="grid__title">
+                            <svg fill="#000" viewBox="0 0 279.623 279.623" xml:space="preserve" stroke="#ffffff">
+
+                                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path
+                                                d="M279.623,36.258H0v177.685h279.623V36.258z M265.286,199.606H14.337V50.596h250.949V199.606z" />
+                                            <path
+                                                d="M228.444,236.196c0-3.958-3.211-7.169-7.169-7.169H57.494c-3.962,0-7.169,3.211-7.169,7.169 c0,3.962,3.207,7.168,7.169,7.168h163.782C225.233,243.364,228.444,240.158,228.444,236.196z" />
+                                            <path
+                                                d="M48.958,93.206h20.125c2.639,0,4.779,2.143,4.779,4.779v71.714c0,2.642,2.142,4.779,4.779,4.779h11.212 c2.637,0,4.779-2.138,4.779-4.779V97.985c0-2.637,2.14-4.779,4.779-4.779h19.991c2.637,0,4.779-2.14,4.779-4.779V80.5 c0-2.639-2.143-4.779-4.779-4.779H48.958c-2.637,0-4.779,2.14-4.779,4.779v7.927C44.178,91.066,46.32,93.206,48.958,93.206z" />
+                                            <path
+                                                d="M179.888,169.951c0.85,2.502,3.673,4.527,6.31,4.527h9.941c2.642,0,5.47-2.025,6.323-4.527l30.584-89.71 c0.854-2.5-0.598-4.521-3.229-4.521h-11.883c-2.642,0-5.376,2.054-6.104,4.593l-18.995,65.789c-0.728,2.539-1.909,2.539-2.632,0 l-18.813-65.785c-0.728-2.539-3.458-4.592-6.091-4.592H152.81c-2.642,0-4.098,2.025-3.253,4.525L179.888,169.951z" />
+                                        </g>
+                                    </g>
+                                </g>
+
+                            </svg>
+                            <h2>КАБЕЛЬНОЕ ТВ</h2>
+                        </div>
+                        <span class="fill-grid"></span>
+                    </a>
             </div>
 
         </div>

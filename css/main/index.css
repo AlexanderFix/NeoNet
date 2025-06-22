@@ -891,6 +891,10 @@ button {
     transition: .3s;
 }
 
+.grid__title path {
+    transition: .1s;
+}
+
 .grid__title h2 {
     transition: .3s;
 }
@@ -914,6 +918,7 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
 }
+
 .grid__item img {
     width: 100px;
     padding: 10px 20px;
@@ -925,6 +930,7 @@ button {
 .grid--inter svg {
     background-color: #CCFF66;
 }
+
 .grid--inter img {
     background-color: #CCFF66;
 }
@@ -939,6 +945,7 @@ button {
 .grid--cable svg {
     background-color: #00abfe;
 }
+
 .grid--cable img {
     background-color: #00abfe;
 }
@@ -957,6 +964,20 @@ button {
 .grid--cable:hover svg {
     fill: white;
 }
+
+.grid--cable:hover path {
+    fill: white;
+}
+
+.grid--stroke:hover svg{
+    fill: none;
+    
+}
+.grid--stroke:hover path{
+    fill: none;
+    stroke: white;
+}
+
 
 
 footer {
@@ -1380,8 +1401,17 @@ footer a:visited {
         margin-left: 0;
     }
 
-    .fill-tv {
+    .fill-grid {
         left: 40%;
+    }
+
+    .grid--400 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid__title {
+        align-items: center;
+        text-align: center;
     }
 
     .footer__about {
