@@ -969,11 +969,12 @@ button {
     fill: white;
 }
 
-.grid--stroke:hover svg{
+.grid--stroke:hover svg {
     fill: none;
-    
+
 }
-.grid--stroke:hover path{
+
+.grid--stroke:hover path {
     fill: none;
     stroke: white;
 }
@@ -1386,6 +1387,17 @@ footer a:visited {
 @media (max-width: 550px) {
     .fill-grid {
         width: 1.5%;
+    }
+
+    .grid--550 {
+        grid-template-columns: 1fr;
+
+    }
+
+    .grid--550 .grid__title {
+        align-items: center;
+        text-align: center;
+
     }
 }
 
