@@ -92,6 +92,8 @@ button {
     border-radius: 3px;
 }
 
+
+
 .button {
     padding: clamp(.6rem, 1.5vw, 1rem) clamp(.6rem, 3vw, 3rem);
     font-size: 16px;
@@ -803,53 +805,6 @@ button {
 }
 
 
-.grid__item-title {
-    padding: 45px;
-    background-color: var(--color-blue);
-    width: 100%;
-    color: #fff;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-
-}
-
-.grid__item-img {
-    width: 28%;
-    height: 136%;
-    position: absolute;
-    object-fit: cover;
-    top: -30%;
-    left: 77%;
-}
-
-.grid__item {
-    background-color: #f0f0f0;
-    cursor: pointer;
-    transition: linear .3s;
-}
-
-.grid__item:hover {
-    /* scale: 1.03; */
-    box-shadow: 0px 0px 10px var(--color-blue);
-}
-
-.grid__item p {
-    padding: 20px 35px;
-    width: 70%;
-}
-
-.grid__item--size {
-    width: 37%;
-    height: 153%;
-    top: -30%;
-    left: 73%
-}
-
-.grid p {
-    font-weight: 500;
-}
-
 .subcribe {
     display: flex;
     flex-direction: column;
@@ -913,17 +868,18 @@ button {
     justify-content: space-between;
 }
 
-.tv {
+.grid__item {
     padding: 20px 30px 50px 20px;
     border-radius: 10px;
-    /* transition: .3s; */
-    border: 1px solid #6d6d6d;
+    border: 1px solid #a1a1aa;
     width: 100%;
     position: relative;
     overflow: hidden;
+    background-color: #fbfbfb;
+    cursor: pointer;
 }
 
-.tv__title {
+.grid__title {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -931,7 +887,15 @@ button {
     position: relative;
 }
 
-.fill-tv {
+.grid__title svg {
+    transition: .3s;
+}
+
+.grid__title h2 {
+    transition: .3s;
+}
+
+.fill-grid {
     position: absolute;
     width: 1%;
     left: 7%;
@@ -945,37 +909,50 @@ button {
 }
 
 
-.tv img {
+.grid__item svg {
     width: 100px;
     padding: 10px 20px;
     border-radius: 10px;
 }
 
-.tv--inter img {
+.cls-1 {
+    fill: none;
+    stroke: #000000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 20px;
+}
+
+.grid--inter svg {
     background-color: #CCFF66;
 }
 
-.tv--inter:hover .fill-tv {
+.grid--inter:hover .fill-grid {
     left: 43%;
     top: 51%;
     transform: scale(150);
     background-color: #CCFF66;
 }
 
-.tv--cable img {
+.grid--cable svg {
     background-color: #00abfe;
 }
 
-.tv--cable:hover .fill-tv {
+.grid--cable:hover .fill-grid {
     left: 43%;
     top: 51%;
     transform: scale(150);
     background-color: #00abfe;
 }
 
-.tv:hover {
+.grid--cable:hover h2 {
     color: white;
 }
+
+.grid--cable:hover svg {
+    fill: white;
+}
+
 
 footer {
     margin-top: 200px;
