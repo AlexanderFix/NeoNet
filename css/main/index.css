@@ -888,11 +888,11 @@ button {
 }
 
 .grid__title svg {
-    transition: .5s;
+    transition: .3s;
 }
 
 .grid__title h2 {
-    transition: .5s;
+    transition: .3s;
 }
 
 .fill-grid {
@@ -901,7 +901,7 @@ button {
     left: 7%;
     top: 20%;
     height: 3%;
-    transition: .5s;
+    transition: .3s;
     z-index: 1;
     border-radius: 50%;
 
@@ -914,10 +914,18 @@ button {
     padding: 10px 20px;
     border-radius: 10px;
 }
+.grid__item img {
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
 
 
 
 .grid--inter svg {
+    background-color: #CCFF66;
+}
+.grid--inter img {
     background-color: #CCFF66;
 }
 
@@ -929,6 +937,9 @@ button {
 }
 
 .grid--cable svg {
+    background-color: #00abfe;
+}
+.grid--cable img {
     background-color: #00abfe;
 }
 
