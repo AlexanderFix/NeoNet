@@ -104,7 +104,9 @@ button {
     color: white;
     border-radius: 3px;
 }
-
+.button:visited {
+    color: white;
+}
 .button--border:hover {
     /* background-color: #ccff66; */
     background-color: #b5ff22;
@@ -979,7 +981,34 @@ button {
     stroke: white;
 }
 
+.cabTV {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
 
+.cabTV ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 20px;
+    
+}
+
+.cabTV li {
+    list-style: disc;
+}
+
+.cabTV img {
+    max-width: 666px;
+}
+
+.cabTV__title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+}
 
 footer {
     margin-top: 200px;
