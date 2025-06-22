@@ -2,13 +2,14 @@ header {
     transition: 0.3s;
     overflow: hidden;
     margin-top: 55px;
+
 }
 
 .fixed__menu-wrap {
     background: #00abfe;
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
     top: 0;
     left: 0;
 }
@@ -76,6 +77,10 @@ header {
     max-width: 24px;
     width: 2.3vw;
 }
+.menu-icons svg {
+    max-width: 24px;
+    width: 2.3vw;
+}
 
 .menu-icons::after {
     content: '';
@@ -112,16 +117,20 @@ header {
 .fixed__menu-support p {
     font-size: clamp(11px, 1.2vw, 11px);
 }
+
 .wrap__tel {
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
+
 hr {
     height: 2px;
     width: 0%;
     background-color: white;
     transition: .3s;
 }
+
 .fixed__menu-support:hover hr {
     width: 100%;
 }
@@ -181,7 +190,8 @@ hr {
     padding: clamp(.5rem, 1vw, .8rem);
     gap: 1vw;
     cursor: pointer;
-    transition: .3s;border-radius: 3px;
+    transition: .3s;
+    border-radius: 3px;
 }
 
 .nav__menu-button:hover {
@@ -199,7 +209,7 @@ hr {
 .nav__menu-button p {
     color: #000;
     background-color: transparent;
-     font-size: clamp(10px, 1.3vw, 16px);
+    font-size: clamp(10px, 1.3vw, 16px);
 }
 
 .burger {
@@ -221,7 +231,7 @@ hr {
 @media (max-width: 768px) {
 
 
-   
+
     .burger__button {
         display: block;
     }
@@ -257,7 +267,7 @@ hr {
         top: 54px;
         left: -100%;
         z-index: 20;
-opacity: 0;
+        opacity: 0;
 
 
         transition: .3s;
@@ -268,7 +278,7 @@ opacity: 0;
 
     .open {
         left: 0;
-opacity: 1;
+        opacity: 1;
     }
 
     .burger__button {
@@ -358,6 +368,37 @@ opacity: 1;
         text-align: start;
     }
 
+    .service__burger-list {
+        overflow: hidden;
+        height: 0;
+        transition: .3s;
+    }
+
+    .service__burger-active {
+        height: 60px;
+    }
+
+    .arrow.burger__arrow {
+        background-color: #fff;
+        height: 10px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .arrow.burger__arrow::after {
+        background-color: #fff;
+        height: 6px;
+        left: 2px;
+        bottom: 0;
+    }
+
+    .arrow.burger__arrow::before {
+        background-color: #fff;
+        height: 6px;
+        left: -2px;
+        bottom: 0;
+    }
+
+
     .burger__menu-button {
         background-color: #ccff66;
         padding: 10px 15px;
@@ -431,7 +472,8 @@ opacity: 1;
     .nav__menu-list {
         width: 80%
     }
+
     .burger p {
-    width: 50px;
-}
+        width: 50px;
+    }
 }

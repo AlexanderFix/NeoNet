@@ -281,13 +281,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Burger start
 
-let burgerButton = document.querySelector('.burger__button')
-let burgerMenu = document.querySelector('.burger__menu')
+const burgerButton = document.querySelector('.burger__button')
+const burgerMenu = document.querySelector('.burger__menu')
+const serviceBurger = document.getElementById('service__burger')
+const arrow = document.getElementById('arrow')
+const burgerList = document.getElementById('service__burger-list')
 
-
+serviceBurger.addEventListener('click', () => {
+  arrow.classList.toggle('rotate__arrow')
+  burgerList.classList.toggle('service__burger-active')
+})
 burgerButton.addEventListener('click', () => {
-
-
   burgerMenu.classList.toggle('open')
   document.body.classList.toggle('lock')
 })

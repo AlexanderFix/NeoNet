@@ -19,12 +19,12 @@
 
 <body>
 
-    <header id="header">
+   <header id="header">
 
         <nav class="fixed__menu-wrap">
             <div class="fixed__menu wrapper">
-
-                <ul class="fixed__menu-list ">
+                <div class="burger__button"><span></span><span></span><span></span></div>
+                <ul class="fixed__menu-list">
                     <li><a href="./about.html">О компании</a>
                     </li>
                     <li><a href="./subscriber.html">Абонентам</a>
@@ -36,6 +36,29 @@
                     <li><a href="./contacts.html">Контакты</a>
                     </li>
                 </ul>
+                <div class="burger__menu">
+                    <ul class="burger__menu-list">
+                        <li><a href="./about.html">О компании</a>
+                        </li>
+                        <li><a href="./subscriber.html">Абонентам</a>
+                        </li>
+                        <li><a href="./business.html">Бизнесу</a>
+                        </li>
+                        <li class="service__burger" id="service__burger"><a>Сервис и помощь <span
+                                    class="arrow burger__arrow" id="arrow"></span></a>
+                            <ul id="service__burger-list" class="service__burger-list">
+                                <li><a href="#">Настройки интернета</a></li>
+                                <li><a href="#">Настройки телевидения</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./contacts.html">Контакты</a>
+                        </li>
+                        <li><a class="burger__menu-button" href=""><img src="img/icons/email.png" alt="">
+                                <p>Отправить заявку на подключение</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <ul class="menu-icons">
                     <li><a href="#"><img src="img/icons/icon_viber.png" alt=""></a></li>
@@ -45,24 +68,19 @@
 
                 <div class="fixed__menu-support">
                     <p>Служба поддержки</p>
-                    <a href="tel:375297450222">+375 29 7450222 (МТС)</a>
-                </div>
-
-                <div class="burger">
-
-                    <div class="logo center">
-                        <img src="img/logo.png" alt="">
+                    <div class="wrap__tel"><a href="tel:375297450222">+375 29 7450222 (МТС)</a>
+                        <hr>
                     </div>
 
-                    <div class="burger_button" id="burger_button">
-                        <div class="burger_menu" id="burger_menu"></div>
-                    </div>
                 </div>
+                <a class="nav__menu-button burger"><img src="img/icons/icon_button_personal.png" alt="">
+                    <p>Личный кабинет</p>
+                </a>
+
             </div>
 
 
         </nav>
-
         <div class="wrapper">
             <nav class="nav__menu">
                 <a href="/" class="logo center">
@@ -85,21 +103,6 @@
             </nav>
         </div>
 
-        <div id="burger_wrapper" class="burger_wrapper">
-            <div id="burger_nav" class="burger_nav">
-                <nav class="burger_nav_active">
-                    <ul class="burger_list">
-                        <li><a href="#">О компании</a>
-                            <hr>
-                        </li>
-                        <li><a href="#">Абонентам</a></li>
-                        <li><a href="#">Бизнесу</a></li>
-                        <li><a href="#">Сервис и помощь</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
 
     </header>
     <main>
@@ -112,32 +115,33 @@
         <div class="wrapper flex__wrapper">
             <section class="grid__wrapper">
                 <h1>О компании NEONET</h1>
-                <div class="grid__service">
+                <div class="grid">
 
                     <a class="tv tv--inter">
                         <div class="tv__title"> <img src="img/icons/company-folder-svgrepo-com.svg" alt="">
                             <h2>ИСТОРИЯ КОМПАНИИ</h2>
                         </div>
-
                         <span class="fill-tv"></span>
                     </a>
                     <a class="tv tv--cable">
                         <div class="tv__title"> <img src="img/icons/team-svgrepo-com.svg" alt="">
                             <h2>КОМАНДА</h2>
-
                         </div>
-
                         <span class="fill-tv"></span>
                     </a>
-    
+
 
                     <a class="tv tv--inter">
-                        <img src="img/icons/vacancy-sign-svgrepo-com.svg" alt="">
-                        <h2>ВАКАНСИИ</h2>
+                        <div class="tv__title"> <img src="img/icons/team-svgrepo-com.svg" alt="">
+                            <h2>ВАКАНСИИ</h2>
+                        </div>
+                        <span class="fill-tv"></span>
                     </a>
                     <a class="tv tv--cable">
-                        <img src="img/icons/company-cooperation-group-svgrepo-com.svg" alt="">
-                        <h2>НАШИ ПАРТНЁРЫ</h2>
+                        <div class="tv__title"> <img src="img/icons/team-svgrepo-com.svg" alt="">
+                            <h2>НАШИ ПАРТНЁРЫ</h2>
+                        </div>
+                        <span class="fill-tv"></span>
                     </a>
 
 
@@ -169,7 +173,7 @@
                     </li>
                     <li><a href="/service.html">Сервис и помощь</a>
                     </li>
-                    <li><a href="/contacts.html">Контакты</a>
+                    <li><a href="contact.vcf">Контакты</a>
                     </li>
                 </ul>
                 <a href="#" class="footer--font">НАВЕРХ</a>
@@ -179,10 +183,20 @@
         <div class="footer">
             <div class="footer-wrap">
                 <div class="footer__about footer__item">
-                    <img src="img/footer_icon.png" alt="">
+                    <ul class="footer__contacts-icons icon__mobile">
+
+                        <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+
+                    </ul>
+                    <a class="footer__logo" href=""><img src="img/footer_icon.png" alt=""></a>
+
+
                     <p> ООО «Сетевые инновации»
                         <br> Брест, Варшавское шоссе 11
-                        <br>info@neonet.by
+                        <br> info@neonet.by
                     </p>
                 </div>
                 <div class="footer__info footer__item">
@@ -216,7 +230,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/form.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

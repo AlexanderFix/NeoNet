@@ -40,11 +40,11 @@
                         </li>
                         <li><a href="./business.html">Бизнесу</a>
                         </li>
-                        <li class="service__burger"><a href="./service.html">Сервис и помощь <img
-                                    src="img/icons/arrow_16519535.png" alt=""></a>
-                            <ul>
-                                <li><a href="">Настройки интернета</a></li>
-                                <li><a href="">Настройки телевидения</a></li>
+                        <li class="service__burger" id="service__burger"><a>Сервис и помощь <span
+                                    class="arrow burger__arrow" id="arrow"></span></a>
+                            <ul id="service__burger-list" class="service__burger-list">
+                                <li><a href="#">Настройки интернета</a></li>
+                                <li><a href="#">Настройки телевидения</a></li>
                             </ul>
                         </li>
                         <li><a href="./contacts.html">Контакты</a>
@@ -140,7 +140,7 @@
                                 <p>Скорость интернет (Мбит/с)</p>
                                 <div class="slider-wrap">
                                     <div class="slider-fill" id="internet-fill"></div>
-                                    <input type="range" id="slider-internet" value="33.33" max="100" step="33.33" />
+                                    <input type="range" id="slider-internet" value="33.33" max="100" step="33.33">
                                     <div id="select-internet" style="left: 33.33%"></div>
 
                                 </div>
@@ -157,7 +157,7 @@
                                 <p>Роутер</p>
                                 <div class="slider-wrap">
                                     <div class="slider-fill" id="rout-fill"></div>
-                                    <input type="range" id="slider-rout" value="0" max="100" step="50" />
+                                    <input type="range" id="slider-rout" value="0" max="100" step="50">
                                     <div id="select-rout"></div>
                                 </div>
                                 <div class="slider__value slider__value-rout">
@@ -170,7 +170,7 @@
                                 <p>Кабельное ТВ</p>
                                 <div class="slider-wrap">
                                     <div class="slider-fill" id="tv-fill"></div>
-                                    <input type="range" id="slider-tv" value="0" max="100" step="50" />
+                                    <input type="range" id="slider-tv" value="0" max="100" step="50">
                                     <div id="select-tv"></div>
                                 </div>
                                 <div class="slider__value slider__value-tv">
@@ -184,17 +184,17 @@
                             <!-- Выбор ТВ -->
                             <div class="tariffs__calc-toggle">
                                 <label class="toggle">
-                                    <input type="checkbox" id="tvInteractive" />
+                                    <input type="checkbox" id="tvInteractive">
                                     <span class="toggle-label"></span> Интерактивное ТВ
                                 </label>
 
                                 <!-- Выбор приставки -->
                                 <label class="toggle">
-                                    <input type="checkbox" id="tvFullHD" name="tvBox" />
+                                    <input type="checkbox" id="tvFullHD" name="tvBox">
                                     <span class="toggle-label"></span> ТВ-приставка FULL HD
                                 </label>
                                 <label class="toggle">
-                                    <input type="checkbox" id="tv4k" name="tvBox" />
+                                    <input type="checkbox" id="tv4k" name="tvBox">
                                     <span class="toggle-label"></span> ТВ-приставка 4K
                                 </label>
                             </div>
@@ -208,20 +208,20 @@
                                 и онлайн игр.</p>
                             <ul class="tariffs__connect-list">
                                 <li>
-                                    <img src="img/icons/wifi-int.png" alt="" />
+                                    <img src="img/icons/wifi-int.png" alt="">
                                     <p class="value-tariffs">Интернет 50 Мбит/с</p>
                                     <p id="rout"></p>
                                 </li>
                                 <li>
-                                    <img src="img/icons/smart-tv_tar.png" alt="" />
+                                    <img src="img/icons/smart-tv_tar.png" alt="">
                                     <p id="tv">Без ТВ</p>
                                 </li>
                                 <li>
-                                    <img src="img/icons/wifi_tar.png" alt="" />
+                                    <img src="img/icons/wifi_tar.png" alt="">
                                     <p id="box">Без приставки</p>
                                 </li>
                                 <li>
-                                    <img src="img/icons/video_10402668.png" alt="" />
+                                    <img src="img/icons/video_10402668.png" alt="">
                                     <p id="movie">Онлайн кинотеатр</p>
                                 </li>
                             </ul>
@@ -230,6 +230,7 @@
                             <a href="">Или заказать консультацию специалиста</a>
                         </div>
                     </form>
+                </div>
             </section>
 
             <section class="form-wrap boxshadow">
@@ -271,7 +272,7 @@
 
         <div class="map wrapper">
 
-            <script type="text/javascript" charset="utf-8" async
+            <script async
                 src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
         </div>
         <div class="wrapper flex__wrapper">
@@ -546,7 +547,7 @@
             </div>
         </div>
     </footer>
-    <form action="" class="cookie" id="cookie">
+    <form action="#" class="cookie" id="cookie">
         <h4 class="cookie__title">Мы используем куки.</h4>
         <p>Это помогает эффективно использовать сайт и его сервисы. <br>
             Нажав «Принять» вы даете свое согласие на использование файлов куки в соответствии с <a href="#">Политикой

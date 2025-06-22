@@ -108,9 +108,10 @@ button {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 60px 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
+
 
 .grid__wrapper {
     display: flex;
@@ -718,6 +719,48 @@ button {
     padding: 20px 20px 20px 0;
     width: 10%;
 } */
+
+.internet__title {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.arrow {
+    width: 2px;
+    position: relative;
+    transition: .3s;
+}
+
+.internet__arrow {
+    background-color: #d4d4d4;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.arrow::after {
+    content: '';
+    height: 10px;
+    width: 2px;
+    background-color: #6d6d6d;
+    position: absolute;
+    left: 17px;
+    bottom: 30%;
+    transform: rotate(45deg);
+}
+
+.arrow::before {
+    content: '';
+    height: 10px;
+    width: 2px;
+    background-color: #6d6d6d;
+    position: absolute;
+    left: 11px;
+    bottom: 30%;
+    transform: rotate(-45deg);
+}
+
 .price__internet {
     cursor: pointer;
 }
@@ -745,11 +788,10 @@ button {
     height: 350px;
 }
 
-.grid__service {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.rotate__arrow {
+    transform: rotate(180deg);
 }
+
 
 .grid__item-title {
     padding: 45px;
@@ -888,7 +930,7 @@ button {
     transition: .3s;
     z-index: 1;
     border-radius: 50%;
-    
+
 
 }
 
@@ -906,15 +948,16 @@ button {
 .tv--inter:hover .fill-tv {
     left: 43%;
     top: 51%;
-    transform: scale(150); background-color: #CCFF66;
+    transform: scale(150);
+    background-color: #CCFF66;
 }
 
 .tv--cable img {
     background-color: #00abfe;
 }
 
-.tv--cable:hover .fill-tv{
-     left: 43%;
+.tv--cable:hover .fill-tv {
+    left: 43%;
     top: 51%;
     transform: scale(150);
     background-color: #00abfe;
@@ -1083,6 +1126,7 @@ footer a:visited {
     color: #6d6d6d;
 }
 
+
 .check__adress {
     display: none;
 }
@@ -1243,6 +1287,9 @@ footer a:visited {
 
     .news__operator-text {
         font-size: 12px;
+    }
+    .tv {
+        padding: 10px;
     }
 
     .footer__nav {
