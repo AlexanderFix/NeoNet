@@ -888,11 +888,11 @@ button {
 }
 
 .grid__title svg {
-    transition: .3s;
+    transition: .5s;
 }
 
 .grid__title h2 {
-    transition: .3s;
+    transition: .5s;
 }
 
 .fill-grid {
@@ -901,7 +901,7 @@ button {
     left: 7%;
     top: 20%;
     height: 3%;
-    transition: .3s;
+    transition: .5s;
     z-index: 1;
     border-radius: 50%;
 
@@ -915,13 +915,7 @@ button {
     border-radius: 10px;
 }
 
-.cls-1 {
-    fill: none;
-    stroke: #000000;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 20px;
-}
+
 
 .grid--inter svg {
     background-color: #CCFF66;
@@ -1280,16 +1274,16 @@ footer a:visited {
         font-size: 12px;
     }
 
-    .tv {
+    .grid__item {
         padding: 10px;
     }
 
-    .tv--cable:hover .fill-tv {
+    .grid--cable:hover .fill-grid {
         left: 55%;
 
     }
 
-    .tv--inter:hover .fill-tv {
+    .grid--inter:hover .fill-grid {
         left: 55%;
     }
 
@@ -1358,7 +1352,7 @@ footer a:visited {
 }
 
 @media (max-width: 550px) {
-    .fill-tv {
+    .fill-grid {
         width: 1.5%;
     }
 }
