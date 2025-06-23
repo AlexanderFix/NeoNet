@@ -61,6 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       select.style.left = (slide.value - 4) + '%';
       fill.style.width = `${slide.value - 2}%`
+      
+      
     }
 
 
@@ -164,10 +166,10 @@ document.addEventListener("DOMContentLoaded", function () {
     //   fill.style.width = `${slide.value}%`
     // } else {
     //   // Для интернет-слайдера – исходное позиционирование
-    select.style.left = slide.value + "%";
+    select.style.left = slide.value - 1 + "%";
     fill.style.width = `${Number(slide.value) + 2}%`
     // }
-
+console.log(slide.value);
     if (slide.id === "slider-internet") {
       let speed = "";
       if (slide.value === "0") speed = "Без интернета";

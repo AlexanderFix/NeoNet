@@ -125,7 +125,7 @@ button {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 30px;
 }
 
 
@@ -873,23 +873,27 @@ button {
 }
 
 .grid__item {
-    padding: 20px 30px 50px 20px;
+    padding: 30px;
     border-radius: 10px;
-    border: 1px solid #a1a1aa;
+    border: 1px solid #e4e4e742;
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-color: #fbfbfb;
+    background-color: #f1f1f1;
     cursor: pointer;
-    box-shadow: 0 0 5px #a1a1aa;
+    box-shadow: 0 0 10px #71717a;
+   
 }
-
+.grid__item h2 {
+    width: 100%;
+    text-align: center;
+}
 .grid__title {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 30px;
     z-index: 11;
-    position: relative;
+    position: relative; align-items: center;
 }
 
 .grid__title svg {
@@ -907,8 +911,8 @@ button {
 .fill-grid {
     position: absolute;
     width: 1%;
-    left: 7%;
-    top: 20%;
+    left: 15%;
+    top: 50%;
     height: 3%;
     transition: .3s;
     z-index: 1;
@@ -918,10 +922,12 @@ button {
 }
 
 
-.grid__item svg {
-    width: 100px;
-    padding: 10px 20px;
-    border-radius: 10px;
+.grid__item .svg {
+    width: 150px;
+    /* padding: 10px 20px; */
+    /* border-radius: 10px; */
+    padding: 30px;
+    border-radius: 50%;
 }
 
 .grid__item img {
@@ -932,7 +938,7 @@ button {
 
 
 
-.grid--inter svg {
+.grid--inter .svg {
     background-color: #CCFF66;
 }
 
@@ -947,7 +953,7 @@ button {
     background-color: #CCFF66;
 }
 
-.grid--cable svg {
+.grid--cable .svg {
     background-color: #00abfe;
 }
 
