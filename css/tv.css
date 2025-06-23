@@ -1,11 +1,15 @@
-h6{
+h6 {
     font-weight: 600;
 }
+
+h4 {
+    height: 52px;
+}
+
 .price__tv-wrap {
     display: flex;
     flex-direction: column;
     gap: 60px;
-    margin-top: 45px;
 }
 
 .price__package-wrap {
@@ -25,22 +29,22 @@ h6{
     margin-left: 30px;
 }
 
-.price__tv-wrap img {
+.price__tv-wrap svg {
     width: 100%;
-    max-width: 50px;
-
+    max-width: 150px;
+margin: 0 auto;
 }
 
 .price__package {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    justify-content: space-between;
     padding: 40px;
     /* border: 1px solid #999999; */
     box-shadow: 0px 0px 5px #999999;
-    width: 45%;
-    justify-content: space-between;
-    gap: 55px;
+    width: 30%;
+    gap: 30px;
 }
 
 .price__package a {
@@ -53,23 +57,31 @@ h6{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    line-height: 20px;
+    width: 100%;
 }
 
-.price__package-title li {
-    list-style: disc;
-}
 
+.price__package-item li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.price__package-item svg {
+    max-width: 35px;
+    margin: 0;
+}
 .price__package-title ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-left: 15px;
 }
 
 .price__package-connect {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    width: 100%;
 }
 
 .price__package-switch {
