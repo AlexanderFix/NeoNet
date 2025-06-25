@@ -35,6 +35,9 @@ main {
     flex-direction: column;
     gap: 60px;
     margin-top: 60px;
+}
+
+.flex__wrapper--hidden {
     overflow: hidden;
 }
 
@@ -787,6 +790,7 @@ button {
 
 .price__add {
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .price__add li {
@@ -942,7 +946,6 @@ input:checked+.price__package-switch-slider::before {
 
 .price__add-title {
     padding: 10px;
-    margin-bottom: 10px;
 }
 
 .device__change-wrap {
