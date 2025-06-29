@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница | NEONET | Интернет-провайдер</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main/index.css">
+
+</head>
+
+<body>
+
+    <header id="header">
+
+        <nav class="fixed__menu-wrap">
+            <div class="fixed__menu wrapper">
+
+                <ul class="fixed__menu-list ">
+                    <li><a href="./about.html">О компании</a>
+                    </li>
+                    <li><a href="./subscriber.html">Абонентам</a>
+                    </li>
+                    <li><a href="./business.html">Бизнесу</a>
+                    </li>
+                    <li><a href="./service.html">Сервис и помощь</a>
+                    </li>
+                    <li><a href="./contacts.html">Контакты</a>
+                    </li>
+                </ul>
+
+                <ul class="menu-icons">
+                    <li><a href="#"><img src="img/icons/icon_viber.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+                </ul>
+
+                <div class="fixed__menu-support">
+                    <p>Служба поддержки</p>
+                    <a href="tel:375297450222">+375 29 7450222 (МТС)</a>
+                </div>
+
+                <div class="burger">
+
+                    <div class="logo center">
+                        <img src="img/logo.png" alt="">
+                    </div>
+
+                    <div class="burger_button" id="burger_button">
+                        <div class="burger_menu" id="burger_menu"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </nav>
+
+        <nav class="nav__menu wrapper">
+            <a href="/" class="logo center">
+                <img src="img/logo.png" alt="">
+            </a>
+
+            <ul class="nav__menu-list">
+                <li><a href="/internet.html"><img src="img/icons/wifi-icon.png" alt="">Интернет</a></li>
+                <li><a href="/tv.html"><img src="img/icons/smart-tv_5017412.png" alt="">Телевидение</a></li>
+                <li><a href="/video.html"><img src="img/icons/cctv_12176956.png" alt="">Видеонаблюдение</a></li>
+            </ul>
+            <div class="nav__menu-button"><img src="img/icons/icon_button_personal.png" alt="">
+                <button>Личный кабинет</button>
+            </div>
+
+        </nav>
+
+        <div id="burger_wrapper" class="burger_wrapper">
+            <div id="burger_nav" class="burger_nav">
+                <nav class="burger_nav_active">
+                    <ul class="burger_list">
+                        <li><a href="#">О компании</a>
+                            <hr>
+                        </li>
+                        <li><a href="#">Абонентам</a></li>
+                        <li><a href="#">Бизнесу</a></li>
+                        <li><a href="#">Сервис и помощь</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="path">
+            <div class="wrapper path__wrapper">
+                <span class="path--blue">Главная</span><span class="path--blue">/ О компании</span><span>/
+                    Вакансии</span>
+            </div>
+
+        </div>
+
+        <div class="wrapper flex__wrapper">
+            <h1>Зона покрытия</h1>
+            <section class="form-wrap boxshadow">
+                <h2>Отправьте заявку на подключение к интернету</h2>
+                <form action="#" class="form">
+                    <div class="form__item-wrap">
+
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Город</p>
+                            <input name="home" class="form__item" type="text" placeholder="Брест">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Улица</p>
+                            <input name="appart" class="form__item " type="text">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper ">
+                            <p>Дом</p>
+                            <input name="appart" class="form__item form__item-input--widht" type="text">
+                        </fieldset>
+
+                        <fieldset class="form__item-wrapper">
+                            <p>Корпус</p>
+                            <input name="appart" class="form__item  form__item-input--widht" type="text">
+                        </fieldset>
+
+                        <button class="button button--border" type="submit">Подключить</button>
+                    </div>
+
+                </form>
+            </section>
+            <a class="check__adress"><img src="img/icons/pin_5216349.png" alt="">
+                Проверить адрес на возможность подключения</a>
+        </div>
+
+
+
+        <div class="map wrapper">
+
+            <script async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab0bd6b81c93c91e813a0b687051259a425a73be7c7642787c2e399784671dd17&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        
+    </main>
+
+    <footer>
+        <nav class="footer__nav">
+            <div class="footer-wrap">
+                <ul class="fixed__menu-list">
+                    <li><a href="/about.html">О компании</a>
+                    </li>
+                    <li><a href="/subscriber.html">Абонентам</a>
+                    </li>
+                    <li><a href="/business.html">Бизнесу</a>
+                    </li>
+                    <li><a href="/service.html">Сервис и помощь</a>
+                    </li>
+                    <li><a href="/contacts.html">Контакты</a>
+                    </li>
+                </ul>
+                <a href="#" class="footer--font">НАВЕРХ</a>
+            </div>
+
+        </nav>
+        <div class="footer">
+            <div class="footer-wrap">
+                <div class="footer__about footer__item">
+                    <img src="img/footer_icon.png" alt="">
+                    <p> ООО «Сетевые инновации»
+                        <br> Брест, Варшавское шоссе 11
+                        <br>info@neonet.by
+                    </p>
+                </div>
+                <div class="footer__info footer__item">
+                    <h5><strong>ИНФОРМАЦИЯ</strong></h5>
+                    <ul class="footer__list">
+                        <li><a href="#">Кабинет пользователя </a></li>
+                        <li><a href="#"> Приложение для Android</a></li>
+                        <li><a href="#"> Приложение для iPhone</a></li>
+                        <li><a href="#"> Политика обработки персональных данных</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contacts footer__item">
+                    <h5><strong>КОНТАКТЫ</strong></h5>
+                    <ul class="footer__list">
+                        <li><a href="tel:+375297450222">+375 29 7450222 (МТС) </a></li>
+                        <li><a href="tel:+375447745022">+375 44 7745022 (А1)</a></li>
+                        <li><a href="mailto:support@neonet.by">support@neonet.by / техподдержка</a></li>
+                        <li><a href="viber://chat?number=+375333356343">Viber (+375 33 3356343)</a></li>
+                    </ul>
+
+                    <ul class="footer__contacts-icons">
+
+                        <li><a href="viber://chat?number=+375333356343"><img src="img/icons/icon_viber.png" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="img/icons/icon_tg.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/icons/icon_vk.png" alt=""></a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/form.js"></script>
+</body>
+
+</html>

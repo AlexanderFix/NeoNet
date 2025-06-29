@@ -240,9 +240,7 @@ hr {
         display: none;
     }
 
-    body.lock {
-        overflow: hidden;
-    }
+    
 
     .menu-icons {
         display: none;
