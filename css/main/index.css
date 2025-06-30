@@ -109,6 +109,11 @@ button {
     border-radius: 3px;
 }
 
+.button--green {
+    background-color: #ccff66;
+    color: #000;
+}
+
 .button:visited {
     color: white;
 }
@@ -791,7 +796,7 @@ button {
 .tarif__plans {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -826,11 +831,13 @@ button {
     gap: 60px;
     width: 100%;
 }
-.price__tv{
+
+.price__tv {
     display: flex;
     margin: auto;
     gap: 100px;
 }
+
 .price__package-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
