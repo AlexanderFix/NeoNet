@@ -78,8 +78,12 @@ header {
     width: 2.3vw;
 }
 .menu-icons svg {
-    max-width: 24px;
+    max-width: 30px;
     width: 2.3vw;
+    transition: .3s;
+}
+.menu-icons svg:hover {
+   scale: 1.2;
 }
 
 .menu-icons::after {
