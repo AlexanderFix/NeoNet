@@ -14,11 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const priceDisplay = document.getElementById("final-price");
   const tv = document.getElementById("tv");
   const box = document.getElementById("box");
+  const movie = document.getElementById("movie");
   const toggle = document.querySelectorAll("input[type=checkbox], input[type=radio]");
   const tvBox = document.getElementsByName("tvBox");
   const cookie = document.getElementById("cookie");
   const cookieReject = document.getElementById("cookie-reject");
   const cookieAccept = document.getElementById("cookie-accept");
+
 
 
 
@@ -61,8 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       select.style.left = (slide.value - 4) + '%';
       fill.style.width = `${slide.value - 2}%`
-      
-      
+
+
     }
 
 
@@ -169,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     select.style.left = slide.value - 1 + "%";
     fill.style.width = `${Number(slide.value) + 2}%`
     // }
-console.log(slide.value);
+    console.log(slide.value);
     if (slide.id === "slider-internet") {
       let speed = "";
       if (slide.value === "0") speed = "Без интернета";
@@ -276,72 +278,127 @@ console.log(slide.value);
   })
   //Cookie end
 
-});
+
+  // Burger start
+
+  const burgerButton = document.querySelector('.burger__button')
+  const burgerMenu = document.querySelector('.burger__menu')
+  const serviceBurger = document.getElementById('service__burger')
+  const arrow = document.getElementById('arrow')
+  const burgerList = document.getElementById('service__burger-list')
+
+  serviceBurger.addEventListener('click', () => {
+    arrow.classList.toggle('rotate__arrow')
+    burgerList.classList.toggle('service__burger-active')
+  })
+  burgerButton.addEventListener('click', () => {
+    burgerMenu.classList.toggle('open')
+    document.body.classList.toggle('lock')
+  })
+  //Burger end
+
+  // Menu select start
+  const selectSingle = document.querySelector('.form__select');
+  const selectSingle_title = selectSingle.querySelector('.form__select__title-span');
+  const selectSingle_labels = selectSingle.querySelectorAll('.form__select__label');
+  const selectSingle_input = document.getElementsByClassName('form__select__input');
+  const selectSingle_content = document.querySelector('.form__select__content')
+
+  // Toggle menu
+  selectSingle.addEventListener('click', () => {
+    if (selectSingle_content.style.display == 'flex') {
+      selectSingle_content.style.display = 'none'
+    } else {
+      selectSingle_content.style.display = 'flex'
+    }
+
+    if ('active' === selectSingle.getAttribute('data-state')) {
+      selectSingle.setAttribute('data-state', '');
+
+    } else {
+      selectSingle.setAttribute('data-state', 'active');
+    }
 
 
 
-
-// Burger start
-
-const burgerButton = document.querySelector('.burger__button')
-const burgerMenu = document.querySelector('.burger__menu')
-const serviceBurger = document.getElementById('service__burger')
-const arrow = document.getElementById('arrow')
-const burgerList = document.getElementById('service__burger-list')
-
-serviceBurger.addEventListener('click', () => {
-  arrow.classList.toggle('rotate__arrow')
-  burgerList.classList.toggle('service__burger-active')
-})
-burgerButton.addEventListener('click', () => {
-  burgerMenu.classList.toggle('open')
-  document.body.classList.toggle('lock')
-})
-//Burger end
-
-// Menu select start
-const selectSingle = document.querySelector('.form__select');
-const selectSingle_title = selectSingle.querySelector('.form__select__title-span');
-const selectSingle_labels = selectSingle.querySelectorAll('.form__select__label');
-const selectSingle_input = document.getElementsByClassName('form__select__input');
-const selectSingle_content = document.querySelector('.form__select__content')
-
-// Toggle menu
-selectSingle.addEventListener('click', () => {
-  if (selectSingle_content.style.display == 'flex') {
-    selectSingle_content.style.display = 'none'
-  } else {
-    selectSingle_content.style.display = 'flex'
-  }
-
-  if ('active' === selectSingle.getAttribute('data-state')) {
-    selectSingle.setAttribute('data-state', '');
-
-  } else {
-    selectSingle.setAttribute('data-state', 'active');
-  }
-
-
-
-
-});
-
-// Close when click to option
-for (let i = 0; i < selectSingle_labels.length; i++) {
-
-  selectSingle_labels[i].addEventListener('click', (evt) => {
-    selectSingle_title.textContent = evt.target.textContent;
-    selectSingle.setAttribute('data-state', '',);
-
-    selectSingle_content.style.display = 'none';
 
   });
 
+  // Close when click to option
+  for (let i = 0; i < selectSingle_labels.length; i++) {
+
+    selectSingle_labels[i].addEventListener('click', (evt) => {
+      selectSingle_title.textContent = evt.target.textContent;
+      selectSingle.setAttribute('data-state', '',);
+
+      selectSingle_content.style.display = 'none';
+
+    });
 
 
-}
+
+  }
 
 
-// Menu select end
+  // Menu select end
+
+
+  //Modal connect
+  const modalClose = document.querySelector('.modal__close');
+  const modal = document.getElementById('modal__connect-wrap');
+  const modalConnect = document.getElementById('modal__connect-wrap');
+  const buttonConnect = document.getElementById('button-connect');
+  const modalTariffs = document.querySelector('.modal__value-tariffs');
+  const modalRout = document.getElementById('modal-rout');
+  const modalTv = document.getElementById('modal-tv');
+  const modalBox = document.getElementById('modal-box');
+  const modalMovie = document.getElementById('modal-movie');
+  const modalPrice = document.getElementById('modal__final-price');
+  const modalOpen = document.getElementById('modal__connect-wrap');
+
+
+  function closeModal(params) {
+    modal.close();
+    document.body.classList.remove('lock')
+    modalOpen.style = "opacity: 0 "
+  }
+
+  buttonConnect.addEventListener('click', (e) => {
+    e.preventDefault();
+    modalConnect.showModal();
+    document.body.classList.add('lock')
+    modalTariffs.textContent = textInet[0].textContent;
+    modalRout.textContent = rout.textContent;
+    modalTv.textContent = tv.textContent;
+    modalBox.textContent = box.textContent;
+    modalMovie.textContent = movie.textContent;
+    modalPrice.textContent = priceDisplay.textContent;
+    modalOpen.style = "opacity: 1"
+  });
+
+  modalClose.addEventListener('click', () => {
+    closeModal()
+  });
+
+  modal.addEventListener('click', (e) => {
+    const modal = e.currentTarget;
+    const clickBackDrop = e.target === modal;
+    
+    if (clickBackDrop) {
+      closeModal()
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+
+    if (e.code == 'Escape') {
+      closeModal()
+    }
+
+  });
+
+});
+
+
 
 

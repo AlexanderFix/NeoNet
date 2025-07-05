@@ -200,6 +200,7 @@
   margin: 30px 7px;
   font-size: clamp(.3rem, 1.5vw, 14px);
   color: #999999;
+  text-align: start;
 }
 
 .check a {

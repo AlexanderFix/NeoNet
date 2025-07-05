@@ -284,7 +284,7 @@
                                 </li>
                             </ul>
                             <p id="final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
-                            <button class="tariffs__connect-button">Подключить</button>
+                            <button id="button-connect" class="tariffs__connect-button">Подключить</button>
                             <a href="">Или заказать консультацию специалиста</a>
                         </div>
                     </form>
@@ -617,6 +617,118 @@
 
 
     </form>
+
+    <dialog id="modal__connect-wrap">
+        <section class="modal__connect">
+            <div class="modal__title modal__title--color"> <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
+            <div class="modal__close-wrap">
+                    <div class="modal__close"><span></span><span></span></div>
+                </div></div>
+           
+            <form action="" class="modal__form ">
+                <div class="tariffs__connect">
+                    <p class="tariffs__connect--bigText modal__value-tariffs">Тариф 50 Мбит/с</p>
+                    <p class="tariffs__connect--mobile">Рекомендуется для нескольких пользователей, просмотра
+                        видео
+                        и онлайн игр.</p>
+                    <ul class="tariffs__connect-list">
+                        <li>
+                            <img src="img/icons/wifi-int.png" alt="">
+                            <p class="modal__value-tariffs">Интернет 50 Мбит/с</p>
+                            <p id="modal-rout"></p>
+                        </li>
+                        <li>
+                            <img src="img/icons/smart-tv_tar.png" alt="">
+                            <p id="modal-tv">Без ТВ</p>
+                        </li>
+                        <li>
+                            <img src="img/icons/wifi_tar.png" alt="">
+                            <p id="modal-box">Без приставки</p>
+                        </li>
+                        <li>
+                            <img src="img/icons/video_10402668.png" alt="">
+                            <p id="modal-movie">Онлайн кинотеатр</p>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="price__pay">
+                        <p>Ежемесячный платеж</p>
+                        <p id="modal__final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
+                    </div>
+                    <!-- <button id="modal__button-connect" class="tariffs__connect-button">Подключить</button> -->
+                    <!-- <a href="">Или заказать консультацию специалиста</a> -->
+                </div>
+                <div class="modal__form-inner ">
+                    <!-- Имя -->
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <input class="form__item modal--widht" type="text" id="name" name="name" required minlength="2"
+                            maxlength="50" pattern="^[А-Яа-яЁё\s]+$" placeholder="Введите ваше имя">
+                    </fieldset>
+
+                    <!-- Телефон -->
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <input placeholder="Телефон" class="form__item modal--widht" type="tel" id="phone" name="phone"
+                            required onfocus="setCursorPosition(this)" pattern="\+375\(\d{2}\)\d{3}-\d{2}-\d{2}">
+                    </fieldset>
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <fieldset class="form__select modal--widht form__item">
+
+
+                            <!--  -->
+                            <!-- <select class="street" name="" id="">
+                                <option value="1">Махновича</option>
+                                <option value="2">Рябцева</option>
+                                <option value="3">Суворова</option>
+                            </select> -->
+
+                            <div class="form__select__title" data-default="Option 0">
+                                <span class="form__select__title-span modal--widht">Героев обороны</span>
+                                <span class="form__select__title-arrow"></span>
+                            </div>
+                            <div class="form__select__content">
+                                <input id="singleSelect01" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect01" class="form__select__label">Махновича</label>
+                                <input id="singleSelect11" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect11" class="form__select__label">Рябцева</label>
+                                <input id="singleSelect21" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect21" class="form__select__label">Суворова</label>
+                                <input id="singleSelect31" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect31" class="form__select__label">Героев обороны</label>
+                            </div>
+
+                        </fieldset>
+                    </fieldset>
+                    <div class="modal__form-item"> <!-- Номер дома -->
+
+                        <fieldset class="form__item-wrapper modal--widht">
+                            <input placeholder="Дом" name="home" class="form__item modal--widht" type="text">
+                        </fieldset>
+
+                        <!-- Квартира -->
+                        <fieldset class="form__item-wrapper modal--widht">
+                            <input placeholder="Квартира" name="appart" class="form__item modal--widht" type="text">
+
+                        </fieldset>
+                    </div>
+                    <!-- Выбор улицы -->
+                     <div class="modal__area-wrap">
+                        <p>Примечание</p>
+                        <textarea placeholder="(опишите здесь любые нюансы, которые вы хотели бы учесть при подключении)" class="modal__area" name="x" id="x" rows="5"></textarea>
+                     </div>
+
+                    <div class="check modal__check">
+                        <input type="checkbox" name="check-policy" id="check-policy">
+                        <label for="check-policy">Я ознакомлен(а) с <a href="#">Политикой</a> и согласен(а) на обработку
+                            персональных данных.</label>
+
+                    </div>
+
+                    <button class="button button--border" type="submit">Подключить</button>
+                </div>
+            </form>
+        </section>
+
+    </dialog>
     <script src="js/index.js"></script>
 </body>
 

@@ -127,9 +127,6 @@ button {
     color: #000;
 }
 
-@keyframes jump {
-    0% {}
-}
 
 .grid {
     display: grid;
@@ -788,9 +785,7 @@ button {
 }
 
 .tarif__plans-wrap {
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
+    margin: 0 auto;
 }
 
 .tarif__plans {
@@ -1308,6 +1303,11 @@ input:checked+.price__package-switch-slider::before {
     align-items: start;
 }
 
+.button__change {
+    display: flex;
+    gap: 40px;
+}
+
 .modal__wrap {
     width: 80%;
     margin: auto;
@@ -1601,6 +1601,198 @@ footer a:visited {
     color: #6d6d6d;
 }
 
+dialog {
+    transition: .3s;
+
+}
+
+dialog[open] {
+    opacity: 0;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#modal__connect-wrap {
+    margin: auto;
+}
+
+.modal__connect {
+    text-align: center;
+
+}
+
+.modal__connect h2 {
+    width: 100%;
+}
+
+.modal__form {
+    display: flex;
+    /* width: 800px; */
+}
+
+.modal__form hr {
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 13%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
+}
+
+.modal__form-item {
+    display: flex;
+    gap: 40px;
+}
+
+.modal__form-inner {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 30px;
+}
+
+.modal--widht {
+    max-width: 100%;
+    width: 100%;
+    text-align: start;
+}
+
+.price__pay {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.price__pay p:nth-child(1) {
+    font-size: 18px;
+}
+
+.form__select__title-arrow {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.form__select__title-arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 10px;
+    background-color: #000;
+    transform: rotate(45deg);
+}
+
+.form__select__title-arrow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    height: 2px;
+    width: 10px;
+    background-color: #000;
+    transform: rotate(-45deg);
+}
+
+.modal__area-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
+    width: 100%;
+    color: #999999;
+}
+
+.modal__area {
+    padding: 10px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+}
+
+.modal__check {
+    margin: 0;
+}
+
+.modal__title--color {
+    background-color: #ececec;
+}
+
+.pay__title {
+    text-align: center;
+}
+
+.pay {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.pay__item {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 20px;
+    box-shadow: 0px 0px 5px #999999;
+}
+
+
+.pay__item hr {
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+.pay__item-list svg {
+    min-width: 20px;
+}
+
+.pay__item-list li {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.pay__item-list--mark li {
+    list-style: disc;
+    display: list-item;
+}
+
+.pay__item-list--color {
+    color: #00abfe;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.pay__item-list li {
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.pay__item-title {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pay__item-title h4 {
+    line-height: 20px;
+    width: 60%;
+}
+
+.pay__item-title--widht h4 {
+    width: 80%;
+}
 
 .check__adress {
     display: none;
