@@ -1,22 +1,138 @@
 
-const listChannel = document.querySelectorAll('.list-channel');
-const publiclyList = document.getElementById('publicly-available');
+let listChannel = document.querySelectorAll('.list-channel');
+let publiclyList = document.getElementById('publicly-available');
 const filmslList = document.getElementById('films-series');
+// const modal = document.getElementById('modal');
 const modalTV = document.getElementById('modal');
 const modalClose = document.querySelector('.modal__close');
 const buttonChange = document.querySelectorAll('.button__change-item');
 const tarrifs = document.querySelector('.tarif__plans-wrap');
+const tarrifsItem = document.getElementsByClassName('tarif__plans');
+const tarrifsPrice = document.querySelectorAll('.price__package-wrap');
+
+// Добавление каналов
+
+let baseChannel = {};
+let baseFilms = {};
+
+let channel = {};
+let films = {};
+
+
+let films2 = {};
+
+let channel2 = {};
+
+for (let index = 0; index < 20; index++) {
+    channel[index] = {
+        image: 'img/icons/belarus1.png',
+        name: `bel ${index}`,
+    }
+    films[index] = {
+        image: 'img/icons/belarus1.png',
+        name: `bel ${index}`,
+    }
+}
+for (let index = 0; index < 10; index++) {
+    channel2[index] = {
+        image: 'img/icons/app-svgrepo-com.svg',
+        name: `bel ${index}`,
+    }
+    films2[index] = {
+        image: 'img/icons/app-svgrepo-com.svg',
+        name: `bel ${index}`,
+    }
+}
+for (let index = 0; index < 12; index++) {
+    baseChannel[index] = {
+        image: 'img/icons/watch-tv_4341516.png',
+        name: `bel ${index}`,
+    }
+    baseFilms[index] = {
+        image: 'img/icons/watch-tv_4341516.png',
+        name: `bel ${index}`,
+    }
+}
+
+function ModalList(id) {
+    document.getElementById('publicly-available').innerHTML = ''
+    document.getElementById('films-series').innerHTML = ''
+    if (id === "nTV") {
+        for (let i = 0; i < Object.keys(channel2).length; i++) {
+
+            document.getElementById('publicly-available').insertAdjacentHTML("beforeend", `<div class="modal__channel">
+                            <img src="${channel2[i].image}" alt="">
+                            <p>${channel2[i].name}</p>
+                        </div> `);
+        }
+        for (let i = 0; i < Object.keys(films2).length; i++) {
+
+
+            document.getElementById('films-series').insertAdjacentHTML("beforeend", `<div class="modal__channel">
+                            <img src="${films2[i].image}" alt="">
+                            <p>${films2[i].name}</p>
+                        </div> `)
+        }
+    } else if (id === "aTV") {
+        for (let i = 0; i < Object.keys(channel).length; i++) {
+
+            document.getElementById('publicly-available').insertAdjacentHTML("beforeend", `<div class="modal__channel">
+                            <img src="${channel[i].image}" alt="">
+                            <p>${channel[i].name}</p>
+                        </div> `);
+        }
+        for (let i = 0; i < Object.keys(films).length; i++) {
+
+
+            document.getElementById('films-series').insertAdjacentHTML("beforeend", `<div class="modal__channel">
+                            <img src="${films[i].image}" alt="">
+                            <p>${films[i].name}</p>
+                        </div> `)
+        }
+    } else {
+        console.log(1);
+
+        for (let i = 0; i < Object.keys(baseChannel).length; i++) {
+
+            document.getElementById('publicly-available').insertAdjacentHTML("beforeend", `<div class="modal__channel">
+                            <img src="${baseChannel[i].image}" alt="">
+                            <p>${baseChannel[i].name}</p>
+                        </div> `);
+        }
+        for (let i = 0; i < Object.keys(baseFilms).length; i++) {
+
+
+            document.getElementById('films-series').insertAdjacentHTML("beforeend", `<div class="modal__channel">
+                            <img src="${baseFilms[i].image}" alt="">
+                            <p>${baseFilms[i].name}</p>
+                        </div> `)
+        }
+    }
+
+}
 
 
 
+
+//Кнопки выбора тарифа
+
+tarrifsItem[0].style.opacity = '1';
 
 buttonChange.forEach(element => {
-    console.log(element);
+
 
     element.addEventListener('click', (e) => {
+
+
+        buttonChange.forEach(element => {
+            element.removeAttribute('disabled')
+        });
+
+        tarrifsItem[0].style.opacity = '0';
+
         if (e.target.id === 'codeTv') {
-            console.log(1);
-            tarrifs.innerHTML = `<section class="tarif__plans">
+            setTimeout(() => {
+                tarrifs.innerHTML = `<section class="tarif__plans">
                     <h2>Кодированные планы</h2>
                     <div class="price__tv-wrap">
                         <div class="price__tv">
@@ -79,7 +195,7 @@ buttonChange.forEach(element => {
                                             </label>
                                         </div> -->
                                     <div class="price__package-connect">
-                                        <p class="list-channel">Список каналов</p>
+                                        <p class="list-channel" id="family-list-channel">Список каналов</p>
                                         <p class="price__package-text">21,70р. / месяц</p>
                                         <button class="button">Подключить</button>
                                     </div>
@@ -143,7 +259,7 @@ buttonChange.forEach(element => {
                                             </label>
                                         </div> -->
                                     <div class="price__package-connect">
-                                        <p class="list-channel">Список каналов</p>
+                                        <p class="list-channel" id="priv-list-channel">Список каналов</p>
 
                                         <p class="price__package-text">21,70р. / месяц</p>
                                         <button class="button">Подключить</button>
@@ -155,9 +271,17 @@ buttonChange.forEach(element => {
 
                     </div>
 
-                </section>`
+                </section>`;
+            }, 300);
+            setTimeout(() => {
+                tarrifsItem[0].style.opacity = '1';
+                modalOpen(document.querySelectorAll('.list-channel'))
+
+            }, 400)
+
         } else {
-            tarrifs.innerHTML = `<section class="tarif__plans">
+            setTimeout(() => {
+                tarrifs.innerHTML = `<section class="tarif__plans">
                     <h2>Тарифные планы</h2>
                     <form action="" class="price__tv-wrap">
                         <div class="price__tv">
@@ -209,7 +333,7 @@ buttonChange.forEach(element => {
                                     </section>
 
                                     <div class="price__package-connect">
-                                        <p class="list-channel">Список каналов</p>
+                                        <p class="list-channel" id="base-list-channel">Список каналов</p>
                                         <p class="price__package-text">21,70р. / месяц</p>
                                         <button class="button">Подключить</button>
                                     </div>
@@ -282,38 +406,238 @@ buttonChange.forEach(element => {
 
                                     </section>
                                     <div class="price__package-connect">
-                                        <p class="list-channel">Список каналов</p>
+                                        <p class="list-channel" id="extended-list-channel">Список каналов</p>
                                         <p class="price__package-text">21,70р. / месяц</p>
                                         <button class="button">Подключить</button>
                                     </div>
                                 </div>
                     </form>
 
-                </section>`
+                </section>`;
+            }, 300)
+            setTimeout(() => {
+                tarrifsItem[0].style.opacity = '1';
+                modalOpen(document.querySelectorAll('.list-channel'))
+            }, 400)
         }
+        e.target.setAttribute('disabled', '');
     })
 });
+
+
+// function slideTv(params) {
+//     // tarrifsPrice.forEach(element => {
+//     //     console.log(element);
+
+//     //     element.style.left = "300px";
+//     // });
+//     console.log(tarrifsPrice[0]);
+
+//     tarrifsPrice[0].style = "left: 100px"
+// }
+
+
+
+
+// Открытие модалки
+function modalOpen(params) {
+
+
+    params.forEach(element => {
+
+        element.addEventListener('click', (e) => {
+            console.log(e.target.id);
+
+            if (e.target.id === 'extended-list-channel') {
+                modalTV.innerHTML = `                    
+                <div class="modal">
+            <section class="modal__title">
+                <h2>СПИСОК ТВ КАНАЛОВ</h2>
+                <div class="modal__close-wrap" onclick="closeModal()">
+                    <div class="modal__close"><span></span><span></span></div>
+                </div>
+            </section>
+            <div class="modal__change">
+                <div class="modal__change-item modal_active" id="nTV" onclick="modalButtons(this)">
+                    <p>Расширенный пакет: <br>
+                        цифровые каналы</p>
+                    <hr>
+                </div>
+
+                <div class="modal__change-item " id="aTV" onclick="modalButtons(this)">
+                    <p>Расширенный пакет: <br>
+                        аналоговые каналы</p>
+                    <hr>
+                </div>
+
+            </div>
+            <div class="modal__list-wrap">
+
+                <div class="modal__list-item">
+                    <strong>Общедоступные</strong>
+                    <div class="modal__channel-wrap" id="publicly-available"></div>
+                </div>
+                <div class="modal__list-item">
+                    <strong>Фильмы / Сериалы</strong>
+                    <div class="modal__channel-wrap" id="films-series">
+
+                    </div>
+                </div>
+                <div class="modal__list-item">
+                    <strong>Развлекательные</strong>
+                    <div class="modal__channel-wrap">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>`
+                ModalList(document.querySelectorAll('.modal__change-item')[0].id)
+                modalButtons();
+            } else if (e.target.id === 'base-list-channel') {
+                modalTV.innerHTML = `<div class="modal">
+            <section class="modal__title">
+                <h2>СПИСОК ТВ КАНАЛОВ</h2>
+                <div class="modal__close-wrap" onclick="closeModal()">
+                    <div class="modal__close"><span></span><span></span></div>
+                </div>
+            </section>
+            <div class="modal__change">
+
+                <div class="modal__change-item modal_active">
+                    <p>Базовый пакет</p>
+                    <hr>
+                </div>
+
+            </div>
+            <div class="modal__list-wrap">
+
+                <div class="modal__list-item">
+                    <strong>Общедоступные</strong>
+                    <div class="modal__channel-wrap" id="publicly-available"></div>
+                </div>
+                <div class="modal__list-item">
+                    <strong>Фильмы / Сериалы</strong>
+                    <div class="modal__channel-wrap" id="films-series">
+
+                    </div>
+                </div>
+                <div class="modal__list-item">
+                    <strong>Развлекательные</strong>
+                    <div class="modal__channel-wrap">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>`;
+                ModalList()
+            } else if (e.target.id === 'priv-list-channel') {
+                modalTV.innerHTML = `<div class="modal">
+            <section class="modal__title">
+                <h2>СПИСОК ТВ КАНАЛОВ</h2>
+                <div class="modal__close-wrap" onclick="closeModal()">
+                    <div class="modal__close"><span></span><span></span></div>
+                </div>
+            </section>
+            <div class="modal__change">
+
+                <div class="modal__change-item modal_active">
+                    <p>Кодированные каналы: <br>
+                            пакет 18+</p>
+                    <hr>
+                </div>
+
+            </div>
+            <div class="modal__list-wrap">
+
+                <div class="modal__list-item">
+                    <strong>Общедоступные</strong>
+                    <div class="modal__channel-wrap" id="publicly-available"></div>
+                </div>
+                <div class="modal__list-item">
+                    <strong>Фильмы / Сериалы</strong>
+                    <div class="modal__channel-wrap" id="films-series">
+
+                    </div>
+                </div>
+                <div class="modal__list-item">
+                    <strong>Развлекательные</strong>
+                    <div class="modal__channel-wrap">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>`;
+                ModalList()
+            } else if (e.target.id === 'family-list-channel') {
+
+                modalTV.innerHTML = `<div class="modal">
+            <section class="modal__title">
+                <h2>СПИСОК ТВ КАНАЛОВ</h2>
+                <div class="modal__close-wrap" onclick="closeModal()">
+                    <div class="modal__close"><span></span><span></span></div>
+                </div>
+            </section>
+            <div class="modal__change">
+
+                <div class="modal__change-item modal_active">
+                    <p>Кодированные каналы: <br>
+                            пакет семейный</p>
+                    <hr>
+                </div>
+
+            </div>
+            <div class="modal__list-wrap">
+
+                <div class="modal__list-item">
+                    <strong>Общедоступные</strong>
+                    <div class="modal__channel-wrap" id="publicly-available"></div>
+                </div>
+                <div class="modal__list-item">
+                    <strong>Фильмы / Сериалы</strong>
+                    <div class="modal__channel-wrap" id="films-series">
+
+                    </div>
+                </div>
+                <div class="modal__list-item">
+                    <strong>Развлекательные</strong>
+                    <div class="modal__channel-wrap">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>`;
+                ModalList()
+            }
+            modalTV.showModal();
+            document.body.classList.add('lock');
+            modalTV.style = "opacity: 1 ";
+
+
+        });
+    });
+
+
+}
+modalOpen(listChannel)
+
+
+
+// Закрытие модалки
+
+
 function closeModal(params) {
     modalTV.close();
     document.body.classList.remove('lock')
     modalTV.style = "opacity: 0 "
 }
-
-// Открытие модалки
-listChannel.forEach(element => {
-    element.addEventListener('click', (e) => {
-        modalTV.showModal();
-        document.body.classList.add('lock')
-        modalTV.style = "opacity: 1 "
-    });
-});
-
-
-// Закрытие модалки
-modalClose.addEventListener('click', () => {
-    closeModal()
-
-})
 
 
 document.addEventListener('keydown', (e) => {
@@ -324,89 +648,50 @@ document.addEventListener('keydown', (e) => {
 })
 
 
-
-modal.addEventListener('click', (e) => {
-    const modal = e.currentTarget;
-    const clickBackDrop = e.target === modal;
+modalTV.addEventListener('click', (e) => {
+    const modalTV = e.currentTarget;
+    const clickBackDrop = e.target === modalTV;
     document.body.classList.remove('lock')
 
     if (clickBackDrop) closeModal();
 })
 
 
-// Добавление каналов
-
-let channel = {};
-let films = {}
-
-
-let films2 = {}
-
-let channel2 = {}
-
-for (let index = 0; index < 20; index++) {
-    channel[index] = {
-        image: 'img/icons/belarus1.png',
-        name: `bel ${index}`,
-    }
-    films[index] = {
-        image: 'img/icons/belarus1.png',
-        name: `bel ${index}`,
-    }
-}
-for (let index = 0; index < 10; index++) {
-    channel2[index] = {
-        image: 'img/icons/belarus1.png',
-        name: `bel ${index}`,
-    }
-    films2[index] = {
-        image: 'img/icons/belarus1.png',
-        name: `bel ${index}`,
-    }
-}
 
 
 
-for (let i = 0; i < Object.keys(channel).length; i++) {
-
-
-    publiclyList.insertAdjacentHTML("beforeend", `<div class="modal__channel">
-                            <img src="${channel[i].image}" alt="">
-                            <p>${channel[i].name}</p>
-                        </div> `)
-}
-for (let i = 0; i < Object.keys(films).length; i++) {
-
-
-    filmslList.insertAdjacentHTML("beforeend", `<div class="modal__channel">
-                            <img src="${films[i].image}" alt="">
-                            <p>${films[i].name}</p>
-                        </div> `)
-}
 
 
 
-const modalChange = document.querySelectorAll('.modal__change-item');
+function modalButtons(params) {
 
 
-modalChange.forEach(element => {
+    const modalChange = document.querySelectorAll('.modal__change-item');
 
-    element.addEventListener('click', (e) => {
-        modalChange.forEach(element => {
-            element.classList.forEach(e => {
+    modalChange.forEach(element => {
 
-                if (e == 'modal_active') {
-                    element.classList.remove('modal_active')
-                }
+        element.addEventListener('click', (e) => {
+
+            modalChange.forEach(element => {
+                element.classList.forEach(e => {
+
+
+                    if (e == 'modal_active') {
+                        element.classList.remove('modal_active')
+                    }
+
+                });
+
 
             });
+            // console.log(modalChange[0].classList);
 
+            e.currentTarget.classList.add('modal_active')
+            ModalList(e.currentTarget.id)
+            console.log(e.currentTarget.id);
 
-        });
-        // console.log(modalChange[0].classList);
+        })
 
-        e.currentTarget.classList.add('modal_active')
+    });
 
-    })
-
-});
+}

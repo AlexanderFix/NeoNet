@@ -189,7 +189,7 @@
 
             </div>
             <div class="button__change">
-                <button class="button button__change-item" id="baseTv">Тарифные планы</button>
+                <button disabled class="button button__change-item" id="baseTv">Тарифные планы</button>
                 <button class="button button__change-item" id="codeTv">Кодированные планы</button>
             </div>
 
@@ -246,7 +246,7 @@
                                     </section>
 
                                     <div class="price__package-connect">
-                                        <p class="list-channel">Список каналов</p>
+                                        <p class="list-channel" id="base-list-channel">Список каналов</p>
                                         <p class="price__package-text">21,70р. / месяц</p>
                                         <button class="button">Подключить</button>
                                     </div>
@@ -319,7 +319,7 @@
 
                                     </section>
                                     <div class="price__package-connect">
-                                        <p class="list-channel">Список каналов</p>
+                                        <p class="list-channel" id="extended-list-channel">Список каналов</p>
                                         <p class="price__package-text">21,70р. / месяц</p>
                                         <button class="button">Подключить</button>
                                     </div>
@@ -429,20 +429,15 @@
         <div class="modal">
             <section class="modal__title">
                 <h2>СПИСОК ТВ КАНАЛОВ</h2>
-                <div class="modal__close-wrap">
+                <div class="modal__close-wrap" onclick="closeModal()">
                     <div class="modal__close"><span></span><span></span></div>
                 </div>
             </section>
             <div class="modal__change">
-                <div class="modal__change-item modal_active">
-                    <p>ТАРИФ <br> ЛАЙТ</p>
-                    <p>100+ каналов <br> [20 в HD] <br> [2 в 4K]</p>
-                    <hr>
-                </div>
 
-                <div class="modal__change-item">
-                    <p>ТАРИФ <br> "СМАРТ" и "Ультра"</p>
-                    <p>120+ каналов <br> [30 в HD] <br> [2 в 4K]</p>
+                <div class="modal__change-item ">
+                    <p>Расширенный пакет: <br>
+                        аналоговые каналы</p>
                     <hr>
                 </div>
 
@@ -462,374 +457,7 @@
                 <div class="modal__list-item">
                     <strong>Развлекательные</strong>
                     <div class="modal__channel-wrap">
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 1</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
-                        <div class="modal__channel">
-                            <img src="img/icons/belarus1.png" alt="">
-                            <p>bel 2</p>
-                        </div>
+
                     </div>
                 </div>
 

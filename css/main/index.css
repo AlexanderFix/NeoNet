@@ -793,6 +793,8 @@ button {
     flex-direction: column;
     gap: 40px;
     align-items: center;
+    transition: .3s;
+    opacity: 0;
 }
 
 .price__add {
@@ -831,12 +833,14 @@ button {
     display: flex;
     margin: auto;
     gap: 100px;
+
 }
 
 .price__package-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+    position: relative;
 }
 
 .price__title {
@@ -865,11 +869,14 @@ button {
     box-shadow: 0px 0px 5px #999999;
     width: 100%;
     gap: 20px;
-    min-width: 255px;
-    max-width: 270px;
+    /* min-width: 255px;
+    max-width: 270px; */
+    width: 285px;
     height: 528px;
     background-color: #f6f6f6;
     margin: 0 auto;
+    left: 0;
+    position: relative;
 }
 
 
@@ -1306,6 +1313,17 @@ input:checked+.price__package-switch-slider::before {
 .button__change {
     display: flex;
     gap: 40px;
+    justify-content: center;
+}
+
+.button__change-item {
+    width: 285px;
+    padding: clamp(.6rem, 1.5vw, 1.2rem) clamp(.6rem, 3vw, 3rem);
+}
+
+.button__change-item:disabled {
+    background-color: #d9f036;
+    color: #000;
 }
 
 .modal__wrap {
@@ -1319,7 +1337,7 @@ input:checked+.price__package-switch-slider::before {
 
 .modal__title {
     text-align: center;
-    padding: 40px;
+    padding: 30px;
     position: relative;
     width: 100%;
 }
@@ -1327,7 +1345,7 @@ input:checked+.price__package-switch-slider::before {
 .modal__close-wrap {
     position: absolute;
     right: 30px;
-    top: 37%;
+    top: 33%;
 
 }
 
@@ -1394,6 +1412,7 @@ input:checked+.price__package-switch-slider::before {
     background-color: #00abfe;
     width: 95%;
 }
+
 
 
 
