@@ -644,7 +644,6 @@ document.addEventListener('keydown', (e) => {
 
     if (e.code == 'Escape') closeModal();
 
-
 })
 
 
@@ -664,7 +663,6 @@ modalTV.addEventListener('click', (e) => {
 
 
 function modalButtons(params) {
-
 
     const modalChange = document.querySelectorAll('.modal__change-item');
 

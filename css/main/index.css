@@ -1346,7 +1346,7 @@ input:checked+.price__package-switch-slider::before {
     position: absolute;
     right: 30px;
     top: 33%;
-
+cursor: pointer;
 }
 
 .modal__close {

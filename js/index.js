@@ -298,26 +298,33 @@ document.addEventListener("DOMContentLoaded", function () {
   //Burger end
 
   // Menu select start
-  const selectSingle = document.querySelector('.form__select');
-  const selectSingle_title = selectSingle.querySelector('.form__select__title-span');
-  const selectSingle_labels = selectSingle.querySelectorAll('.form__select__label');
+  const selectSingle = document.querySelectorAll('.form__select');
+  const selectSingle_title = document.querySelector('.form__select__title-span');
+  const selectSingle_labels = document.querySelectorAll('.form__select__label');
   const selectSingle_input = document.getElementsByClassName('form__select__input');
-  const selectSingle_content = document.querySelector('.form__select__content')
+console.log(selectSingle);
 
   // Toggle menu
-  selectSingle.addEventListener('click', () => {
+  selectSingle.forEach(element => {
+    console.log(element);
+    
+    element.addEventListener('click', () => {
+  const selectSingle_content = element.querySelector('.form__select__content')
+
     if (selectSingle_content.style.display == 'flex') {
       selectSingle_content.style.display = 'none'
     } else {
       selectSingle_content.style.display = 'flex'
     }
 
-    if ('active' === selectSingle.getAttribute('data-state')) {
-      selectSingle.setAttribute('data-state', '');
+    if ('active' === element.getAttribute('data-state')) {
+      element.setAttribute('data-state', '');
 
     } else {
-      selectSingle.setAttribute('data-state', 'active');
+      element.setAttribute('data-state', 'active');
     }
+  });
+  
 
 
 
