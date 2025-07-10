@@ -302,11 +302,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const selectSingle_title = document.querySelector('.form__select__title-span');
   const selectSingle_labels = document.querySelectorAll('.form__select__label');
   const selectSingle_input = document.getElementsByClassName('form__select__input');
-console.log(selectSingle);
+
 
   // Toggle menu
   selectSingle.forEach(element => {
-    console.log(element);
+
     
     element.addEventListener('click', () => {
   const selectSingle_content = element.querySelector('.form__select__content')
@@ -408,4 +408,12 @@ console.log(selectSingle);
 
 
 
+const inputField = document.getElementById('phoneModal');
+console.log(inputField);
+
+const maskOptions = {
+  mask: '+{375} (00) 000-00-00',
+  lazy: false, 
+};
+const mask = IMask(inputField, maskOptions);
 
