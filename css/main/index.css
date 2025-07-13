@@ -822,19 +822,9 @@ button {
     font-size: 16px;
 }
 
-.price__tv-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    width: 100%;
-}
 
-.price__tv {
-    display: flex;
-    margin: auto;
-    gap: 100px;
 
-}
+
 
 .price__package-wrap {
     display: grid;
@@ -853,7 +843,7 @@ button {
     margin-left: 30px;
 }
 
-.price__tv-wrap svg {
+.price__package-wrap svg {
     width: 100%;
     max-width: 150px;
     margin: 0 auto;
@@ -1874,6 +1864,27 @@ dialog::backdrop {
 
 .pay__item-title--widht h4 {
     width: 80%;
+}
+.service__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.service {
+    display: flex;
+    gap: 30px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.service svg {
+    width: 40px;
+}
+.service__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .check__adress {

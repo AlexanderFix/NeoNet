@@ -404,6 +404,7 @@ buttonChange.forEach(element => {
 // }
 
 
+
 // modal.showModal()
 // console.log(document.querySelectorAll("[data-payModal]")[0]);
 
@@ -903,6 +904,165 @@ function modalOpen(channel, button) {
                     IMask(document.getElementById('phoneModal'), maskOptions);
 
                     break;
+                case "extendedModalIntTV":
+                    modal.innerHTML = `<section class="modal__connectTV">
+            <div class="modal__title modal__title--color">
+                <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
+                <div class="modal__close-wrap" onclick="closeModal()">
+                    <div class="modal__close"><span></span><span></span></div>
+                </div>
+            </div>
+
+            <form action="#" class="modal__form modal__form--TV">
+                <div class="tariffs__connect tariffs__connect--widht">
+                    <div class="modal__TV-title">
+                        <p class="tariffs__connect--bigText modal__value-tariffs">Расширенный пакет</p>
+                          <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250">
+
+                                <defs>
+                                    <image width="806" height="806" id="img12"
+                                        href="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9Ii00LjggLTQuOCA1Ny42MCA1Ny42MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KDTxnIGlkPSJTVkdSZXBvX2JnQ2FycmllciIgc3Ryb2tlLXdpZHRoPSIwIj4KDTxyZWN0IHg9Ii00LjgiIHk9Ii00LjgiIHdpZHRoPSI1Ny42MCIgaGVpZ2h0PSI1Ny42MCIgcng9IjI4LjgiIGZpbGw9IiNjY2ZmNjYiIHN0cm9rZXdpZHRoPSIwIi8+Cg08L2c+Cg08ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KDTxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPGcgaWQ9InR2Ij4gPGcgaWQ9InR2XzIiPiA8cGF0aCBpZD0iQ29tYmluZWQgU2hhcGUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNDEuMDAwOCAzNC4wMDA2SDI5Ljk2NDhDMjkuNDEyNSAzNC4wMDA2IDI4Ljk2NDggMzMuNTUyOSAyOC45NjQ4IDMzLjAwMDZDMjguOTY0OCAzMi40NDgzIDI5LjQxMjUgMzIuMDAwNiAyOS45NjQ4IDMyLjAwMDZINDEuMDAwOEM0MS41NTI1IDMyLjAwMDYgNDIuMDAwOCAzMS41NTIzIDQyLjAwMDggMzEuMDAwNlYxMS4wMDA2QzQyLjAwMDggMTAuNDQ3NyA0MS41NTM0IDEwLjAwMDYgNDEuMDAwOCAxMC4wMDA2SDcuMDAwNzlDNi40NDcwOCAxMC4wMDA2IDYuMDAwNzkgMTAuNDQ2OSA2LjAwMDc5IDExLjAwMDZWMzEuMDAwNkM2LjAwMDc5IDMxLjU1MzIgNi40NDc5MiAzMi4wMDA2IDcuMDAwNzkgMzIuMDAwNkgyMS44NjI3QzIxLjkwMzggMzEuOTk1NSAyMS45NDU3IDMxLjk5MjggMjEuOTg4MiAzMS45OTI4QzIyLjAzMDcgMzEuOTkyOCAyMi4wNzI2IDMxLjk5NTUgMjIuMTEzNyAzMi4wMDA2SDI1LjkzODhDMjUuOTgzIDMyLjAwMDYgMjYuMDI2NiAzMi4wMDM1IDI2LjA2OTMgMzIuMDA5MUMyNi41ODM3IDMyLjA1MDQgMjYuOTg4MiAzMi40ODA4IDI2Ljk4ODIgMzMuMDA1OFYzNy45OTg2SDMzQzMzLjU1MjMgMzcuOTk4NiAzNCAzOC40NDYzIDM0IDM4Ljk5ODZDMzQgMzkuNTUwOSAzMy41NTIzIDM5Ljk5ODYgMzMgMzkuOTk4NkgxNUMxNC40NDc3IDM5Ljk5ODYgMTQgMzkuNTUwOSAxNCAzOC45OTg2QzE0IDM4LjQ0NjMgMTQuNDQ3NyAzNy45OTg2IDE1IDM3Ljk5ODZIMjAuOTg4MlYzNC4wMDA2SDcuMDAwNzlDNS4zNDMwNCAzNC4wMDA2IDQuMDAwNzkgMzIuNjU3NCA0LjAwMDc5IDMxLjAwMDZWMTEuMDAwNkM0LjAwMDc5IDkuMzQyMzMgNS4zNDI1MSA4LjAwMDYxIDcuMDAwNzkgOC4wMDA2MUg0MS4wMDA4QzQyLjY1NzYgOC4wMDA2MSA0NC4wMDA4IDkuMzQyODYgNDQuMDAwOCAxMS4wMDA2VjMxLjAwMDZDNDQuMDAwOCAzMi42NTY5IDQyLjY1NzEgMzQuMDAwNiA0MS4wMDA4IDM0LjAwMDZaTTI0Ljk4ODIgMzcuOTk4NlYzNC4wMDA2SDIyLjk4ODJWMzcuOTk4NkgyNC45ODgyWiIgZmlsbD0iIzAwMDAwMCIvPiA8L2c+IDwvZz4gPC9nPgoNPC9zdmc+" />
+                                    <image width="811" height="811" id="img22"
+                                        href="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9Ii03LjY4IC03LjY4IDQ3LjM2IDQ3LjM2IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzMiAzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEuNiI+Cg08ZyBpZD0iU1ZHUmVwb19iZ0NhcnJpZXIiIHN0cm9rZS13aWR0aD0iMCIvPgoNPGcgaWQ9IlNWR1JlcG9fdHJhY2VyQ2FycmllciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cg08ZyBpZD0iU1ZHUmVwb19pY29uQ2FycmllciI+IDxnPiA8cGF0aCBmaWxsPSIjMDAwMDAwIiBkPSJNMTYsMEM3LjE3OCwwLDAsNy4xNzgsMCwxNnM3LjE3OCwxNiwxNiwxNnMxNi03LjE3OCwxNi0xNlMyNC44MjIsMCwxNiwweiBNMTYsMzFDNy43MjksMzEsMSwyNC4yNzEsMSwxNiBTNy43MjksMSwxNiwxczE1LDYuNzI5LDE1LDE1UzI0LjI3MSwzMSwxNiwzMXoiLz4gPHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTE5LjYwOSwxNC44MDJMMTQuMzE2LDEwLjhjLTAuMjYzLTAuMTk3LTAuNTY3LTAuMzAyLTAuODgtMC4zMDJDMTIuNjMxLDEwLjQ5OCwxMiwxMS4xNTgsMTIsMTJ2OCBjMCwwLjg0MiwwLjYzNSwxLjUwMiwxLjQ0NSwxLjUwMmMwLjMxMywwLDAuNjE5LTAuMTA0LDAuODg1LTAuMzA0bDUuMjU4LTMuOTk4YzAuMzgyLTAuMjg3LDAuNjExLTAuNzQyLDAuNjExLTEuMjE4IEMyMC4xOTgsMTUuNTEyLDE5Ljk4MywxNS4wODEsMTkuNjA5LDE0LjgwMnogTTE4Ljk4NSwxNi40MDFsLTUuMjU4LDMuOTk4QzEzLjQzNCwyMC42MjIsMTMsMjAuNDUzLDEzLDIwdi04IGMwLTAuMzI2LDAuMjI1LTAuNTAyLDAuNDM3LTAuNTAyYzAuMDk2LDAsMC4xOSwwLjAzNCwwLjI3OSwwLjEwMWw1LjI5Myw0LjAwMmMwLjE2NSwwLjEyMywwLjE5LDAuMjkyLDAuMTksMC4zODIgQzE5LjE5OCwxNi4xNDcsMTkuMTIyLDE2LjMsMTguOTg1LDE2LjQwMXoiLz4gPC9nPiA8L2c+Cg08L3N2Zz4=" />
+                                </defs>
+                                <style>
+                                </style>
+                                <use id="tv-svgrepo-com" href="#img12" transform="matrix(.31,0,0,.31,0,0)" />
+                                <use id="play-button-svgrepo-com" href="#img22"
+                                    transform="matrix(.09,0,0,.089,89,77)" />
+                            </svg>
+                        <div class="price__package-item">
+                            <ul>
+                                                <li>
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+
+                                                        <g id="SVGRepo_bgCarrier44" stroke-width="0" />
+
+                                                        <g id="SVGRepo_tracerCarrier44" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+
+                                                        <g id="SVGRepo_iconCarrier44">
+                                                            <path
+                                                                d="M17 3L12 7L7 3M6.8 21H17.2C18.8802 21 19.7202 21 20.362 20.673C20.9265 20.3854 21.3854 19.9265 21.673 19.362C22 18.7202 22 17.8802 22 16.2V11.8C22 10.1198 22 9.27976 21.673 8.63803C21.3854 8.07354 20.9265 7.6146 20.362 7.32698C19.7202 7 18.8802 7 17.2 7H6.8C5.11984 7 4.27976 7 3.63803 7.32698C3.07354 7.6146 2.6146 8.07354 2.32698 8.63803C2 9.27976 2 10.1198 2 11.8V16.2C2 17.8802 2 18.7202 2.32698 19.362C2.6146 19.9265 3.07354 20.3854 3.63803 20.673C4.27976 21 5.11984 21 6.8 21Z"
+                                                                stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </g>
+
+                                                    </svg>
+                                                    <p><strong>Для цифровых ТВ</strong> <br>Более 100 каналов</p>
+                                                </li>
+                                                <li>
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+
+                                                        <g id="SVGRepo_bgCarrier55" stroke-width="0" />
+
+                                                        <g id="SVGRepo_tracerCarrier55" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+
+                                                        <g id="SVGRepo_iconCarrier55">
+                                                            <path
+                                                                d="M17 3L12 7L7 3M6.8 21H17.2C18.8802 21 19.7202 21 20.362 20.673C20.9265 20.3854 21.3854 19.9265 21.673 19.362C22 18.7202 22 17.8802 22 16.2V11.8C22 10.1198 22 9.27976 21.673 8.63803C21.3854 8.07354 20.9265 7.6146 20.362 7.32698C19.7202 7 18.8802 7 17.2 7H6.8C5.11984 7 4.27976 7 3.63803 7.32698C3.07354 7.6146 2.6146 8.07354 2.32698 8.63803C2 9.27976 2 10.1198 2 11.8V16.2C2 17.8802 2 18.7202 2.32698 19.362C2.6146 19.9265 3.07354 20.3854 3.63803 20.673C4.27976 21 5.11984 21 6.8 21Z"
+                                                                stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </g>
+
+                                                    </svg>
+                                                    <p><strong>Для аналоговых ТВ</strong><br> более 35 каналов</p>
+                                                </li>
+                                            </ul>
+
+
+
+                        </div>
+                    </div>
+                    <div class="modal__pay">
+                        <hr>
+                        <div class="price__pay price__pay--TV">
+                            <p>Ежемесячный платеж</p>
+                            <p class="tariffs__connect--bigText">${document.querySelectorAll("[data-payModal]")[1].textContent}</p>
+                        </div>
+                    </div>
+
+                    <!-- <button id="modal__button-connect" class="tariffs__connect-button">Подключить</button> -->
+                    <!-- <a href="">Или заказать консультацию специалиста</a> -->
+                </div>
+                <div class="modal__form-inner ">
+                    <!-- Имя -->
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <input class="form__item modal--widht" type="text" id="nameModal" name="name" required
+                            minlength="2" maxlength="50" pattern="^[А-Яа-яЁё\s]+$" placeholder="Введите ваше имя">
+                    </fieldset>
+
+                    <!-- Телефон -->
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <input class="form__item modal--widht" type="tel" id="phoneModal" name="phone">
+                    </fieldset>
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <fieldset class="form__select modal--widht form__item">
+
+
+                            <!--  -->
+                            <!-- <select class="street" name="" id="">
+                                <option value="1">Махновича</option>
+                                <option value="2">Рябцева</option>
+                                <option value="3">Суворова</option>
+                            </select> -->
+
+                            <div class="form__select__title" data-default="Option 0">
+                                <span class="form__select__title-span modal--widht">Героев обороны</span>
+                                <span class="form__select__title-arrow"></span>
+                            </div>
+                            <div class="form__select__content">
+                                <input id="singleSelect01" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect01" class="form__select__label">Махновича</label>
+                                <input id="singleSelect11" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect11" class="form__select__label">Рябцева</label>
+                                <input id="singleSelect21" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect21" class="form__select__label">Суворова</label>
+                                <input id="singleSelect31" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect31" class="form__select__label">Героев обороны</label>
+                            </div>
+
+                        </fieldset>
+                    </fieldset>
+                    <div class="modal__form-item">
+                        <!-- Номер дома -->
+
+                        <fieldset class="form__item-wrapper modal--widht">
+                            <input placeholder="Дом" name="home" class="form__item modal--widht" type="text">
+                        </fieldset>
+
+                        <!-- Квартира -->
+                        <fieldset class="form__item-wrapper modal--widht">
+                            <input placeholder="Квартира" name="appart" class="form__item modal--widht" type="text">
+
+                        </fieldset>
+                    </div>
+                    <!-- Выбор улицы -->
+                    <div class="modal__area-wrap">
+                        <p>Примечание</p>
+                        <textarea
+                            placeholder="(опишите здесь любые нюансы, которые вы хотели бы учесть при подключении)"
+                            class="modal__area" name="x" id="x" rows="5"></textarea>
+                    </div>
+
+                    <div class="check modal__check">
+                        <input type="checkbox" name="check-policy" id="check-policy-modal">
+                        <label for="check-policy">Я ознакомлен(а) с <a href="#">Политикой</a> и согласен(а) на обработку
+                            персональных данных.</label>
+
+                    </div>
+
+                    <button class="button button--border" type="submit">Подключить</button>
+                </div>
+            </form>
+        </section>`;
+                    SelectTown()
+                    IMask(document.getElementById('phoneModal'), maskOptions);
+
+                    break;
                 case "familyModalTV":
 
                     modal.innerHTML = `<section class="modal__connectTV">
@@ -1201,6 +1361,7 @@ function modalOpen(channel, button) {
         if (clickBackDrop) closeModal();
     })
 }
+
 
 
 modalOpen(document.querySelectorAll('.list-channel'), document.querySelectorAll('.price__package-wrap')[0].querySelectorAll('.button'))
