@@ -309,6 +309,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     element.addEventListener('click', () => {
+     
+      
   const selectSingle_content = element.querySelector('.form__select__content')
 
     if (selectSingle_content.style.display == 'flex') {
@@ -409,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 const inputField = document.getElementById('phoneModal');
-console.log(inputField);
+
 
 const maskOptions = {
   mask: '+{375} (00) 000-00-00',
