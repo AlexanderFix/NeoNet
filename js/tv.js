@@ -605,13 +605,13 @@ function modalOpen(channel, button) {
             switch (e.target.id) {
 
                 case "baseModalTV":
-                    modal.innerHTML = `<section class="modal__connectTV">
-            <div class="modal__title modal__title--color">
+                    modal.innerHTML = `<div class="modal__connectTV">
+            <section class="modal__title modal__title--color">
                 <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
                 <div class="modal__close-wrap" onclick="closeModal()">
                     <div class="modal__close"><span></span><span></span></div>
                 </div>
-            </div>
+            </section>
 
             <form action="#" class="modal__form modal__form--TV">
                 <div class="tariffs__connect tariffs__connect--widht">
@@ -739,19 +739,19 @@ function modalOpen(channel, button) {
                     <button class="button button--border" type="submit">Подключить</button>
                 </div>
             </form>
-        </section>`;
+        </div>`;
 
                     SelectTown()
                     IMask(document.getElementById('phoneModal'), maskOptions);
                     break;
                 case "extendedModalTV":
-                    modal.innerHTML = `<section class="modal__connectTV">
-            <div class="modal__title modal__title--color">
+                    modal.innerHTML = `<div class="modal__connectTV">
+            <section class="modal__title modal__title--color">
                 <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
                 <div class="modal__close-wrap" onclick="closeModal()">
                     <div class="modal__close"><span></span><span></span></div>
                 </div>
-            </div>
+            </section>
 
             <form action="#" class="modal__form modal__form--TV">
                 <div class="tariffs__connect tariffs__connect--widht">
@@ -899,19 +899,19 @@ function modalOpen(channel, button) {
                     <button class="button button--border" type="submit">Подключить</button>
                 </div>
             </form>
-        </section>`;
+        </div>`;
                     SelectTown()
                     IMask(document.getElementById('phoneModal'), maskOptions);
 
                     break;
                 case "extendedModalIntTV":
-                    modal.innerHTML = `<section class="modal__connectTV">
-            <div class="modal__title modal__title--color">
+                    modal.innerHTML = `<div class="modal__connectTV">
+            <section class="modal__title modal__title--color">
                 <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
                 <div class="modal__close-wrap" onclick="closeModal()">
                     <div class="modal__close"><span></span><span></span></div>
                 </div>
-            </div>
+            </section>
 
             <form action="#" class="modal__form modal__form--TV">
                 <div class="tariffs__connect tariffs__connect--widht">
@@ -1058,20 +1058,20 @@ function modalOpen(channel, button) {
                     <button class="button button--border" type="submit">Подключить</button>
                 </div>
             </form>
-        </section>`;
+        </div>`;
                     SelectTown()
                     IMask(document.getElementById('phoneModal'), maskOptions);
 
                     break;
                 case "familyModalTV":
 
-                    modal.innerHTML = `<section class="modal__connectTV">
-            <div class="modal__title modal__title--color">
+                    modal.innerHTML = `<div class="modal__connectTV">
+            <section class="modal__title modal__title--color">
                 <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
                 <div class="modal__close-wrap" onclick="closeModal()">
                     <div class="modal__close"><span></span><span></span></div>
                 </div>
-            </div>
+            </section>
 
             <form action="#" class="modal__form modal__form--TV">
                 <div class="tariffs__connect tariffs__connect--widht">
@@ -1197,17 +1197,17 @@ function modalOpen(channel, button) {
                     <button class="button button--border" type="submit">Подключить</button>
                 </div>
             </form>
-        </section>`;
+        </div>`;
                     break;
                 case "privModalTV":
 
-                    modal.innerHTML = `<section class="modal__connectTV">
-            <div class="modal__title modal__title--color">
+                    modal.innerHTML = `<div class="modal__connectTV">
+            <section class="modal__title modal__title--color">
                 <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
                 <div class="modal__close-wrap" onclick="closeModal()">
                     <div class="modal__close"><span></span><span></span></div>
                 </div>
-            </div>
+            </section>
 
             <form action="#" class="modal__form modal__form--TV">
                 <div class="tariffs__connect tariffs__connect--widht">
@@ -1333,7 +1333,7 @@ function modalOpen(channel, button) {
                     <button class="button button--border" type="submit">Подключить</button>
                 </div>
             </form>
-        </section>`;
+        </div>`;
                     break;
 
                 default:

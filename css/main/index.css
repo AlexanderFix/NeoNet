@@ -1865,11 +1865,13 @@ dialog::backdrop {
 .pay__item-title--widht h4 {
     width: 80%;
 }
+
 .service__list {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
+
 .service {
     display: flex;
     gap: 30px;
@@ -1878,13 +1880,59 @@ dialog::backdrop {
     padding: 20px;
 
 }
+
 .service svg {
     width: 40px;
 }
+
 .service__item {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.modal__bussines {
+    width: 40%;
+    margin: 0 auto;
+    height: 90%;
+    overflow: auto;
+    
+}
+
+.formBussines__wrapper {
+    background-color: white;
+   
+}
+
+.business__form {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+.business__form-inner {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    height: auto;
+}
+
+.modal__title--colorBlue {
+    background-color: var(--color-blue);
+    color: white;
+
+}
+
+.title__price {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100%;
 }
 
 .check__adress {
