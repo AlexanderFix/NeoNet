@@ -6,11 +6,16 @@
   background-color: #fcfcfc;
   padding: 30px ;
 }
-
+.form-wrap--radius {
+  border-radius: 10px 10px 0 0;
+}
 
 .form {
   width: 100%;
   margin-top: 3.5vw;
+}
+.form--top {
+  margin-top: 0;
 }
 
 .form__item-wrapper {
@@ -48,6 +53,10 @@
 
 .form__item-input--widht {
   max-width: 75px;
+}
+.form__item-input--long {
+  max-width: 275px;
+  width: 275px;
 }
 
 /* menu select */

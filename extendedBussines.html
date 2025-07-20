@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+  
     <header id="header">
 
         <nav class="fixed__menu-wrap">
@@ -189,34 +189,12 @@
                         Присоединяйтесь к NEONET и откройте для себя новые возможности в мире цифровых технологий!
                     </p>
 
-                    <div class="business__list">
-                        <ul class="business__list-list">
-                            <li>Защищенный Интернет;</li>
-                            <li>IP-телефония;</li>
-                            <li>DWDM;</li>
-                            <li>Wi-Fi с авторизацией;</li>
-                            <li>защита от DDoS атак 24/7;</li>
-                            <li>VPN;</li>
-                        </ul>
-                        <ul class="business__list-list">
-                            <li>хостинг сайтов и серверов;А</li>
-                            <li>номер 8-800;</li>
-                            <li>IP-видеонаблюдение и аналитика;</li>
-                            <li>ЦОД/ВЦОД;</li>
-                            <li>кабельное телевидение;</li>
-                            <li>информационная безопасность.</li>
-                        </ul>
-                    </div>
+
                     <p> <strong>Почему выбирают NEONET?</strong>
                         <br> Высокая скорость: Благодаря современной инфраструктуре, мы обеспечиваем высокую
                         скорость
                         интернета для всех наших клиентов.
                     </p>
-
-                    <p><strong>Гибкие тарифы:</strong> Мы предлагаем разнообразные тарифные планы, которые подходят
-                        как
-                        для
-                        частных пользователей, так и для корпоративных клиентов.</p>
 
                     <p> <strong>Профессиональная поддержка:</strong> Наша команда экспертов всегда готова помочь с
                         любыми
@@ -332,94 +310,11 @@
                 </div>
             </div>
         </div>
-        <dialog class="modal__wrap" id="modal" data-modal>
-            <div class="modal__bussines">
-                <section class="modal__title modal__title--colorBlue">
-                    <h2>Заявка для юридических лиц</h2>
-                    <div class="modal__close-wrap" onclick="closeModal()">
-                        <div class="modal__close"><span></span><span></span></div>
-                    </div>
-                </section>
-                <div class="formBussines__wrapper">
-                    <div class="title__price ">
-                        <p class="tariffs__business--bigText">Тариф 50 мб/с</p>
-                        <p class="tariffs__business--bigText">20,70р. / месяц</p>
-                    </div>
-                    <form action="" class="business__form">
+    </footer>
+   
 
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="organization"
-                                name="organization" required minlength="2" maxlength="100" pattern="^[А-Яа-яЁё\s]+$"
-                                placeholder="Полное наименование организации (ИП)">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="legalAddress"
-                                name="legalAddress" required minlength="2" maxlength="100"
-                                pattern="^[А-Яа-яЁё\s]+$^[ 0-9]+$" placeholder="Юридический адрес">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="serviceAddress"
-                                name="serviceAddress" required minlength="2" maxlength="100"
-                                pattern="^[А-Яа-яЁё\s]+$^[ 0-9]+$" placeholder="Адрес оказания услуги">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="postOrganization"
-                                name="postOrganization" required minlength="2" maxlength="100"
-                                pattern="^[А-Яа-яЁё\s]+$^[ 0-9]+$" placeholder="Почтовый адрес">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="number" id="unn" name="unn" required
-                                minlength="2" maxlength="9" placeholder="УНН">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="currentAccount"
-                                name="currentAccount" required minlength="2" maxlength="100"
-                                placeholder="Расчётный счёт">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="bank" name="bank" required
-                                minlength="2" maxlength="100" placeholder="Банк">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="bik" name="bik" required
-                                minlength="2" maxlength="100" placeholder="БИК">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="tel" id="phone" name="phone" required
-                                minlength="2" maxlength="100" placeholder="Контактный телефон (правильно укажите код)">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="nameDirector"
-                                name="nameDirector" required minlength="2" maxlength="50" pattern="^[А-Яа-яЁё\s]+$"
-                                placeholder="ФИО и должность руководителя">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="text" id="act" name="act" required
-                                minlength="2" maxlength="50" pattern="^[А-Яа-яЁё\s]+$"
-                                placeholder="Действует на основании">
-                        </fieldset>
-                        <fieldset class="form__item-wrapper modal--widht">
-                            <input class="form__item business__form-inner" type="email" id="email" name="email" required
-                                minlength="2" maxlength="50" placeholder="E-mail:">
-                        </fieldset>
-                        <div class="modal__area-wrap">
-                            <p>Примечание</p>
-                            <textarea
-                                placeholder="(опишите здесь любые нюансы, которые вы хотели бы учесть при подключении)"
-                                class="modal__area" name="x" id="x" rows="5"></textarea>
-                        </div>
-
-                        <button class="button">Отправить</button>
-                    </form>
-                </div>
-
-
-
-            </div>
-
-        </dialog>
-        <script src="js/imask.js"></script>
-        <script src="js/business.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/business.js"></script>
 </body>
 
 </html>

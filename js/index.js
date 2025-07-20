@@ -298,124 +298,386 @@ document.addEventListener("DOMContentLoaded", function () {
   //Burger end
 
   // Menu select start
-  const selectSingle = document.querySelectorAll('.form__select');
-  const selectSingle_title = document.querySelector('.form__select__title-span');
-  const selectSingle_labels = document.querySelectorAll('.form__select__label');
-  const selectSingle_input = document.getElementsByClassName('form__select__input');
+
+  function selectCity(params) {
+    const selectSingle = document.querySelectorAll('.form__select');
+    const selectSingle_title = document.querySelector('.form__select__title-span');
+    const selectSingle_labels = document.querySelectorAll('.form__select__label');
+    const selectSingle_input = document.getElementsByClassName('form__select__input');
 
 
-  // Toggle menu
-  selectSingle.forEach(element => {
-
-    
-    element.addEventListener('click', () => {
-     
-      
-  const selectSingle_content = element.querySelector('.form__select__content')
-
-    if (selectSingle_content.style.display == 'flex') {
-      selectSingle_content.style.display = 'none'
-    } else {
-      selectSingle_content.style.display = 'flex'
-    }
-
-    if ('active' === element.getAttribute('data-state')) {
-      element.setAttribute('data-state', '');
-
-    } else {
-      element.setAttribute('data-state', 'active');
-    }
-  });
-  
+    // Toggle menu
+    selectSingle.forEach(element => {
 
 
+      element.addEventListener('click', () => {
+        console.log(1);
 
 
-  });
+        const selectSingle_content = element.querySelector('.form__select__content')
 
-  // Close when click to option
-  for (let i = 0; i < selectSingle_labels.length; i++) {
+        if (selectSingle_content.style.display == 'flex') {
+          selectSingle_content.style.display = 'none'
+        } else {
+          selectSingle_content.style.display = 'flex'
+        }
 
-    selectSingle_labels[i].addEventListener('click', (evt) => {
-      selectSingle_title.textContent = evt.target.textContent;
-      selectSingle.setAttribute('data-state', '',);
+        if ('active' === element.getAttribute('data-state')) {
+          element.setAttribute('data-state', '');
 
-      selectSingle_content.style.display = 'none';
+        } else {
+          element.setAttribute('data-state', 'active');
+        }
+      });
+
+
+
+
 
     });
 
+    // Close when click to option
+    for (let i = 0; i < selectSingle_labels.length; i++) {
+
+      selectSingle_labels[i].addEventListener('click', (evt) => {
+        selectSingle_title.textContent = evt.target.textContent;
+        selectSingle.setAttribute('data-state', '',);
+
+        selectSingle_content.style.display = 'none';
+
+      });
 
 
+
+    }
   }
+
 
 
   // Menu select end
 
 
   //Modal connect
-  const modalClose = document.querySelector('.modal__close');
-  const modal = document.getElementById('modal__connect-wrap');
-  const modalConnect = document.getElementById('modal__connect-wrap');
-  const buttonConnect = document.getElementById('button-connect');
-  const modalTariffs = document.querySelector('.modal__value-tariffs');
-  const modalRout = document.getElementById('modal-rout');
-  const modalTv = document.getElementById('modal-tv');
-  const modalBox = document.getElementById('modal-box');
-  const modalMovie = document.getElementById('modal-movie');
-  const modalPrice = document.getElementById('modal__final-price');
-  const modalOpen = document.getElementById('modal__connect-wrap');
+  const buttonsModal = document.querySelectorAll('[data-modal]');
+
+  buttonsModal.forEach(element => {
+
+    element.addEventListener('click', (e) => {
+      e.preventDefault();
 
 
-  function closeModal(params) {
-    modal.close();
-    document.body.classList.remove('lock')
-    modalOpen.style = "opacity: 0 "
-  }
+      const maskOptions = {
+        mask: '+{375} (00) 000-00-00',
+        lazy: false,
+      };
 
-  buttonConnect.addEventListener('click', (e) => {
-    e.preventDefault();
-    modalConnect.showModal();
-    document.body.classList.add('lock')
-    modalTariffs.textContent = textInet[0].textContent;
-    modalRout.textContent = rout.textContent;
-    modalTv.textContent = tv.textContent;
-    modalBox.textContent = box.textContent;
-    modalMovie.textContent = movie.textContent;
-    modalPrice.textContent = priceDisplay.textContent;
-    modalOpen.style = "opacity: 1"
+
+      if (e.target.id === "button-connect") {
+
+        body.insertAdjacentHTML('beforeend', `<dialog id="modal-wrap">
+        <section class="modal__connect">
+            <div class="modal__title modal__title--color">
+                <h2>ОТПРАВИТЬ ЗАЯВКУ</h2>
+                <div class="modal__close-wrap" onclick="closeModal()">
+                    <div class="modal__close"><span></span><span></span></div>
+                </div>
+            </div>
+
+            <form action="#" class="modal__form ">
+                <div class="tariffs__connect">
+                    <p class="tariffs__connect--bigText modal__value-tariffs">Тариф 50 Мбит/с</p>
+                    <p class="tariffs__connect--mobile">Рекомендуется для нескольких пользователей, просмотра
+                        видео
+                        и онлайн игр.</p>
+                    <ul class="tariffs__connect-list">
+                        <li>
+                            <img src="img/icons/wifi-int.png" alt="">
+                            <p class="modal__value-tariffs">Интернет 50 Мбит/с</p>
+                            <p id="modal-rout"></p>
+                        </li>
+                        <li>
+                            <img src="img/icons/smart-tv_tar.png" alt="">
+                            <p id="modal-tv">Без ТВ</p>
+                        </li>
+                        <li>
+                            <img src="img/icons/wifi_tar.png" alt="">
+                            <p id="modal-box">Без приставки</p>
+                        </li>
+                        <li>
+                            <img src="img/icons/video_10402668.png" alt="">
+                            <p id="modal-movie">Онлайн кинотеатр</p>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="price__pay">
+                        <p>Ежемесячный платеж</p>
+                        <p id="modal__final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
+                    </div>
+                    <!-- <button id="modal__button-connect" class="tariffs__connect-button">Подключить</button> -->
+                    <!-- <a href="">Или заказать консультацию специалиста</a> -->
+                </div>
+                <div class="modal__form-inner ">
+                    <!-- Имя -->
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <input class="form__item modal--widht" type="text" id="nameModal" name="name" required
+                            minlength="2" maxlength="50" pattern="^[А-Яа-яЁё\s]+$" placeholder="Введите ваше имя">
+                    </fieldset>
+
+                    <!-- Телефон -->
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <input class="form__item modal--widht" type="tel" id="phoneModal" name="phone">
+                    </fieldset>
+                    <fieldset class="form__item-wrapper modal--widht">
+                        <fieldset class="form__select modal--widht form__item">
+
+
+                            <!--  -->
+                            <!-- <select class="street" name="" id="">
+                                <option value="1">Махновича</option>
+                                <option value="2">Рябцева</option>
+                                <option value="3">Суворова</option>
+                            </select> -->
+
+                            <div class="form__select__title" data-default="Option 0">
+                                <span class="form__select__title-span modal--widht">Героев обороны</span>
+                                <span class="form__select__title-arrow"></span>
+                            </div>
+                            <div class="form__select__content">
+                                <input id="singleSelect01" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect01" class="form__select__label">Махновича</label>
+                                <input id="singleSelect11" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect11" class="form__select__label">Рябцева</label>
+                                <input id="singleSelect21" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect21" class="form__select__label">Суворова</label>
+                                <input id="singleSelect31" class="form__select__input" type="radio" name="singleSelect">
+                                <label for="singleSelect31" class="form__select__label">Героев обороны</label>
+                            </div>
+
+                        </fieldset>
+                    </fieldset>
+                    <div class="modal__form-item">
+                        <!-- Номер дома -->
+
+                        <fieldset class="form__item-wrapper modal--widht">
+                            <input placeholder="Дом" name="home" class="form__item modal--widht" type="text">
+                        </fieldset>
+
+                        <!-- Квартира -->
+                        <fieldset class="form__item-wrapper modal--widht">
+                            <input placeholder="Квартира" name="appart" class="form__item modal--widht" type="text">
+
+                        </fieldset>
+                    </div>
+                    <!-- Выбор улицы -->
+                    <div class="modal__area-wrap">
+                        <p>Примечание</p>
+                        <textarea
+                            placeholder="(опишите здесь любые нюансы, которые вы хотели бы учесть при подключении)"
+                            class="modal__area" name="x" id="x" rows="5"></textarea>
+                    </div>
+
+                    <div class="check modal__check">
+                        <input type="checkbox" name="check-policy" id="check-policy-modal">
+                        <label for="check-policy">Я ознакомлен(а) с <a href="#">Политикой</a> и согласен(а) на обработку
+                            персональных данных.</label>
+
+                    </div>
+
+                    <button class="button button--border" type="submit">Подключить</button>
+                </div>
+            </form>
+        </section>
+
+    </dialog>
+     `);
+        IMask(document.getElementById('phoneModal'), maskOptions);
+        selectCity()
+
+        const modal = document.getElementById('modal-wrap');
+
+        const modalTariffs = document.querySelector('.modal__value-tariffs');
+        const modalRout = document.getElementById('modal-rout');
+        const modalTv = document.getElementById('modal-tv');
+        const modalBox = document.getElementById('modal-box');
+        const modalMovie = document.getElementById('modal-movie');
+        const modalPrice = document.getElementById('modal__final-price');
+
+
+
+
+        modal.showModal();
+        document.body.classList.add('lock')
+        modalTariffs.textContent = textInet[0].textContent;
+        modalRout.textContent = rout.textContent;
+        modalTv.textContent = tv.textContent;
+        modalBox.textContent = box.textContent;
+        modalMovie.textContent = movie.textContent;
+        modalPrice.textContent = priceDisplay.textContent;
+        modal.style = "opacity: 1";
+
+
+        modal.addEventListener('click', (e) => {
+          const modal = e.currentTarget;
+          const clickBackDrop = e.target === modal;
+
+          if (clickBackDrop) {
+            closeModal()
+          }
+
+
+          modal.style = "opacity: 1";
+
+          modal.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+            closeModal();
+            document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeend', `<div class="sent__form">
+        <p>Форма успешно отправлена</p>
+
+    </div>`)
+
+            setTimeout(() => {
+              document.getElementsByClassName('sent__form')[0].style = "opacity: 1"
+            }, 100)
+            setTimeout(() => {
+              document.getElementsByClassName('sent__form')[0].style = "opacity: 0"
+              document.getElementsByClassName('sent__form')[0].remove()
+            }, 4000)
+
+          })
+
+        });
+
+      } else if (e.target.id === "support__button") {
+
+
+        body.insertAdjacentHTML('beforeend', `<dialog id="modal-wrap">
+        <section class="form-wrap modal__support  form-wrap--950 radius">
+            <div class="modal__support-title ">
+                <h2>ОСТАЛИСЬ ВОПРОСЫ? ЗАКАЖИТЕ ОБРАТНЫЙ ЗВОНОК</h2>
+
+                <div class="modal__close-wrap" onclick="closeModal()">
+                    <div class="modal__close"><span></span><span></span></div>
+                </div>
+            </div>
+            <form action="#" class="form form--top">
+                <div class="form__item-wrap">
+
+                    <!-- Имя -->
+                    <fieldset class="form__item-wrapper">
+                        <p>Имя</p>
+                        <input class="form__item form__item-input--long" type="text" id="name" name="name" required
+                            minlength="2" maxlength="50" pattern="^[А-Яа-яЁё\s]+$" placeholder="Введите ваше имя">
+                    </fieldset>
+
+                    <!-- Телефон -->
+                    <fieldset class="form__item-wrapper">
+                        <p>Телефон</p>
+                        <input class="form__item form__item-input--long" type="tel" id="phoneModal" name="phone" required
+                            value="+375(__)___-__-__" onfocus="setCursorPosition(this)"
+                            pattern="\+375\(\d{2}\)\d{3}-\d{2}-\d{2}">
+                    </fieldset>
+
+                    <button class="button button--border" type="submit">Отправить</button>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="check-policy" id="check-policy">
+                    <label for="check-policy">Я ознакомлен(а) с <a href="#">Политикой</a> и согласен(а) на обработку
+                        персональных данных.</label>
+
+                </div>
+            </form>
+        </section>
+    </dialog>`);
+
+
+
+        const modal = document.getElementById('modal-wrap');
+        modal.showModal();
+        IMask(document.getElementById('phoneModal'), maskOptions);
+        selectCity();
+        document.body.classList.add('lock')
+
+        modal.addEventListener('click', (e) => {
+          const modal = e.currentTarget;
+          const clickBackDrop = e.target === modal;
+
+          if (clickBackDrop) {
+            closeModal()
+          }
+        });
+
+
+        modal.style = "opacity: 1";
+
+        modal.addEventListener("submit", (event) => {
+
+          event.preventDefault();
+
+          closeModal();
+          document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeend', `<div class="sent__form">
+        <p>Форма успешно отправлена</p>
+
+    </div>`)
+
+          setTimeout(() => {
+            document.getElementsByClassName('sent__form')[0].style = "opacity: 1"
+          }, 100)
+          setTimeout(() => {
+            document.getElementsByClassName('sent__form')[0].style = "opacity: 0"
+            document.getElementsByClassName('sent__form')[0].remove()
+          }, 4000)
+
+        })
+      }
+
+
+      document.addEventListener('keydown', (e) => {
+
+        if (e.code == 'Escape') closeModal();
+
+      })
+
+
+    })
   });
 
-  modalClose.addEventListener('click', () => {
-    closeModal()
-  });
+  const body = document.querySelector('body');
 
-  modal.addEventListener('click', (e) => {
-    const modal = e.currentTarget;
-    const clickBackDrop = e.target === modal;
-    
-    if (clickBackDrop) {
-      closeModal()
-    }
-  });
 
-  document.addEventListener('keydown', (e) => {
 
-    if (e.code == 'Escape') {
-      closeModal()
-    }
-
-  });
 
 });
 
 
 
-const inputField = document.getElementById('phoneModal');
+function closeModal() {
+  const modal = document.getElementById('modal-wrap');
+
+  modal.close();
+  document.body.classList.remove('lock')
+  modal.style = "opacity: 0"
+
+  modal.remove()
+}
 
 
-const maskOptions = {
-  mask: '+{375} (00) 000-00-00',
-  lazy: false, 
-};
-const mask = IMask(inputField, maskOptions);
+// news 
+
+const buttonNews = document.querySelector('.button__news');
+
+buttonNews.addEventListener('mouseenter', () => {
+
+  const img = document.getElementsByClassName('news__operator-img');
+  console.log(img[0]);
+
+  img[0].classList.add("news__operator-img--active");
+})
+buttonNews.addEventListener('mouseleave', () => {
+
+  const img = document.getElementsByClassName('news__operator-img');
+
+  img[0].classList.remove("news__operator-img--active")
+})
 

@@ -18,8 +18,7 @@
 </head>
 
 <body>
-
-    <header id="header">
+<div class="body__wrapper"><header id="header">
 
         <nav class="fixed__menu-wrap">
             <div class="fixed__menu wrapper">
@@ -172,6 +171,10 @@
         <div class="wrapper flex__wrapper">
             <section class="tariffs">
                 <h1>NEONET. Тарифы на услуги для физических лиц</h1>
+                <div class="button__change">
+                <button disabled class="button button__change-item" id="base-int">Тарифные планы</button>
+                <button class="button button__change-item" id="social-int">Кодированные планы</button>
+            </div>
                 <form action="#" id="tariffs__calc-wrap" class="tariffs__calc-wrap">
                     <section class="tariffs__calc">
                         <h2>Соберите удобный тариф</h2>
@@ -261,89 +264,142 @@
                             </li>
                         </ul>
                         <p id="final-price" class="tariffs__connect--bigText">21,70р./ месяц</p>
-                        <button class="tariffs__connect-button">Подключить</button>
-                        <a href="">Или заказать консультацию специалиста</a>
+                        <button id="button-connect" class="tariffs__connect-button" data-modal>Подключить</button>
+                        <p class="support__button" id="support__button" data-modal>Или заказать консультацию специалиста
+                        </p>
                     </div>
                 </form>
             </section>
-            <!-- <section class="price__internet">
-                <h2>Дополнительные услуги</h2>
-                <table class="internet__table">
-                    <thead>
-                        <tr>
-                            <th class="price__title">УСЛУГА</th>
-                            <th></th>
-                            <th class="price__title">СТОИМОСТЬ</th>
-                        </tr>
-                    </thead>
-                    <tbody class="video__table-item">
 
-                        <tr>
-                            <td class="table--widht"><strong>Настройка абонентского интернет оборудования с выездом
-                                    специалиста</strong></td>
-                            <td></td>
-                            <td class="table--short"><strong>от 150 руб</strong></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Прокладка кабеля UTP открытым способом (за 1 метр, с учётом стоимости
-                                    материалов)</strong></td>
-                            <td></td>
-                            <td><strong>от 150 руб</strong></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Расшивка интернет розетки (ethernet, rj-45)</strong></td>
-                            <td></td>
-                            <td><strong>от 150 руб</strong></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Прокладка телевизионного кабеля открытым способом
-                                    (с учётом стоимости телевизионного кабеля за 1 метр)</strong></td>
-                            <td></td>
-                            <td><strong>от 150 руб</strong></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Замена/установка делителя или штекера
-                                    (с учетом стоимости материалов, 1 шт.)</strong></td>
-                            <td></td>
-                            <td><strong>от 150 руб</strong></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Вызов специалиста для возврата оборудования</strong></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section> -->
+            <div class="price-wrap">
+                <div class="price__add price__add-title" id="price__add">
+                    <section class="internet__title" id="price__title" data-open>
+                        <span class="arrow internet__arrow" id="arrow__price" data-arrow></span>
+                        <h2>Дополнительные услуги</h2>
+                    </section>
 
-            <div class="price__add" id="price__add">
-                <section class="internet__title" id="price__title" data-open>
-                    <span class="arrow internet__arrow" id="arrow__price" data-arrow></span>
-                    <h2>Дополнительные услуги</h2></span>
-                </section>
+                    <div class="price__list" id="price__list" data-list>
+                        <ul>
+                            <li>
+                                <strong>Настройка абонентского интернет оборудования с выездом
+                                    специалиста</strong>
+                                <strong>от 150 руб</strong>
+                            </li>
+                            <li>
+                                <strong>Прокладка кабеля UTP открытым способом (за 1 метр, с учётом стоимости
+                                    материалов)</strong>
+                                <strong>от 150 руб</strong>
+                            </li>
+                            <li><strong>Расшивка интернет розетки (ethernet, rj-45)</strong><strong>от 150 руб</strong>
+                            </li>
+                            <li><strong>Прокладка телевизионного кабеля открытым способом
+                                    (с учётом стоимости телевизионного кабеля за 1 метр)</strong><strong>от 150
+                                    руб</strong>
+                            </li>
+                            <li><strong>Замена/установка делителя или штекера
+                                    (с учетом стоимости материалов, 1 шт.)</strong><strong>от 150 руб</strong></li>
+                            <li><strong>Вызов специалиста для возврата оборудования</strong><strong>от 150 руб</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price__add price__add-title" id="price__add">
+                    <section class="internet__title" id="price__title" data-open>
+                        <span class="arrow internet__arrow" id="arrow__price" data-arrow></span>
+                        <h2>Дополнительные услуги</h2>
+                    </section>
 
-                <div class="price__list" id="price__list" data-list>
-                    <ul>
-                        <li>
-                            <strong>Настройка абонентского интернет оборудования с выездом
-                                специалиста</strong>
-                            <strong>от 150 руб</strong>
-                        </li>
-                        <li>
-                            <strong>Прокладка кабеля UTP открытым способом (за 1 метр, с учётом стоимости
-                                материалов)</strong>
-                            <strong>от 150 руб</strong>
-                        </li>
-                        <li><strong>Расшивка интернет розетки (ethernet, rj-45)</strong><strong>от 150 руб</strong></li>
-                        <li><strong>Прокладка телевизионного кабеля открытым способом
-                                (с учётом стоимости телевизионного кабеля за 1 метр)</strong><strong>от 150 руб</strong>
-                        </li>
-                        <li><strong>Замена/установка делителя или штекера
-                                (с учетом стоимости материалов, 1 шт.)</strong><strong>от 150 руб</strong></li>
-                        <li><strong>Вызов специалиста для возврата оборудования</strong><strong>от 150 руб</strong></li>
-                    </ul>
+                    <div class="price__list" id="price__list" data-list>
+                        <ul>
+                            <li>
+                                <strong>Настройка абонентского интернет оборудования с выездом
+                                    специалиста</strong>
+                                <strong>от 150 руб</strong>
+                            </li>
+                            <li>
+                                <strong>Прокладка кабеля UTP открытым способом (за 1 метр, с учётом стоимости
+                                    материалов)</strong>
+                                <strong>от 150 руб</strong>
+                            </li>
+                            <li><strong>Расшивка интернет розетки (ethernet, rj-45)</strong><strong>от 150 руб</strong>
+                            </li>
+                            <li><strong>Прокладка телевизионного кабеля открытым способом
+                                    (с учётом стоимости телевизионного кабеля за 1 метр)</strong><strong>от 150
+                                    руб</strong>
+                            </li>
+                            <li><strong>Замена/установка делителя или штекера
+                                    (с учетом стоимости материалов, 1 шт.)</strong><strong>от 150 руб</strong></li>
+                            <li><strong>Вызов специалиста для возврата оборудования</strong><strong>от 150 руб</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price__add price__add-title" id="price__add">
+                    <section class="internet__title" id="price__title" data-open>
+                        <span class="arrow internet__arrow" id="arrow__price" data-arrow></span>
+                        <h2>Дополнительные услуги</h2>
+                    </section>
+
+                    <div class="price__list" id="price__list" data-list>
+                        <ul>
+                            <li>
+                                <strong>Настройка абонентского интернет оборудования с выездом
+                                    специалиста</strong>
+                                <strong>от 150 руб</strong>
+                            </li>
+                            <li>
+                                <strong>Прокладка кабеля UTP открытым способом (за 1 метр, с учётом стоимости
+                                    материалов)</strong>
+                                <strong>от 150 руб</strong>
+                            </li>
+                            <li><strong>Расшивка интернет розетки (ethernet, rj-45)</strong><strong>от 150 руб</strong>
+                            </li>
+                            <li><strong>Прокладка телевизионного кабеля открытым способом
+                                    (с учётом стоимости телевизионного кабеля за 1 метр)</strong><strong>от 150
+                                    руб</strong>
+                            </li>
+                            <li><strong>Замена/установка делителя или штекера
+                                    (с учетом стоимости материалов, 1 шт.)</strong><strong>от 150 руб</strong></li>
+                            <li><strong>Вызов специалиста для возврата оборудования</strong><strong>от 150 руб</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price__add price__add-title" id="price__add">
+                    <section class="internet__title" id="price__title" data-open>
+                        <span class="arrow internet__arrow" id="arrow__price" data-arrow></span>
+                        <h2>Дополнительные услуги</h2>
+                    </section>
+
+                    <div class="price__list" id="price__list" data-list>
+                        <ul>
+                            <li>
+                                <strong>Настройка абонентского интернет оборудования с выездом
+                                    специалиста</strong>
+                                <strong>от 150 руб</strong>
+                            </li>
+                            <li>
+                                <strong>Прокладка кабеля UTP открытым способом (за 1 метр, с учётом стоимости
+                                    материалов)</strong>
+                                <strong>от 150 руб</strong>
+                            </li>
+                            <li><strong>Расшивка интернет розетки (ethernet, rj-45)</strong><strong>от 150 руб</strong>
+                            </li>
+                            <li><strong>Прокладка телевизионного кабеля открытым способом
+                                    (с учётом стоимости телевизионного кабеля за 1 метр)</strong><strong>от 150
+                                    руб</strong>
+                            </li>
+                            <li><strong>Замена/установка делителя или штекера
+                                    (с учетом стоимости материалов, 1 шт.)</strong><strong>от 150 руб</strong></li>
+                            <li><strong>Вызов специалиста для возврата оборудования</strong><strong>от 150 руб</strong>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
 
 
@@ -412,8 +468,10 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer></div>
+    
     <script src="js/priceAdd.js"></script>
+    <script src="js/internet.js"></script>
     <script src="js/index.js"></script>
 
 </body>
