@@ -359,6 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Modal connect
   const buttonsModal = document.querySelectorAll('[data-modal]');
+  const body = document.querySelector('body');
 
   buttonsModal.forEach(element => {
 
@@ -373,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
       if (e.target.id === "button-connect") {
+
 
         body.insertAdjacentHTML('beforeend', `<dialog id="modal-wrap">
         <section class="modal__connect">
@@ -495,19 +497,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const modal = document.getElementById('modal-wrap');
 
-        const modalTariffs = document.querySelector('.modal__value-tariffs');
+        const modalTariffs = document.querySelectorAll('.modal__value-tariffs');
         const modalRout = document.getElementById('modal-rout');
         const modalTv = document.getElementById('modal-tv');
         const modalBox = document.getElementById('modal-box');
         const modalMovie = document.getElementById('modal-movie');
         const modalPrice = document.getElementById('modal__final-price');
 
-
-
-
         modal.showModal();
-        document.body.classList.add('lock')
-        modalTariffs.textContent = textInet[0].textContent;
+        document.body.classList.add('lock');
+        modalTariffs.forEach(element => {
+          element.textContent = textInet[0].textContent;
+        });
         modalRout.textContent = rout.textContent;
         modalTv.textContent = tv.textContent;
         modalBox.textContent = box.textContent;
@@ -589,7 +590,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </form>
         </section>
-    </dialog>`);
+        </dialog>`);
 
 
 
@@ -617,9 +618,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
           closeModal();
           document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeend', `<div class="sent__form">
-        <p>Форма успешно отправлена</p>
+          <p>Форма успешно отправлена</p>
 
-    </div>`)
+          </div>`)
 
           setTimeout(() => {
             document.getElementsByClassName('sent__form')[0].style = "opacity: 1"
@@ -630,6 +631,8 @@ document.addEventListener("DOMContentLoaded", function () {
           }, 4000)
 
         })
+      } else if (e.target.id === "button-social") {
+
       }
 
 
@@ -643,7 +646,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   });
 
-  const body = document.querySelector('body');
+
 
 
 

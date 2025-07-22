@@ -20,6 +20,7 @@ body {
       display: flex;
     flex-direction: column;
     min-height: 100%;
+    overflow: hidden;
 }
 
 
@@ -1363,10 +1364,17 @@ input:checked+.price__package-switch-slider::before {
     gap: 40px;
     justify-content: center;
 }
+.button__change--left {
+    justify-content: start;
+}
 
 .button__change-item {
     width: 290px;
     padding: clamp(.6rem, 1.5vw, 1.2rem) clamp(.6rem, 3vw, 3rem);
+    border: 2px solid #00abfe;
+}
+.button__change-item--widht {
+    width: 370px;
 }
 
 .button__change-item:disabled {
