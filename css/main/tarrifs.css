@@ -249,6 +249,7 @@
     text-decoration: underline;
     text-underline-offset: 2px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .tariffs__connect a:hover {

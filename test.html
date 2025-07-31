@@ -1,50 +1,113 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Телефон с ограничением кода</title>
-  <style>
-    input {
-      font-size: 16px;
-      padding: 8px;
-      width: 220px;
-    }
-  </style>
-</head>
-<body>
+<div class="tariffs">
+  <section class="tariffs__content">
+    <h1>NEONET. Тарифы на услуги для физических лиц</h1>
 
-  <label for="phone">Телефон:</label><br>
-  <input type="tel" id="phone" placeholder="+375(29)123-45-67" maxlength="19">
+    <div  id="tariffs__calc-wrap" class="tariffs__calc-wrap">
+      <section class="tariffs__calc">
+        <h2>Соберите удобный тариф</h2>
 
-  <script>
-    const phoneInput = document.getElementById('phone');
-    const allowedCodes = ["25", "29", "33", "44"];
 
-    phoneInput.addEventListener('input', function () {
-      let digits = this.value.replace(/\D/g, ''); // Оставляем только цифры
+        <!-- Слайдер интернета -->
+        <div class="tariffs__calc-slider">
+          <p>Скорость интернет (Мбит/с)</p>
+          <div class="slider-wrap">
+            <div class="slider-fill" id="internet-fill"></div>
+            <input type="range" id="slider-internet" value="33.33" max="100" step="33.33"
+              data-prices="0.00,{% for option in internet_options %}{{ option.price }}{% if not forloop.last %},{% endif %}{% endfor %}"
+              data-descriptions=",{% for option in internet_options %}{{ option.description }}{% if not forloop.last %},{% endif %}{% endfor %}" />
+            <div id="select-internet" style="left: 33.33%"></div>
+          </div>
+          <div class="slider__value slider__value-inet">
+            <span>Без интернета</span>
+            <span>50</span>
+            <span>100</span>
+            <span>250</span>
+          </div>
+        </div>
 
-      if (digits.startsWith("375")) {
-        digits = digits.slice(3); // удаляем "375", т.к. вставляем его вручную
-      }
+        <!-- Слайдер роутера -->
+        <div class="tariffs__calc-slider">
+          <p>Роутер</p>
+          <div class="slider-wrap">
+            <div class="slider-fill" id="rout-fill"></div>
+            <input type="range" id="slider-rout" value="0" max="100" step="50"
+              data-prices="0.00,{% for router in routers %}{{ router.price }}{% if not forloop.last %},{% endif %}{% endfor %}" />
+            <div id="select-rout"></div>
+          </div>
+          <div class="slider__value slider__value-rout">
+            <span>Без роутера</span>
+            <span data-lineText>Роутер 2.4 ГГц</span>
+            <span data-lineText>Роутер 5 ГГц</span>
+          </div>
+        </div>
 
-      let result = "+375(";
-      const code = digits.substring(0, 2);
+        <!-- Слайдер ТВ -->
+        <div class="tariffs__calc-slider">
+          <p>Кабельное ТВ</p>
+          <div class="slider-wrap">
+            <div class="slider-fill" id="tv-fill"></div>
+            <input type="range" id="slider-tv" value="0" max="100" step="50"
+              data-prices="0.00,{% for package in cable_tv %}{{ package.price}}{% if not forloop.last %},{% endif %}{% endfor %}" />
+            <div id="select-tv"></div>
+          </div>
+          <div class="slider__value slider__value-tv">
+            <span style="left: 0%;">Без ТВ</span>
+            <span style="left: 46.5%;">12 Каналов</span>
+            <span style="left: 88%;">105 Каналов</span>
+          </div>
+        </div>
 
-      // Проверяем допустимый код оператора
-      if (digits.length >= 2 && !allowedCodes.includes(code)) {
-        result += "__)___-__-__";
-        this.value = result;
-        return;
-      }
+        <!-- Выбор ТВ -->
+        <div class="tariffs__calc-toggle">
+          <label class="toggle">
+            <input type="checkbox" id="tvInteractive"
+              data-price="{% if interactive_tv %}{{ interactive_tv.price}}{% endif %}" />
+            <span class="toggle-label"></span> Интерактивное ТВ
+          </label>
 
-      if (digits.length >= 1) result += digits.substring(0, 2);
-      if (digits.length >= 3) result += ")" + digits.substring(2, 5);
-      if (digits.length >= 6) result += "-" + digits.substring(5, 7);
-      if (digits.length >= 8) result += "-" + digits.substring(7, 9);
+          <!-- Выбор приставки -->
+          <label class="toggle">
+            <input type="checkbox" id="tvFullHD" name="tvBox"
+              data-price="{% for box in tv_boxes %}{% if 'Приставка FullHD' in box.name %}{{ box.price}}{% endif %}{% endfor %}">
+            <span class="toggle-label"></span> ТВ-приставка FULL HD
+          </label>
 
-      this.value = result;
-    });
-  </script>
+          <label class="toggle">
+            <input type="checkbox" id="tv4k" name="tvBox"
+              data-price="{% for box in tv_boxes %}{% if 'Приставка 4К' in box.name %}{{ box.price}}{% endif %}{% endfor %}">
+            <span class="toggle-label"></span> ТВ-приставка 4K
+          </label>
+        </div>
+      </section>
 
-</body>
-</html>
+      <div class="tariffs__connect">
+        <p class="tariffs__connect--bigText value-tariffs">Интернет 50 Мбит/с </p>
+        <p id="description">Рекомендуется для нескольких пользователей, просмотра видео и онлайн игр.</p>
+        <ul class="tariffs__connect-list">
+          <li>
+            <img src="{% static 'img/icons/wifi-int.png' %}" alt="" />
+            <p class="value-tariffs">Интернет 50 Мбит/с </p>
+            <p id="rout"></p>
+          </li>
+          <li>
+            <img src="{% static 'img/icons/smart-tv_tar.png' %}" alt="" />
+            <p id="tv">Без ТВ</p>
+
+          </li>
+          <li>
+            <img src="{% static 'img/icons/wifi_tar.png' %}" alt="" />
+            <p id="box">Без приставки</p>
+          </li>
+          <li>
+            <img src="{% static 'img/icons/video_10402668.png' %}" alt="" />
+            <p id="movie">Онлайн кинотеатр</p>
+          </li>
+        </ul>
+        <p id="final-price" class="tariffs__connect--bigText">./ месяц</p>
+        <button id="button-connect" class="tariffs__connect-button">Подключить</button>
+        <a href="">Или заказать консультацию специалиста</a>
+      </div>
+    </div>
+  </section>
+
+</div>
