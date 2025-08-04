@@ -924,21 +924,34 @@ if (document.getElementById('internet-button__change')) {
 }
 
 // news 
+    const img = document.querySelectorAll('.back__news');
+    const newsSvg = document.querySelectorAll('.svg__wrap');
+
+function backgroundNews(params) {
+  
+}
 if (document.querySelector('.button__news')) {
   const buttonNews = document.querySelector('.button__news');
 
   buttonNews.addEventListener('mouseenter', () => {
 
-    const img = document.getElementsByClassName('news__operator-img');
-    console.log(img[0]);
-
-    img[0].classList.add("news__operator-img--active");
+    newsSvg.forEach(element => {
+      
+      element.children[0].style.fill = "#fff";
+    });
+img.forEach(element => {
+  element.classList.add("back__news--active");
+  
+});
   })
   buttonNews.addEventListener('mouseleave', () => {
-
-    const img = document.getElementsByClassName('news__operator-img');
-
-    img[0].classList.remove("news__operator-img--active")
+    newsSvg.forEach(element => {
+      element.children[0].style.fill = "#000";
+    });
+   img.forEach(element => {
+  element.classList.remove("back__news--active")
+  
+});
   })
 }
 
